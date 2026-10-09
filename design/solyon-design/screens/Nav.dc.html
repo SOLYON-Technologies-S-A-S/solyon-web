@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Navegación SOLYON</title>
+
+<link rel="stylesheet" href="../styles/01-base.css">
+<link rel="stylesheet" href="../styles/03-motion-components.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<header class="nav">
+<nav aria-label="Principal" class="wrap nav-in">
+<a class="brand" href="Main.dc.html" aria-label="SOLYON Technologies, inicio">
+<svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><ellipse cx="15" cy="15" rx="13" ry="9" transform="rotate(-18 15 15)" fill="none" stroke="#E9EEEC" stroke-width="1.5"></ellipse><ellipse cx="15" cy="15" rx="7.5" ry="5" transform="rotate(-18 15 15)" fill="none" stroke="#E9EEEC" stroke-width="1.5"></ellipse><circle cx="15" cy="15" r="2.5" fill="#FF7A3D"></circle></svg>
+<span>SOLYON</span>
+</a>
+<div class="nav-links {{openCls}}" id="menu">
+<a href="Retail.dc.html">Retail</a>
+<a href="Gobierno.dc.html">Gobierno</a>
+<a href="Insurance.dc.html">Insurance</a>
+<a href="Tecnologia.dc.html">Tecnología</a>
+<a href="Investigacion.dc.html">Investigación</a>
+<a href="Nosotros.dc.html">Nosotros</a>
+</div>
+<div class="nav-cta">
+<a class="lang" href="Insurance.dc.html" lang="en" aria-label="English version">ES / EN</a>
+<a class="go" href="Contacto.dc.html">Agendar diagnóstico</a>
+<button class="burger" type="button" aria-controls="menu" aria-expanded="{{expanded}}" aria-label="{{label}}" onClick="{{toggle}}">
+<sc-if value="{{open}}" hint-placeholder-val="{{false}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if>
+<sc-if value="{{closed}}" hint-placeholder-val="{{true}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
+</button>
+</div>
+</nav>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":80}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const open = !!(this.state && this.state.open);
+    return {
+      open: open,
+      closed: !open,
+      openCls: open ? 'open' : '',
+      expanded: open ? 'true' : 'false',
+      label: open ? 'Cerrar menú' : 'Abrir menú',
+      toggle: () => this.setState({ open: !open })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>SOLYON Technologies · Inicio</title>
+
+<link rel="stylesheet" href="../styles/01-base.css">
+<link rel="stylesheet" href="../styles/02-media.css">
+<link rel="stylesheet" href="../styles/03-motion-components.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="font-family: 'IBM Plex Sans', sans-serif; color: #0B1D26; background: #F4F5F2">
+<dc-import name="Nav" hint-size="100%,72px"></dc-import>
+
+<section class="hero dark" style="padding: 96px 0 112px">
+<svg class="hero-art" viewBox="0 0 900 900" aria-hidden="true" style="opacity: 0.35; right: -320px">
+<g fill="none" stroke="#2A5466" stroke-width="1">
+<ellipse cx="520" cy="430" rx="150" ry="104" transform="rotate(-16 520 430)"></ellipse>
+<ellipse cx="510" cy="440" rx="225" ry="160" transform="rotate(-14 510 440)"></ellipse>
+<ellipse cx="500" cy="450" rx="300" ry="215" transform="rotate(-12 500 450)"></ellipse>
+<ellipse cx="490" cy="460" rx="378" ry="272" transform="rotate(-10 490 460)"></ellipse>
+</g>
+</svg>
+<div class="wrap hero2">
+<div class="stack" style="gap: 28px">
+<a class="kicker reveal" href="Prensa.dc.html"><span class="live"></span>Seleccionados por <b>Toyota Mobility Foundation</b> →</a>
+<h1 class="h1 reveal d1">Tu operación, convertida en software e IA.</h1>
+<p class="lead reveal d2" style="margin: 0; max-width: 560px">Tomamos lo que hoy vive en chats, hojas de cálculo y en la cabeza de tu equipo, y lo convertimos en un sistema que vende, decide y reporta.</p>
+<div class="row reveal d3" style="margin-top: 8px">
+<a class="btn btn-primary" href="Contacto.dc.html">Agendar diagnóstico</a>
+<a class="btn btn-secondary" href="#soluciones">Ver cómo funciona</a>
+</div>
+<p class="coords reveal d4">6.2442° N · 75.5812° W — Medellín, Colombia</p>
+</div>
+
+<div class="console reveal d2" aria-label="Ejemplo animado: un mensaje de WhatsApp se convierte en una ficha de cliente">
+<div class="console-bar"><span>SOLYON OS · en vivo</span><span class="on">Procesando</span></div>
+<div class="bubble step-in"><small>WhatsApp · 10:42</small>Hola! ¿Ya llegaron los Jordan 4 en talla 42? La vez pasada me quedé sin ellos.</div>
+<div class="engine step-in s2">Arcanum estructura</div>
+<div class="record step-in s3">
+<div class="hd"><span>Ficha VIP · Andrés M.</span><span class="chip ok">Cliente recurrente</span></div>
+<span class="k">Talla</span><span class="v">42</span>
+<span class="k">Interés</span><span class="v">Jordan 4 · lanzamientos</span>
+<span class="k">Historial</span><span class="v">3 compras · ticket alto</span>
+<span class="k">Acción</span><span class="v"><span class="chip">Ofrecer en el próximo drop</span></span>
+</div>
+<p class="mono" style="color: #A9B8BE; font-size: 11px">Ilustración del flujo · datos de ejemplo</p>
+</div>
+</div>
+</section>
+
+<section class="paper" style="padding: 28px 0; border-bottom: 1px solid #D5DBD8">
+<div class="marquee" aria-label="Publicaciones y respaldos">
+<div class="marquee-track">
+<a class="mq" href="Prensa.dc.html"><small>Publicado por</small>Toyota Mobility Foundation</a>
+<a class="mq" href="Prensa.dc.html"><small>Publicado por</small>Alcaldía de Medellín</a>
+<a class="mq" href="Prensa.dc.html"><small>Publicado por</small>Ruta N</a>
+<span class="mq"><small>Grant</small>ElevenLabs</span>
+<span class="mq"><small>Programa</small>Google for Startups</span>
+<span class="mq"><small>Grupo certificado</small>MinCiencias</span>
+<span class="mq"><small>Incubación</small>Créame</span>
+<a class="mq" href="Prensa.dc.html" aria-hidden="true" tabindex="-1"><small>Publicado por</small>Toyota Mobility Foundation</a>
+<a class="mq" href="Prensa.dc.html" aria-hidden="true" tabindex="-1"><small>Publicado por</small>Alcaldía de Medellín</a>
+<a class="mq" href="Prensa.dc.html" aria-hidden="true" tabindex="-1"><small>Publicado por</small>Ruta N</a>
+<span class="mq" aria-hidden="true"><small>Grant</small>ElevenLabs</span>
+<span class="mq" aria-hidden="true"><small>Programa</small>Google for Startups</span>
+<span class="mq" aria-hidden="true"><small>Grupo certificado</small>MinCiencias</span>
+<span class="mq" aria-hidden="true"><small>Incubación</small>Créame</span>
+</div>
+</div>
+</section>
+
+<section class="section" id="soluciones">
+<div class="wrap">
+<div class="head sr">
+<p class="eyebrow">Soluciones</p>
+<h2 class="h2">Una infraestructura. Tres operaciones.</h2>
+</div>
+<div class="tabs" role="tablist" aria-label="Soluciones por tipo de cliente">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="3">
+<button class="tab" type="button" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}">{{t.label}}</button>
+</sc-for>
+</div>
+
+<sc-if value="{{isRetail}}" hint-placeholder-val="{{true}}">
+<div class="panel" role="tabpanel">
+<div class="stack" style="gap: 20px">
+<span class="tag tag-dev"><span class="dot"></span>Programa clientes fundadores</span>
+<h3 class="h2" style="font-size: clamp(30px, 3.2vw, 44px)">Vende tu drop al cliente correcto antes de publicarlo.</h3>
+<p class="muted" style="font-size: 18px">Para boutiques de alto ticket que venden por WhatsApp e Instagram. En vivo en 21 días, bajo tu propia marca.</p>
+<a class="btn btn-primary" href="Retail.dc.html" style="width: fit-content">Ver solución retail</a>
+</div>
+<div class="drop" style="max-width: 360px; justify-self: center; width: 100%; box-shadow: 0 30px 60px -30px rgba(11,29,38,.35)">
+<span class="chip" style="width: fit-content">Acceso anticipado · solo VIP</span>
+<div class="img">[FOTO DEL PRODUCTO]</div>
+<b>Jordan 4 Retro · Talla 42</b>
+<div class="timer"><span>Reservado para ti</span><span>14:59</span></div>
+<div class="bar"><i></i></div>
+<div class="paybtn">Pagar y asegurar</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isGov}}" hint-placeholder-val="{{false}}">
+<div class="panel" role="tabpanel">
+<div class="stack" style="gap: 20px">
+<span class="tag tag-live"><span class="dot"></span>Validado en Medellín</span>
+<h3 class="h2" style="font-size: clamp(30px, 3.2vw, 44px)">Datos del territorio para planear y rendir cuentas.</h3>
+<p class="muted" style="font-size: 18px">Mapa de barreras, observatorio territorial y accesibilidad de flota, con trabajo de campo incluido.</p>
+<a class="btn btn-primary" href="Gobierno.dc.html" style="width: fit-content">Ver solución de gobierno</a>
+</div>
+<div style="background: #0B1D26; border-radius: 12px; padding: 20px; position: relative">
+<svg viewBox="0 0 480 320" style="width: 100%; display: block" role="img" aria-label="Mapa ilustrativo de barreras en Manrique y Aranjuez">
+<g fill="none" stroke="#2A5466" stroke-width="1"><ellipse cx="200" cy="160" rx="60" ry="40" transform="rotate(-14 200 160)"></ellipse><ellipse cx="200" cy="160" rx="120" ry="80" transform="rotate(-12 200 160)"></ellipse><ellipse cx="210" cy="165" rx="185" ry="120" transform="rotate(-10 210 165)"></ellipse><ellipse cx="340" cy="140" rx="70" ry="50" transform="rotate(-8 340 140)"></ellipse><ellipse cx="340" cy="140" rx="120" ry="85" transform="rotate(-8 340 140)"></ellipse></g>
+<path d="M60 260 C 140 220, 180 190, 230 160 S 330 110, 420 80" fill="none" stroke="#3CC7B4" stroke-width="2" stroke-dasharray="6 6"></path>
+<g fill="#FF7A3D"><circle cx="150" cy="210" r="5"></circle><circle cx="190" cy="140" r="5"></circle><circle cx="250" cy="185" r="5"></circle><circle cx="300" cy="120" r="5"></circle><circle cx="355" cy="160" r="5"></circle><circle cx="390" cy="105" r="5"></circle><circle cx="120" cy="150" r="5"></circle><circle cx="270" cy="230" r="5"></circle></g>
+<text x="130" y="105" fill="#A9B8BE" font-family="IBM Plex Mono, monospace" font-size="12">MANRIQUE</text>
+<text x="330" y="215" fill="#A9B8BE" font-family="IBM Plex Mono, monospace" font-size="12">ARANJUEZ</text>
+</svg>
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9B8BE"><span><span style="color: #FF7A3D">●</span> Barrera reportada</span><span><span style="color: #3CC7B4">- -</span> Ruta accesible</span><span>Ilustración</span></div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{isIns}}" hint-placeholder-val="{{false}}">
+<div class="panel" role="tabpanel" lang="en">
+<div class="stack" style="gap: 20px">
+<span class="tag tag-val"><span class="dot"></span>Design partners · US</span>
+<h3 class="h2" style="font-size: clamp(30px, 3.2vw, 44px)">Compliance and renewals that never depend on memory.</h3>
+<p class="muted" style="font-size: 18px">Operational intelligence for commercial insurance and trucking compliance in the United States.</p>
+<a class="btn btn-primary" href="Insurance.dc.html" style="width: fit-content">See insurance solution</a>
+</div>
+<div class="record" style="background: #fff; border: 1px solid #D5DBD8; box-shadow: 0 30px 60px -30px rgba(11,29,38,.35); font-size: 14px">
+<div class="hd"><span>Account · Fleet of 14 units</span><span class="chip">Action needed</span></div>
+<span class="k">Certificate</span><span class="v">Expires in 12 days</span>
+<span class="k">DOT filing</span><span class="v"><span class="chip ok">Up to date</span></span>
+<span class="k">Renewal</span><span class="v">Quote follow-up scheduled</span>
+<span class="k">Memory</span><span class="v">3 exceptions on record</span>
+<span class="k" style="grid-column: 1/-1; padding-top: 8px">Interface illustration · sample data</span>
+</div>
+</div>
+</sc-if>
+</div>
+</section>
+
+<section class="section dark">
+<div class="wrap">
+<div class="head sr">
+<p class="eyebrow">Evidencia, no promesas</p>
+<h2 class="h2">Ya funcionó en las calles de Medellín.</h2>
+</div>
+<div class="bigstat sr">
+<div><span class="n">184</span><span class="l">usuarios activos al cierre, frente a una meta contractual de 150</span></div>
+<div><span class="n">378</span><span class="l">barreras urbanas georreferenciadas con evidencia</span></div>
+<div><span class="n">−44%</span><span class="l">de incertidumbre antes de cada viaje</span></div>
+<div><span class="n">+60%</span><span class="l">de salidas autónomas</span></div>
+</div>
+<div class="evidence sr" style="margin-top: 48px">
+<a class="video" href="https://www.youtube.com/watch?v=0SyayXeU42g" aria-label="Ver en YouTube el video del piloto SOLYON Move"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"></path></svg></span><div class="vmeta"><b>SOLYON Move en Manrique y Aranjuez</b><span>Video del piloto</span></div></a>
+<div class="side">
+<figure class="media"><div class="media-top"><span class="media-kind"><span class="dot"></span>Foto real</span><span>Manrique</span></div><div class="media-center"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"></rect><circle cx="12" cy="13" r="4"></circle><path d="M8 6l2-3h4l2 3"></path></svg><span>solyon-move-field-validation.jpeg</span></div><figcaption><b>Validación en territorio</b></figcaption></figure>
+<figure class="media"><div class="media-top"><span class="media-kind"><span class="dot"></span>Producto</span><span>App</span></div><div class="media-center"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"></rect><path d="M10 18h4"></path></svg><span>solyon-move-app-real.jpeg</span></div><figcaption><b>La app en uso</b></figcaption></figure>
+</div>
+</div>
+<div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; align-items: center">
+<p class="muted" style="font-size: 14px">Piloto Medellín Mobility for All · Ruta N y Toyota Mobility Foundation · febrero a agosto de 2026</p>
+<a class="link" href="Move.dc.html">Ver el caso completo →</a>
+</div>
+</div>
+</section>
+
+<section class="section paper" style="padding: 88px 0">
+<div class="wrap">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 8px">
+<p class="eyebrow" style="margin: 0">Así lo contaron</p>
+<a class="link" href="Prensa.dc.html">Sala de prensa →</a>
+</div>
+<div class="quote-strip sr">
+<a class="qs" href="https://toyotamobilityfoundation.org/en/press-room/pressrelease02162026/"><span class="m">Internacional · feb 2026</span><span class="o">Toyota Mobility Foundation</span><p>SOLYON, entre los cinco proyectos seleccionados para la movilidad inclusiva en Medellín.</p></a>
+<a class="qs" href="https://www.medellin.gov.co/es/sala-de-prensa/noticias/en-medellin-crean-dos-plataformas-con-inteligencia-artificial-para-facilitar-los-viajes-de-personas-con-movilidad-reducida/"><span class="m">Gobierno · ago 2026</span><span class="o">Alcaldía de Medellín</span><p>SOLYON Move, una de las dos plataformas con IA para quienes se mueven con dificultad.</p></a>
+<a class="qs" href="https://rutanmedellin.org/noticias/en-medell%C3%ADn-crean-dos-plataformas-con-inteligencia-artificial-para-facilitar-los-viajes-de-personas-con-movilidad-reducida"><span class="m">Ecosistema CTI · ago 2026</span><span class="o">Ruta N</span><p>Los resultados del piloto en Manrique y Aranjuez.</p></a>
+</div>
+</div>
+</section>
+
+<section class="section dark">
+<div class="wrap split" style="align-items: center">
+<div class="stack sr" style="gap: 24px">
+<p class="eyebrow" style="margin: 0">La tecnología</p>
+<h2 class="h2">Cada cliente nuevo usa lo que construimos para el anterior.</h2>
+<p class="muted" style="font-size: 18px">SOLYON OS reutiliza los mismos componentes entre industrias. Arcanum, nuestro motor de IA, le da memoria a cada operación.</p>
+<ul class="list" style="margin-top: 8px">
+<li><a class="link" href="Investigacion.dc.html">Grupo de investigación certificado por MinCiencias</a></li>
+<li><a class="link" href="PI.dc.html">Software propio registrado ante la DNDA</a></li>
+<li><a class="link" href="ReporteBarreras.dc.html">Datos abiertos: reporte de barreras de Medellín</a></li>
+</ul>
+<a class="btn btn-secondary" href="Tecnologia.dc.html" style="width: fit-content; margin-top: 8px">Explorar SOLYON OS</a>
+</div>
+<div class="stackviz sr" aria-label="Capas de SOLYON OS">
+<div class="lyr"><b>Agentes y automatización</b><span>04 · Agents</span></div>
+<div class="lyr"><b>Sistemas operativos</b><span>03 · Systems</span></div>
+<div class="lyr core"><b>Arcanum · memoria e inteligencia</b><span>Núcleo</span></div>
+<div class="lyr"><b>Infraestructura de datos</b><span>02 · Data</span></div>
+<div class="lyr"><b>Conocimiento operacional</b><span>01 · Knowledge</span></div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap" style="display: flex; flex-direction: column; align-items: flex-start; gap: 28px">
+<h2 class="h2 sr" style="max-width: 900px">¿Qué parte de tu operación vive en WhatsApp, Excel o en la cabeza de alguien?</h2>
+<p class="lead" style="margin: 0">En 30 minutos te decimos qué se puede convertir en sistema.</p>
+<div class="row">
+<a class="btn btn-primary" href="Contacto.dc.html">Agendar diagnóstico de 30 minutos</a>
+<a class="btn btn-secondary" href="https://wa.me/573147903517">Escribir por WhatsApp</a>
+</div>
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const a = (this.state && this.state.t) || 'retail';
+    const list = [
+      { id: 'retail', label: 'Retail de alto ticket' },
+      { id: 'gov', label: 'Gobierno y territorio' },
+      { id: 'ins', label: 'Insurance (US)' }
+    ];
+    return {
+      tabs: list.map((t) => ({ ...t, sel: t.id === a ? 'true' : 'false', pick: () => this.setState({ t: t.id }) })),
+      isRetail: a === 'retail',
+      isGov: a === 'gov',
+      isIns: a === 'ins'
+    };
+  }
+}
+</script>
+</body>
+</html>
