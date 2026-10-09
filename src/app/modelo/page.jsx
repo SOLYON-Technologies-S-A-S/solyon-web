@@ -1,0 +1,216 @@
+import { pageMeta } from "@/lib/seo";
+import Link from "next/link";
+
+export const metadata = pageMeta({
+  title: "Modelo de negocio · SOLYON",
+  description: "Cada cliente paga una activación que financia la construcción y una licencia recurrente por usar SOLYON OS.",
+  path: "/modelo",
+});
+
+export default function ModeloPage() {
+  return (
+    <>
+      <section className="dark phero">
+        <div className="wrap hero2">
+          <div className="stack" style={{ gap: "28px" }}>
+            <Link className="crumb" href="/tecnologia">Inicio / Tecnología / Modelo</Link>
+            <span className="kicker reveal">
+              <span className="live"></span>
+              <span>Modelo de{" "}<b>negocio</b></span>
+            </span>
+            <h1 className="h1 reveal d1" style={{ fontSize: "clamp(40px, 4.4vw, 64px)" }}>Una implementación que se paga sola. Un ingreso que se repite.</h1>
+            <p className="lead reveal d2" style={{ margin: "0", maxWidth: "540px" }}>Cada cliente paga una activación que financia la construcción y una licencia recurrente por usar SOLYON OS.</p>
+            <div className="row reveal d3">
+              <a className="btn btn-primary" href="#vertical">Ver por vertical</a>
+              <Link className="btn btn-secondary" href="/aliados">Construir con nosotros</Link>
+            </div>
+          </div>
+          <div className="mapbox reveal d2" aria-label="Ilustración: ingreso por cliente en el tiempo, con una activación inicial y una licencia mensual recurrente">
+            <div className="console-bar" style={{ marginBottom: "16px" }}>
+              <span>Ingreso por cliente</span>
+              <span className="on">Recurrente</span>
+            </div>
+            <svg viewBox="0 0 480 290" role="img" aria-label="Barra alta de activación en el mes 1 y barras iguales de licencia del mes 2 al 12, con una línea acumulada que sube">
+              <g stroke="#24485A" strokeWidth="1">
+                <line x1="30" y1="250" x2="460" y2="250"></line>
+                <line x1="30" y1="180" x2="460" y2="180" strokeDasharray="2 6"></line>
+                <line x1="30" y1="110" x2="460" y2="110" strokeDasharray="2 6"></line>
+              </g>
+              <rect x="40" y="90" width="24" height="160" rx="3" fill="#FF7A3D"></rect>
+              <g fill="#3CC7B4">
+                <rect x="74" y="214" width="24" height="36" rx="3"></rect>
+                <rect x="108" y="214" width="24" height="36" rx="3"></rect>
+                <rect x="142" y="214" width="24" height="36" rx="3"></rect>
+                <rect x="176" y="214" width="24" height="36" rx="3"></rect>
+                <rect x="210" y="214" width="24" height="36" rx="3"></rect>
+                <rect x="244" y="214" width="24" height="36" rx="3"></rect>
+                <rect x="278" y="214" width="24" height="36" rx="3"></rect>
+                <rect x="312" y="214" width="24" height="36" rx="3"></rect>
+                <rect x="346" y="214" width="24" height="36" rx="3"></rect>
+                <rect x="380" y="214" width="24" height="36" rx="3"></rect>
+                <rect x="414" y="214" width="24" height="36" rx="3"></rect>
+              </g>
+              <polyline points="52,196 86,184 120,172 154,160 188,148 222,136 256,124 290,112 324,100 358,88 392,76 426,64" fill="none" stroke="#E9EEEC" strokeWidth="2" style={{ strokeDasharray: "6 6", animation: "flow 1.6s linear infinite" }}></polyline>
+              <circle cx="426" cy="64" r="5" fill="#E9EEEC"></circle>
+              <text x="40" y="78" fill="#FF7A3D" fontFamily="IBM Plex Mono, monospace" fontSize="12">ACTIVACIÓN</text>
+              <text x="176" y="204" fill="#3CC7B4" fontFamily="IBM Plex Mono, monospace" fontSize="12">LICENCIA RECURRENTE</text>
+              <text x="300" y="50" fill="#E9EEEC" fontFamily="IBM Plex Mono, monospace" fontSize="12">ACUMULADO</text>
+              <text x="40" y="272" fill="#A9B8BE" fontFamily="IBM Plex Mono, monospace" fontSize="11">MES 1</text>
+              <text x="404" y="272" fill="#A9B8BE" fontFamily="IBM Plex Mono, monospace" fontSize="11">MES 12</text>
+            </svg>
+            <div className="maplegend">
+              <span><span style={{ color: "#FF7A3D" }}>■</span>{" "}Activación · pago único</span>
+              <span><span style={{ color: "#3CC7B4" }}>■</span>{" "}Licencia · mensual o anual</span>
+              <span>Ilustración · datos de ejemplo</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="wrap">
+          <div className="head sr">
+            <p className="eyebrow">Dos líneas de ingreso</p>
+            <h2 className="h2">Activación más licencia.</h2>
+          </div>
+          <div className="feat sr">
+            <div>
+              <span className="n">01</span>
+              <h3 className="h3">Activación · pago único por implementación</h3>
+              <p className="muted">Cubre la minería de datos, la configuración y el despliegue. Financia el equipo técnico de cada proyecto.</p>
+            </div>
+            <div>
+              <span className="n" style={{ color: "#0E6E62" }}>02</span>
+              <h3 className="h3">Licencia · suscripción mensual o anual</h3>
+              <p className="muted">Uso de la plataforma, infraestructura, IA, soporte y actualizaciones. Es el ingreso que construye la compañía.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section paper" id="vertical">
+        <div className="wrap">
+          <div className="head sr">
+            <p className="eyebrow">Por vertical</p>
+            <h2 className="h2">El mismo modelo, adaptado a cada comprador.</h2>
+          </div>
+          <div className="table-box sr" style={{ boxShadow: "0 40px 80px -50px rgba(11,29,38,.45)" }}>
+            <table>
+              <thead>
+                <tr>
+                  <th>Vertical</th>
+                  <th>Comprador</th>
+                  <th>Activación</th>
+                  <th>Recurrente</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>Retail de alto ticket</strong>
+                  </td>
+                  <td>Dueño de boutique</td>
+                  <td>
+                    <strong>COP 8.600.000</strong>
+                  </td>
+                  <td>
+                    <strong>COP 1.200.000 / mes</strong>
+                  </td>
+                  <td>
+                    <span className="tag tag-val"><span className="dot"></span>Comercializando</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Gobierno y territorio</strong>
+                  </td>
+                  <td>Alcaldías y operadores de transporte</td>
+                  <td>Contrato de implementación</td>
+                  <td>Licencia anual{" "}<span className="fill">[VALOR]</span></td>
+                  <td>
+                    <span className="tag tag-live"><span className="dot"></span>Piloto ejecutado</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Insurance Operations</strong>
+                  </td>
+                  <td>Agencias, MGAs y flotas en EE.UU.</td>
+                  <td>Piloto pagado bajo SLA</td>
+                  <td>Licencia{" "}<span className="fill">[VALOR]</span></td>
+                  <td>
+                    <span className="tag tag-dev"><span className="dot"></span>Design partners</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section className="section dark">
+        <div className="wrap">
+          <div className="head sr">
+            <p className="eyebrow">Por qué escala</p>
+            <h2 className="h2">Cada cliente abarata al siguiente.</h2>
+          </div>
+          <div className="feat sr">
+            <div>
+              <span className="n">01</span>
+              <h3 className="h4">Componentes compartidos</h3>
+              <p className="muted" style={{ fontSize: "15px" }}>Conocimiento, datos, CRM y agentes se reutilizan entre verticales.</p>
+            </div>
+            <div>
+              <span className="n">02</span>
+              <h3 className="h4">Implementación estandarizada</h3>
+              <p className="muted" style={{ fontSize: "15px" }}>Sprints con entregables fijos, como los 21 días de retail.</p>
+            </div>
+            <div>
+              <span className="n">03</span>
+              <h3 className="h4">Más módulos por cliente</h3>
+              <p className="muted" style={{ fontSize: "15px" }}>Un cliente activo puede sumar herramientas sobre la misma base.</p>
+            </div>
+            <div>
+              <span className="n">04</span>
+              <h3 className="h4">Costo de cambio alto</h3>
+              <p className="muted" style={{ fontSize: "15px" }}>El sistema guarda la memoria de la operación: cambiarlo cuesta más que mantenerlo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="wrap split">
+          <div className="stack sr" style={{ gap: "20px" }}>
+            <p className="eyebrow" style={{ margin: "0" }}>Métricas que gestionamos</p>
+            <h2 className="h2">Lo que medimos cada mes.</h2>
+            <p className="muted">Compartimos los valores actuales en conversación con aliados.</p>
+          </div>
+          <ul className="checks sr" style={{ gridTemplateColumns: "1fr", gap: "0" }}>
+            <li>
+              <span><b>Ingreso recurrente mensual.</b>{" "}Suma de licencias activas.</span>
+            </li>
+            <li>
+              <span><b>Retención de clientes.</b>{" "}Clientes que renuevan cada periodo.</span>
+            </li>
+            <li>
+              <span><b>Tiempo de implementación.</b>{" "}Días desde la firma hasta el go-live.</span>
+            </li>
+            <li>
+              <span><b>Margen por implementación.</b>{" "}Activación frente a costo técnico.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section className="section paper" style={{ padding: "88px 0" }}>
+        <div className="wrap band">
+          <div className="sr">
+            <p className="eyebrow">Alianzas</p>
+            <h2 className="h2">¿Quieres construir con nosotros?</h2>
+          </div>
+          <div className="row">
+            <Link className="btn btn-primary" href="/aliados">Ver alianzas</Link>
+            <Link className="btn btn-secondary" href="/contacto">Agendar diagnóstico</Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

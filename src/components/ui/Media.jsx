@@ -16,6 +16,18 @@ const ICONS = {
       <path d="M10 18h4" />
     </>
   ),
+  person: (
+    <>
+      <circle cx="12" cy="8" r="4" />
+      <path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" />
+    </>
+  ),
+  map: (
+    <>
+      <path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2z" />
+      <path d="M9 4v14M15 6v14" />
+    </>
+  ),
   desktop: (
     <>
       <rect x="2" y="4" width="20" height="13" rx="2" />
