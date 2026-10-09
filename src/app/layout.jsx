@@ -73,7 +73,6 @@ export const metadata = {
   openGraph: {
     type: "website",
 
-    url: SITE_URL,
 
     siteName:
       "SOLYON Technologies",
