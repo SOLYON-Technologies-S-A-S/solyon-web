@@ -1,4 +1,5 @@
 import { pageMeta } from "@/lib/seo";
+import LeadForm from "@/components/forms/LeadForm";
 import Link from "next/link";
 
 export const metadata = pageMeta({
@@ -170,23 +171,23 @@ export default function InsurancePage() {
             <h2 className="h2">Become a design partner.</h2>
             <p className="muted">We work with a small number of partners at a time. We reply within{" "}<span className="fill">[N]</span>{" "}business days.</p>
           </div>
-          <form className="stack" style={{ gap: "20px" }} aria-label="Design partner application">
+          <LeadForm audience="insurance" className="stack" style={{ gap: "20px" }} aria-label="Design partner application">
             <div className="grid g2" style={{ gap: "20px" }}>
               <div className="field">
                 <label htmlFor="i-name">Full name</label>
-                <input id="i-name" type="text" autoComplete="name" />
+                <input name="i-name" required id="i-name" type="text" autoComplete="name" />
               </div>
               <div className="field">
                 <label htmlFor="i-company">Company</label>
-                <input id="i-company" type="text" autoComplete="organization" />
+                <input name="i-company" required id="i-company" type="text" autoComplete="organization" />
               </div>
               <div className="field">
                 <label htmlFor="i-email">Work email</label>
-                <input id="i-email" type="email" autoComplete="email" />
+                <input name="i-email" required id="i-email" type="email" autoComplete="email" />
               </div>
               <div className="field">
                 <label htmlFor="i-type">Type of operation</label>
-                <select id="i-type">
+                <select id="i-type" name="i-type" required>
                   <option>Insurance agency</option>
                   <option>MGA</option>
                   <option>Carrier</option>
@@ -198,11 +199,11 @@ export default function InsurancePage() {
             </div>
             <div className="field">
               <label htmlFor="i-pain">Which workflow hurts the most today?</label>
-              <textarea id="i-pain"></textarea>
+              <textarea id="i-pain" name="i-pain"></textarea>
             </div>
-            <label className="check"><input type="checkbox" />{" "}I agree to SOLYON Technologies' privacy policy.</label>
-            <button className="btn btn-primary" type="button" style={{ width: "fit-content" }}>Apply as a design partner</button>
-          </form>
+            <label className="check"><input type="checkbox" name="consent" required />{" "}I agree to SOLYON Technologies' privacy policy.</label>
+            <button className="btn btn-primary" type="submit" style={{ width: "fit-content" }}>Apply as a design partner</button>
+          </LeadForm>
         </div>
       </section>
     </div>

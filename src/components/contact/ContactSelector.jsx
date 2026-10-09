@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import LeadForm from "@/components/forms/LeadForm";
 
 const TABS = [
   { id: "retail", label: "Tengo una boutique", sub: "Retail de alto ticket" },
@@ -54,82 +55,82 @@ export default function ContactSelector() {
         <div style={{ flex: "2 1 560px", minWidth: "0" }}>
           {tab === "retail" && (
             <>
-            <form className="stack" role="tabpanel" id="panel-contacto" aria-labelledby={`tab-contacto-${tab}`} style={{ gap: "20px", padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: "1px solid #D5DBD8", borderRadius: "14px", animation: "rise .5s cubic-bezier(.2,.7,.2,1) both" }} aria-label="Contacto retail">
+            <LeadForm audience="retail" className="stack" role="tabpanel" id="panel-contacto" aria-labelledby={`tab-contacto-${tab}`} style={{ gap: "20px", padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: "1px solid #D5DBD8", borderRadius: "14px", animation: "rise .5s cubic-bezier(.2,.7,.2,1) both" }} aria-label="Contacto retail">
               <p className="mono" style={{ color: "#B84A12", fontSize: "13px" }}>Retail de alto ticket · responde ventas@</p>
               <div className="grid g2" style={{ gap: "20px" }}>
                 <div className="field">
                   <label htmlFor="c-r-name">Nombre</label>
-                  <input id="c-r-name" type="text" autoComplete="name" />
+                  <input name="c-r-name" required id="c-r-name" type="text" autoComplete="name" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-r-brand">Boutique</label>
-                  <input id="c-r-brand" type="text" />
+                  <input name="c-r-brand" required id="c-r-brand" type="text" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-r-ig">Instagram</label>
-                  <input id="c-r-ig" type="text" placeholder="@tumarca" />
+                  <input name="c-r-ig" required id="c-r-ig" type="text" placeholder="@tumarca" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-r-phone">WhatsApp</label>
-                  <input id="c-r-phone" type="tel" autoComplete="tel" />
+                  <input name="c-r-phone" required id="c-r-phone" type="tel" autoComplete="tel" />
                 </div>
               </div>
-              <label className="check"><input type="checkbox" />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
-              <button className="btn btn-primary" type="button" style={{ width: "fit-content" }}>Agendar diagnóstico</button>
-            </form>
+              <label className="check"><input type="checkbox" name="consent" required />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
+              <button className="btn btn-primary" type="submit" style={{ width: "fit-content" }}>Agendar diagnóstico</button>
+            </LeadForm>
             </>
           )}
           {tab === "gov" && (
             <>
-            <form className="stack" role="tabpanel" id="panel-contacto" aria-labelledby={`tab-contacto-${tab}`} style={{ gap: "20px", padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: "1px solid #D5DBD8", borderRadius: "14px", animation: "rise .5s cubic-bezier(.2,.7,.2,1) both" }} aria-label="Contacto gobierno">
+            <LeadForm audience="gobierno" className="stack" role="tabpanel" id="panel-contacto" aria-labelledby={`tab-contacto-${tab}`} style={{ gap: "20px", padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: "1px solid #D5DBD8", borderRadius: "14px", animation: "rise .5s cubic-bezier(.2,.7,.2,1) both" }} aria-label="Contacto gobierno">
               <p className="mono" style={{ color: "#B84A12", fontSize: "13px" }}>Gobierno y territorio · responde gobierno@</p>
               <div className="grid g2" style={{ gap: "20px" }}>
                 <div className="field">
                   <label htmlFor="c-g-entity">Entidad</label>
-                  <input id="c-g-entity" type="text" />
+                  <input name="c-g-entity" required id="c-g-entity" type="text" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-g-role">Cargo</label>
-                  <input id="c-g-role" type="text" />
+                  <input name="c-g-role" required id="c-g-role" type="text" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-g-email">Correo institucional</label>
-                  <input id="c-g-email" type="email" autoComplete="email" />
+                  <input name="c-g-email" required id="c-g-email" type="email" autoComplete="email" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-g-town">Municipio</label>
-                  <input id="c-g-town" type="text" />
+                  <input name="c-g-town" required id="c-g-town" type="text" />
                 </div>
               </div>
               <div className="field">
                 <label htmlFor="c-g-goal">Meta o proyecto del Plan de Desarrollo</label>
-                <textarea id="c-g-goal"></textarea>
+                <textarea id="c-g-goal" name="c-g-goal"></textarea>
               </div>
-              <label className="check"><input type="checkbox" />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
-              <button className="btn btn-primary" type="button" style={{ width: "fit-content" }}>Solicitar ficha técnica</button>
-            </form>
+              <label className="check"><input type="checkbox" name="consent" required />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
+              <button className="btn btn-primary" type="submit" style={{ width: "fit-content" }}>Solicitar ficha técnica</button>
+            </LeadForm>
             </>
           )}
           {tab === "ins" && (
             <>
-            <form className="stack" role="tabpanel" id="panel-contacto" aria-labelledby={`tab-contacto-${tab}`} style={{ gap: "20px", padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: "1px solid #D5DBD8", borderRadius: "14px", animation: "rise .5s cubic-bezier(.2,.7,.2,1) both" }} aria-label="Insurance contact" lang="en">
+            <LeadForm audience="insurance" lang="en" className="stack" role="tabpanel" id="panel-contacto" aria-labelledby={`tab-contacto-${tab}`} style={{ gap: "20px", padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: "1px solid #D5DBD8", borderRadius: "14px", animation: "rise .5s cubic-bezier(.2,.7,.2,1) both" }} aria-label="Insurance contact">
               <p className="mono" style={{ color: "#B84A12", fontSize: "13px" }}>Insurance Operations · partners@</p>
               <div className="grid g2" style={{ gap: "20px" }}>
                 <div className="field">
                   <label htmlFor="c-i-name">Full name</label>
-                  <input id="c-i-name" type="text" autoComplete="name" />
+                  <input name="c-i-name" required id="c-i-name" type="text" autoComplete="name" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-i-company">Company</label>
-                  <input id="c-i-company" type="text" autoComplete="organization" />
+                  <input name="c-i-company" required id="c-i-company" type="text" autoComplete="organization" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-i-email">Work email</label>
-                  <input id="c-i-email" type="email" autoComplete="email" />
+                  <input name="c-i-email" required id="c-i-email" type="email" autoComplete="email" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-i-type">Type of operation</label>
-                  <select id="c-i-type">
+                  <select id="c-i-type" name="c-i-type" required>
                     <option>Insurance agency</option>
                     <option>MGA</option>
                     <option>Carrier</option>
@@ -138,31 +139,31 @@ export default function ContactSelector() {
                   </select>
                 </div>
               </div>
-              <label className="check"><input type="checkbox" />{" "}I agree to SOLYON Technologies' privacy policy.</label>
-              <button className="btn btn-primary" type="button" style={{ width: "fit-content" }}>Apply as a design partner</button>
-            </form>
+              <label className="check"><input type="checkbox" name="consent" required />{" "}I agree to SOLYON Technologies' privacy policy.</label>
+              <button className="btn btn-primary" type="submit" style={{ width: "fit-content" }}>Apply as a design partner</button>
+            </LeadForm>
             </>
           )}
           {tab === "ally" && (
             <>
-            <form className="stack" role="tabpanel" id="panel-contacto" aria-labelledby={`tab-contacto-${tab}`} style={{ gap: "20px", padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: "1px solid #D5DBD8", borderRadius: "14px", animation: "rise .5s cubic-bezier(.2,.7,.2,1) both" }} aria-label="Contacto aliados">
+            <LeadForm audience="aliados" className="stack" role="tabpanel" id="panel-contacto" aria-labelledby={`tab-contacto-${tab}`} style={{ gap: "20px", padding: "clamp(24px, 4vw, 40px)", background: "#fff", border: "1px solid #D5DBD8", borderRadius: "14px", animation: "rise .5s cubic-bezier(.2,.7,.2,1) both" }} aria-label="Contacto aliados">
               <p className="mono" style={{ color: "#B84A12", fontSize: "13px" }}>Aliados, academia e inversión · responde el fundador</p>
               <div className="grid g2" style={{ gap: "20px" }}>
                 <div className="field">
                   <label htmlFor="c-a-name">Nombre</label>
-                  <input id="c-a-name" type="text" autoComplete="name" />
+                  <input name="c-a-name" required id="c-a-name" type="text" autoComplete="name" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-a-org">Organización</label>
-                  <input id="c-a-org" type="text" autoComplete="organization" />
+                  <input name="c-a-org" required id="c-a-org" type="text" autoComplete="organization" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-a-email">Correo</label>
-                  <input id="c-a-email" type="email" autoComplete="email" />
+                  <input name="c-a-email" required id="c-a-email" type="email" autoComplete="email" />
                 </div>
                 <div className="field">
                   <label htmlFor="c-a-type">Tipo de alianza</label>
-                  <select id="c-a-type">
+                  <select id="c-a-type" name="c-a-type" required>
                     <option>Distribución</option>
                     <option>Academia e investigación</option>
                     <option>Institucional</option>
@@ -173,10 +174,11 @@ export default function ContactSelector() {
               </div>
               <div className="field">
                 <label htmlFor="c-a-msg">Mensaje</label>
-                <textarea id="c-a-msg"></textarea>
+                <textarea id="c-a-msg" name="c-a-msg"></textarea>
               </div>
-              <button className="btn btn-primary" type="button" style={{ width: "fit-content" }}>Enviar</button>
-            </form>
+              <label className="check"><input type="checkbox" name="consent" required />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
+<button className="btn btn-primary" type="submit" style={{ width: "fit-content" }}>Enviar</button>
+            </LeadForm>
             </>
           )}
         </div>

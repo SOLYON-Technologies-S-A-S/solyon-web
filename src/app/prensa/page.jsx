@@ -1,4 +1,5 @@
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE_URL } from "@/lib/seo";
+import JsonLd from "@/components/ui/JsonLd";
 import Link from "next/link";
 import Media from "@/components/ui/Media";
 
@@ -8,9 +9,51 @@ export const metadata = pageMeta({
   path: "/prensa",
 });
 
+const MENTIONS = [
+  {
+    headline: "En Medellín crean dos plataformas con IA para facilitar los viajes de personas con movilidad reducida",
+    publisher: "Alcaldía de Medellín",
+    datePublished: "2026-08-06",
+    url: "https://www.medellin.gov.co/es/sala-de-prensa/noticias/en-medellin-crean-dos-plataformas-con-inteligencia-artificial-para-facilitar-los-viajes-de-personas-con-movilidad-reducida/",
+  },
+  {
+    headline: "Cinco proyectos seleccionados por Ruta N y TMF para la movilidad inclusiva en Medellín",
+    publisher: "Toyota Mobility Foundation",
+    datePublished: "2026-02-16",
+    url: "https://toyotamobilityfoundation.org/en/press-room/pressrelease02162026/",
+    inLanguage: "en",
+  },
+  {
+    headline: "Plataformas con IA para facilitar los viajes de personas con movilidad reducida",
+    publisher: "Ruta N",
+    datePublished: "2026-08",
+    url: "https://rutanmedellin.org/noticias/en-medell%C3%ADn-crean-dos-plataformas-con-inteligencia-artificial-para-facilitar-los-viajes-de-personas-con-movilidad-reducida",
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Menciones de SOLYON Technologies en prensa",
+  url: `${SITE_URL}/prensa`,
+  itemListElement: MENTIONS.map((m, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "NewsArticle",
+      headline: m.headline,
+      url: m.url,
+      datePublished: m.datePublished,
+      publisher: { "@type": "Organization", name: m.publisher },
+      ...(m.inLanguage && { inLanguage: m.inLanguage }),
+    },
+  })),
+};
+
 export default function PrensaPage() {
   return (
     <>
+      <JsonLd data={jsonLd} />
       <section className="dark phero">
         <div className="wrap hero2">
           <div className="stack" style={{ gap: "28px" }}>

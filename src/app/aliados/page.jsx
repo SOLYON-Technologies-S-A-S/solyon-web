@@ -1,4 +1,5 @@
 import { pageMeta } from "@/lib/seo";
+import LeadForm from "@/components/forms/LeadForm";
 import Link from "next/link";
 
 export const metadata = pageMeta({
@@ -120,23 +121,23 @@ export default function AliadosPage() {
             <h2 className="h2">Propón una alianza.</h2>
             <p className="muted">Responde el fundador directamente.</p>
           </div>
-          <form className="stack" style={{ gap: "20px" }} aria-label="Propuesta de alianza">
+          <LeadForm audience="aliados" className="stack" style={{ gap: "20px" }} aria-label="Propuesta de alianza">
             <div className="grid g2" style={{ gap: "20px", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 1fr))" }}>
               <div className="field">
                 <label htmlFor="a-name">Nombre</label>
-                <input id="a-name" type="text" autoComplete="name" />
+                <input name="a-name" required id="a-name" type="text" autoComplete="name" />
               </div>
               <div className="field">
                 <label htmlFor="a-org">Organización</label>
-                <input id="a-org" type="text" autoComplete="organization" />
+                <input name="a-org" required id="a-org" type="text" autoComplete="organization" />
               </div>
               <div className="field">
                 <label htmlFor="a-email">Correo</label>
-                <input id="a-email" type="email" autoComplete="email" />
+                <input name="a-email" required id="a-email" type="email" autoComplete="email" />
               </div>
               <div className="field">
                 <label htmlFor="a-type">Tipo de alianza</label>
-                <select id="a-type">
+                <select id="a-type" name="a-type" required>
                   <option>Distribución</option>
                   <option>Academia e investigación</option>
                   <option>Institucional</option>
@@ -146,10 +147,11 @@ export default function AliadosPage() {
             </div>
             <div className="field">
               <label htmlFor="a-msg">Cuéntanos tu propuesta</label>
-              <textarea id="a-msg"></textarea>
+              <textarea id="a-msg" name="a-msg"></textarea>
             </div>
-            <button className="btn btn-primary" type="button" style={{ width: "fit-content" }}>Enviar propuesta</button>
-          </form>
+            <label className="check"><input type="checkbox" name="consent" required />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
+<button className="btn btn-primary" type="submit" style={{ width: "fit-content" }}>Enviar propuesta</button>
+          </LeadForm>
         </div>
       </section>
     </>

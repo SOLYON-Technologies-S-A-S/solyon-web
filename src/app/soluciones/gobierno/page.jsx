@@ -1,4 +1,5 @@
 import { pageMeta } from "@/lib/seo";
+import LeadForm from "@/components/forms/LeadForm";
 import Link from "next/link";
 import Media from "@/components/ui/Media";
 
@@ -6,6 +7,7 @@ export const metadata = pageMeta({
   title: "Gobierno y territorio · SOLYON",
   description: "Mapeamos las barreras de tu municipio con la comunidad y las convertimos en evidencia para el Plan de Desarrollo.",
   path: "/soluciones/gobierno",
+  image: "/visual/solyon-move-crm-historica.png",
 });
 
 export default function GobiernoPage() {
@@ -215,29 +217,29 @@ export default function GobiernoPage() {
             <h2 className="h2">Te la enviamos con una propuesta para tu municipio.</h2>
             <p className="muted">Respondemos en un máximo de{" "}<span className="fill">[N.º]</span>{" "}días hábiles.</p>
           </div>
-          <form className="stack" style={{ gap: "20px" }} aria-label="Solicitud de ficha técnica">
+          <LeadForm audience="gobierno" className="stack" style={{ gap: "20px" }} aria-label="Solicitud de ficha técnica">
             <div className="grid g2" style={{ gap: "20px" }}>
               <div className="field">
                 <label htmlFor="g-entity">Entidad</label>
-                <input id="g-entity" type="text" placeholder="Alcaldía de…" />
+                <input name="g-entity" required id="g-entity" type="text" placeholder="Alcaldía de…" />
               </div>
               <div className="field">
                 <label htmlFor="g-role">Cargo</label>
-                <input id="g-role" type="text" />
+                <input name="g-role" required id="g-role" type="text" />
               </div>
             </div>
             <div className="field">
               <label htmlFor="g-email">Correo institucional</label>
-              <input id="g-email" type="email" autoComplete="email" />
+              <input name="g-email" required id="g-email" type="email" autoComplete="email" />
             </div>
             <div className="field">
               <label htmlFor="g-goal">¿Qué meta del Plan de Desarrollo quieres atender?</label>
-              <textarea id="g-goal"></textarea>
+              <textarea id="g-goal" name="g-goal"></textarea>
               <span className="hint">Opcional. Nos ayuda a preparar una propuesta concreta.</span>
             </div>
-            <label className="check"><input type="checkbox" />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
-            <button className="btn btn-primary" type="button" style={{ width: "fit-content" }}>Solicitar ficha técnica</button>
-          </form>
+            <label className="check"><input type="checkbox" name="consent" required />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
+            <button className="btn btn-primary" type="submit" style={{ width: "fit-content" }}>Solicitar ficha técnica</button>
+          </LeadForm>
         </div>
       </section>
     </>

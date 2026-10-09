@@ -1,4 +1,5 @@
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE_URL } from "@/lib/seo";
+import JsonLd from "@/components/ui/JsonLd";
 import Link from "next/link";
 import Media from "@/components/ui/Media";
 
@@ -6,11 +7,26 @@ export const metadata = pageMeta({
   title: "SOLYON Move · Movilidad accesible",
   description: "Rutas con menos pendientes y obstáculos para personas con movilidad reducida. Cada reporte se vuelve un dato para la ciudad.",
   path: "/solyon-move",
+  image: "/visual/solyon-move-field-validation.jpeg",
 });
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "SOLYON Move",
+  url: `${SITE_URL}/solyon-move`,
+  description: "Rutas con menos pendientes y obstáculos para personas con movilidad reducida. Cada reporte se vuelve un dato para la ciudad.",
+  applicationCategory: "MapsApplication",
+  operatingSystem: "Android",
+  downloadUrl: "https://play.google.com/store/apps/details?id=com.solyon.move",
+  inLanguage: "es-CO",
+  publisher: { "@id": `${SITE_URL}/#organization` },
+};
 
 export default function MovePage() {
   return (
     <>
+      <JsonLd data={jsonLd} />
       <section className="dark phero">
         <div className="wrap hero2">
           <div className="stack" style={{ gap: "26px" }}>

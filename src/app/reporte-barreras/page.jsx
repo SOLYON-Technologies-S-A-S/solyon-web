@@ -1,4 +1,5 @@
 import { pageMeta } from "@/lib/seo";
+import LeadForm from "@/components/forms/LeadForm";
 import Link from "next/link";
 import Media from "@/components/ui/Media";
 
@@ -6,6 +7,7 @@ export const metadata = pageMeta({
   title: "Reporte de barreras de accesibilidad · SOLYON",
   description: "El reporte abierto del piloto SOLYON Move, para que entidades, academia y organizaciones prioricen dónde intervenir.",
   path: "/reporte-barreras",
+  image: "/visual/solyon-move-barriers.png",
 });
 
 export default function ReporteBarrerasPage() {
@@ -143,23 +145,23 @@ export default function ReporteBarrerasPage() {
             <h2 className="h2">Recibe el reporte en tu correo.</h2>
             <p className="muted" style={{ fontSize: "18px" }}>Te avisaremos también cuando publiquemos nuevos municipios.</p>
           </div>
-          <form className="stack" style={{ gap: "20px" }} aria-label="Descarga del reporte de barreras">
+          <LeadForm audience="reporte" className="stack" style={{ gap: "20px" }} aria-label="Descarga del reporte de barreras">
             <div className="grid g2" style={{ gap: "20px" }}>
               <div className="field">
                 <label htmlFor="b-name">Nombre</label>
-                <input id="b-name" type="text" autoComplete="name" />
+                <input name="b-name" required id="b-name" type="text" autoComplete="name" />
               </div>
               <div className="field">
                 <label htmlFor="b-email">Correo</label>
-                <input id="b-email" type="email" autoComplete="email" />
+                <input name="b-email" required id="b-email" type="email" autoComplete="email" />
               </div>
               <div className="field">
                 <label htmlFor="b-org">Organización</label>
-                <input id="b-org" type="text" autoComplete="organization" />
+                <input name="b-org" required id="b-org" type="text" autoComplete="organization" />
               </div>
               <div className="field">
                 <label htmlFor="b-profile">Perfil</label>
-                <select id="b-profile">
+                <select id="b-profile" name="b-profile" required>
                   <option>Entidad pública</option>
                   <option>Academia</option>
                   <option>Organización social</option>
@@ -169,9 +171,9 @@ export default function ReporteBarrerasPage() {
                 </select>
               </div>
             </div>
-            <label className="check"><input type="checkbox" />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
-            <button className="btn btn-primary" type="button" style={{ width: "fit-content" }}>Descargar reporte (PDF)</button>
-          </form>
+            <label className="check"><input type="checkbox" name="consent" required />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
+            <button className="btn btn-primary" type="submit" style={{ width: "fit-content" }}>Descargar reporte (PDF)</button>
+          </LeadForm>
         </div>
       </section>
       <section className="section" style={{ padding: "88px 0" }}>

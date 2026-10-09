@@ -24,7 +24,7 @@ export function pageMeta({ title, description, path, lang = "es", image = "/og-c
       title,
       description,
       locale: lang === "en" ? "en_US" : "es_CO",
-      images: [{ url: image, width: 1200, height: 630, alt: title }],
+      images: [image === "/og-cover.jpg" ? { url: image, width: 1200, height: 630, alt: title } : { url: image, alt: title }],
     },
     twitter: { card: "summary_large_image", title, description, images: [image] },
   };

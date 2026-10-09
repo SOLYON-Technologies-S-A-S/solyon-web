@@ -1,4 +1,5 @@
 import { pageMeta } from "@/lib/seo";
+import LeadForm from "@/components/forms/LeadForm";
 import Link from "next/link";
 import FaqAccordion from "@/components/ui/FaqAccordion";
 
@@ -154,28 +155,28 @@ export default function RetailPage() {
             <h2 className="h2">30 minutos para ver qué hay en tus chats.</h2>
             <p className="muted">Te mostramos cuántos clientes podrías reactivar. Sin costo.</p>
           </div>
-          <form className="stack" style={{ gap: "20px" }} aria-label="Postulación retail">
+          <LeadForm audience="retail" className="stack" style={{ gap: "20px" }} aria-label="Postulación retail">
             <div className="grid g2" style={{ gap: "20px" }}>
               <div className="field">
                 <label htmlFor="r-name">Nombre</label>
-                <input id="r-name" type="text" autoComplete="name" />
+                <input name="r-name" required id="r-name" type="text" autoComplete="name" />
               </div>
               <div className="field">
                 <label htmlFor="r-brand">Boutique</label>
-                <input id="r-brand" type="text" />
+                <input name="r-brand" required id="r-brand" type="text" />
               </div>
               <div className="field">
                 <label htmlFor="r-ig">Instagram</label>
-                <input id="r-ig" type="text" placeholder="@tumarca" />
+                <input name="r-ig" required id="r-ig" type="text" placeholder="@tumarca" />
               </div>
               <div className="field">
                 <label htmlFor="r-phone">WhatsApp</label>
-                <input id="r-phone" type="tel" autoComplete="tel" />
+                <input name="r-phone" required id="r-phone" type="tel" autoComplete="tel" />
               </div>
             </div>
-            <label className="check"><input type="checkbox" />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
-            <button className="btn btn-primary" type="button" style={{ width: "fit-content" }}>Postular mi boutique</button>
-          </form>
+            <label className="check"><input type="checkbox" name="consent" required />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
+            <button className="btn btn-primary" type="submit" style={{ width: "fit-content" }}>Postular mi boutique</button>
+          </LeadForm>
         </div>
       </section>
     </>

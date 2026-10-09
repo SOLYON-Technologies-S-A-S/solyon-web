@@ -1,4 +1,5 @@
 import { pageMeta } from "@/lib/seo";
+import LeadForm from "@/components/forms/LeadForm";
 import Link from "next/link";
 
 export const metadata = pageMeta({
@@ -127,14 +128,14 @@ export default function PublicacionesPage() {
             <p className="eyebrow" style={{ margin: "0" }}>Suscríbete</p>
             <h2 className="h2">Recibe cada nueva publicación.</h2>
           </div>
-          <form className="stack" style={{ gap: "16px", flex: "1 1 360px", maxWidth: "460px" }} aria-label="Suscripción a publicaciones">
+          <LeadForm audience="publicaciones" className="stack" style={{ gap: "16px", flex: "1 1 360px", maxWidth: "460px" }} aria-label="Suscripción a publicaciones">
             <div className="field">
               <label htmlFor="p-email">Correo</label>
-              <input id="p-email" type="email" autoComplete="email" />
+              <input name="p-email" required id="p-email" type="email" autoComplete="email" />
             </div>
-            <label className="check"><input type="checkbox" />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
-            <button className="btn btn-primary" type="button" style={{ width: "fit-content" }}>Suscribirme</button>
-          </form>
+            <label className="check"><input type="checkbox" name="consent" required />{" "}Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
+            <button className="btn btn-primary" type="submit" style={{ width: "fit-content" }}>Suscribirme</button>
+          </LeadForm>
         </div>
       </section>
     </>

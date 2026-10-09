@@ -5,6 +5,8 @@ import "@/styles/design/01-base.css";
 import "@/styles/design/02-media.css";
 import "@/styles/design/03-motion-components.css";
 import "@/styles/design/04-footer.css";
+import "@/styles/design/05-consent.css";
+import Analytics from "@/components/analytics/Analytics";
 import Nav from "@/components/layout/Nav";
 import Footer from "@/components/layout/Footer";
 
@@ -150,7 +152,7 @@ export default function RootLayout({
       "SOLYON Technologies",
 
     legalName:
-      "SOLYON Technologies S.A.S.",
+      "SOLYON Technologies S.A.S. BIC",
 
     url:
       SITE_URL,
@@ -262,6 +264,7 @@ export default function RootLayout({
         <Nav />
         <main id="contenido">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

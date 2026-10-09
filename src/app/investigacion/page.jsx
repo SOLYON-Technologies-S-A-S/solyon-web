@@ -1,4 +1,5 @@
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, SITE_URL } from "@/lib/seo";
+import JsonLd from "@/components/ui/JsonLd";
 import Link from "next/link";
 
 export const metadata = pageMeta({
@@ -7,9 +8,20 @@ export const metadata = pageMeta({
   path: "/investigacion",
 });
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ResearchOrganization",
+  name: "SOLYON Lab",
+  url: `${SITE_URL}/investigacion`,
+  description: "Investigamos para construir, y publicamos lo que podemos demostrar.",
+  parentOrganization: { "@id": `${SITE_URL}/#organization` },
+  address: { "@type": "PostalAddress", addressLocality: "Medellín", addressCountry: "CO" },
+};
+
 export default function InvestigacionPage() {
   return (
     <>
+      <JsonLd data={jsonLd} />
       <section className="dark phero">
         <div className="wrap hero2">
           <div className="stack" style={{ gap: "28px" }}>

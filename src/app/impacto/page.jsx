@@ -6,6 +6,7 @@ export const metadata = pageMeta({
   title: "Impacto · SOLYON",
   description: "Medimos resultados en personas, territorio e instituciones, con metodología pública y evaluación de terceros.",
   path: "/impacto",
+  image: "/visual/solyon-move-field-validation.jpeg",
 });
 
 export default function ImpactoPage() {
