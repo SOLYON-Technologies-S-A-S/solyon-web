@@ -1,10 +1,18 @@
-// src/app/not-found.jsx
+import Link from "next/link";
+
+export const metadata = { title: { absolute: "Página no encontrada · SOLYON" }, robots: { index: false } };
+
 export default function NotFound() {
   return (
-    <main className="section py-24 text-center space-y-4">
-      <h1 className="font-display text-5xl gradient-gold">404</h1>
-      <p className="text-gray-300">Esta ruta no existe dentro del universo SOLYON.</p>
-      <a href="/" className="btn mt-4 inline-block">Volver al inicio</a>
-    </main>
+    <section className="section">
+      <div className="wrap">
+        <p className="eyebrow">Error 404</p>
+        <h1 className="h1">Esta página no existe.</h1>
+        <p className="lead">Puede que el enlace haya cambiado con el nuevo sitio.</p>
+        <div className="row" style={{ marginTop: 32 }}>
+          <Link className="btn btn-primary" href="/">Volver al inicio</Link>
+        </div>
+      </div>
+    </section>
   );
 }

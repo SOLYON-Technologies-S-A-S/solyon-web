@@ -1,2 +1,0 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = { content: ["./src/app/**/*.{js,jsx}","./src/components/**/*.{js,jsx}"], theme: { extend: { colors: { negroSoberano:"#181818", oroRosado:"#E8A0B0", blancoPuro:"#FFFFFF", grisElegante:"#2D2D2D", grisClaro:"#EFEFEF" }, fontFamily: { display:["Montserrat","ui-sans-serif","system-ui"], body:["Lato","ui-sans-serif","system-ui"] } } }, plugins: [] };
