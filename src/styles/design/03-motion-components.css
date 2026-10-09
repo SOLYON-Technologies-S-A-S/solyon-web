@@ -27,7 +27,7 @@
 .record .k{font-family:var(--font-plex-mono),'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#4A5A61;padding-top:2px}
 .record .v{font-weight:600}
 .record .hd{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;padding-bottom:8px;margin-bottom:4px;border-bottom:1px solid #D5DBD8;font-family:var(--font-archivo),'Archivo',sans-serif;font-stretch:110%;font-weight:700;font-size:15px}
-.chip{display:inline-flex;font-family:var(--font-plex-mono),'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:2px;background:#FFE7D9;color:#B84A12;font-weight:500}
+.chip{display:inline-flex;font-family:var(--font-plex-mono),'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;border-radius:2px;background:#FFE7D9;color:#B3460F;font-weight:500}
 .chip.ok{background:#D9F4EF;color:#0E6E62}
 .marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .marquee-track{display:flex;gap:72px;width:max-content;animation:scrollx 38s linear infinite;align-items:center}
