@@ -1,8 +1,16 @@
 // src/app/layout.jsx
 
-import "./../styles/globals.css";
-import { LanguageProvider } from "@/lib/language";
-import MainHeader from "@/components/MainHeader";
+import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import "@/styles/design/01-base.css";
+import "@/styles/design/02-media.css";
+import "@/styles/design/03-motion-components.css";
+import "@/styles/design/04-footer.css";
+import Nav from "@/components/layout/Nav";
+import Footer from "@/components/layout/Footer";
+
+const archivo = Archivo({ subsets: ["latin"], axes: ["wdth"], display: "swap", variable: "--font-archivo" });
+const plexSans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], display: "swap", variable: "--font-plex-sans" });
+const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], display: "swap", variable: "--font-plex-mono" });
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ||
@@ -61,15 +69,6 @@ export const metadata = {
 
   category:
     "Technology",
-
-  alternates: {
-    canonical: SITE_URL,
-
-    languages: {
-      "es-CO": SITE_URL,
-      "en-US": `${SITE_URL}/?lang=en`,
-    },
-  },
 
   openGraph: {
     type: "website",
@@ -234,6 +233,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
+      className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -259,11 +259,10 @@ export default function RootLayout({
       </head>
 
       <body>
-        <LanguageProvider>
-          <MainHeader />
-
-          {children}
-        </LanguageProvider>
+        <a className="skip" href="#contenido">Saltar al contenido</a>
+        <Nav />
+        <main id="contenido">{children}</main>
+        <Footer />
       </body>
     </html>
   );
