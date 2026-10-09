@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Contacto · SOLYON</title>
+
+<link rel="stylesheet" href="../styles/01-base.css">
+<link rel="stylesheet" href="../styles/02-media.css">
+<link rel="stylesheet" href="../styles/03-motion-components.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="font-family: 'IBM Plex Sans', sans-serif; color: #0B1D26; background: #F4F5F2">
+<dc-import name="Nav" hint-size="100%,72px"></dc-import>
+
+<section class="dark phero" style="padding-bottom: 80px">
+<div class="wrap hero2">
+<div class="stack" style="gap: 28px">
+<a class="crumb" href="Main.dc.html">Inicio / Contacto</a>
+<span class="kicker reveal"><span class="live"></span>Diagnóstico · <b>sin costo</b></span>
+<h1 class="h1 reveal d1">Agenda un diagnóstico de 30 minutos.</h1>
+<p class="lead reveal d2" style="margin: 0; max-width: 520px">Dinos quién eres y te llevamos a la persona correcta. Sin costo y sin compromiso.</p>
+<div class="row reveal d3">
+<a class="btn btn-primary" href="#formulario">Elegir mi perfil</a>
+<a class="btn btn-secondary" href="https://wa.me/573147903517">Escribir por WhatsApp</a>
+</div>
+</div>
+
+<div class="mapbox reveal d2">
+<svg viewBox="0 0 520 300" role="img" aria-label="Mapa ilustrativo con la ubicación de SOLYON en Medellín">
+<g fill="none" stroke="#2A5466" stroke-width="1">
+<ellipse cx="260" cy="150" rx="40" ry="26" transform="rotate(-14 260 150)"></ellipse>
+<ellipse cx="260" cy="150" rx="90" ry="58" transform="rotate(-12 260 150)"></ellipse>
+<ellipse cx="262" cy="152" rx="145" ry="92" transform="rotate(-10 262 152)"></ellipse>
+<ellipse cx="265" cy="155" rx="205" ry="128" transform="rotate(-8 265 155)"></ellipse>
+<ellipse cx="268" cy="158" rx="270" ry="168" transform="rotate(-6 268 158)"></ellipse>
+</g>
+<path d="M260 150 L 470 60" fill="none" stroke="#3CC7B4" stroke-width="1.5" stroke-dasharray="5 6"></path>
+<path d="M260 150 L 60 250" fill="none" stroke="#3CC7B4" stroke-width="1.5" stroke-dasharray="5 6"></path>
+<circle cx="260" cy="150" r="16" fill="none" stroke="#FF7A3D" stroke-width="1.5" class="blinkpt"></circle>
+<circle cx="260" cy="150" r="6" fill="#FF7A3D"></circle>
+<circle cx="470" cy="60" r="4" fill="#3CC7B4" class="blinkpt" style="animation-delay: .8s"></circle>
+<circle cx="60" cy="250" r="4" fill="#3CC7B4" class="blinkpt" style="animation-delay: 1.6s"></circle>
+<text x="284" y="146" fill="#E9EEEC" font-family="IBM Plex Mono, monospace" font-size="15" letter-spacing="1.5">MEDELLÍN</text>
+<text x="284" y="168" fill="#A9B8BE" font-family="IBM Plex Mono, monospace" font-size="12">6.2442° N · 75.5812° W</text>
+<text x="370" y="40" fill="#A9B8BE" font-family="IBM Plex Mono, monospace" font-size="13">ESTADOS UNIDOS</text>
+<text x="40" y="276" fill="#A9B8BE" font-family="IBM Plex Mono, monospace" font-size="13">COLOMBIA</text>
+</svg>
+<div class="maplegend"><span><span style="color: #FF7A3D">●</span> Sede</span><span><span style="color: #3CC7B4">- -</span> Dónde operamos</span><span>Ilustración</span></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="formulario">
+<div class="wrap">
+<div class="head sr" style="margin-bottom: 32px">
+<p class="eyebrow">Elige tu perfil</p>
+<h2 class="h2">¿Quién eres?</h2>
+</div>
+<div class="tabs" role="tablist" aria-label="Tipo de contacto" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr))">
+<sc-for list="{{options}}" as="opt" hint-placeholder-count="4">
+<button class="tab" type="button" role="tab" aria-selected="{{opt.pressed}}" onClick="{{opt.pick}}" style="min-height: 64px; padding: 10px 22px; flex-direction: column; align-items: flex-start; gap: 2px; border-radius: 12px; text-align: left"><span>{{opt.label}}</span><span style="font-family: 'IBM Plex Mono', monospace; font-weight: 400; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; opacity: .8">{{opt.sub}}</span></button>
+</sc-for>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div style="flex: 2 1 560px; min-width: 0">
+<sc-if value="{{isRetail}}" hint-placeholder-val="{{true}}">
+<form class="stack" role="tabpanel" style="gap: 20px; padding: clamp(24px, 4vw, 40px); background: #fff; border: 1px solid #D5DBD8; border-radius: 14px; animation: rise .5s cubic-bezier(.2,.7,.2,1) both" aria-label="Contacto retail">
+<p class="mono" style="color: #B84A12; font-size: 13px">Retail de alto ticket · responde ventas@</p>
+<div class="grid g2" style="gap: 20px">
+<div class="field"><label for="c-r-name">Nombre</label><input id="c-r-name" type="text" autocomplete="name"></div>
+<div class="field"><label for="c-r-brand">Boutique</label><input id="c-r-brand" type="text"></div>
+<div class="field"><label for="c-r-ig">Instagram</label><input id="c-r-ig" type="text" placeholder="@tumarca"></div>
+<div class="field"><label for="c-r-phone">WhatsApp</label><input id="c-r-phone" type="tel" autocomplete="tel"></div>
+</div>
+<label class="check"><input type="checkbox"> Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
+<button class="btn btn-primary" type="button" style="width: fit-content">Agendar diagnóstico</button>
+</form>
+</sc-if>
+
+<sc-if value="{{isGov}}" hint-placeholder-val="{{false}}">
+<form class="stack" role="tabpanel" style="gap: 20px; padding: clamp(24px, 4vw, 40px); background: #fff; border: 1px solid #D5DBD8; border-radius: 14px; animation: rise .5s cubic-bezier(.2,.7,.2,1) both" aria-label="Contacto gobierno">
+<p class="mono" style="color: #B84A12; font-size: 13px">Gobierno y territorio · responde gobierno@</p>
+<div class="grid g2" style="gap: 20px">
+<div class="field"><label for="c-g-entity">Entidad</label><input id="c-g-entity" type="text"></div>
+<div class="field"><label for="c-g-role">Cargo</label><input id="c-g-role" type="text"></div>
+<div class="field"><label for="c-g-email">Correo institucional</label><input id="c-g-email" type="email" autocomplete="email"></div>
+<div class="field"><label for="c-g-town">Municipio</label><input id="c-g-town" type="text"></div>
+</div>
+<div class="field"><label for="c-g-goal">Meta o proyecto del Plan de Desarrollo</label><textarea id="c-g-goal"></textarea></div>
+<label class="check"><input type="checkbox"> Autorizo el tratamiento de mis datos según la política de SOLYON Technologies.</label>
+<button class="btn btn-primary" type="button" style="width: fit-content">Solicitar ficha técnica</button>
+</form>
+</sc-if>
+
+<sc-if value="{{isIns}}" hint-placeholder-val="{{false}}">
+<form class="stack" role="tabpanel" style="gap: 20px; padding: clamp(24px, 4vw, 40px); background: #fff; border: 1px solid #D5DBD8; border-radius: 14px; animation: rise .5s cubic-bezier(.2,.7,.2,1) both" aria-label="Insurance contact" lang="en">
+<p class="mono" style="color: #B84A12; font-size: 13px">Insurance Operations · partners@</p>
+<div class="grid g2" style="gap: 20px">
+<div class="field"><label for="c-i-name">Full name</label><input id="c-i-name" type="text" autocomplete="name"></div>
+<div class="field"><label for="c-i-company">Company</label><input id="c-i-company" type="text" autocomplete="organization"></div>
+<div class="field"><label for="c-i-email">Work email</label><input id="c-i-email" type="email" autocomplete="email"></div>
+<div class="field"><label for="c-i-type">Type of operation</label><select id="c-i-type"><option>Insurance agency</option><option>MGA</option><option>Carrier</option><option>Trucking fleet</option><option>Compliance services</option></select></div>
+</div>
+<label class="check"><input type="checkbox"> I agree to SOLYON Technologies' privacy policy.</label>
+<button class="btn btn-primary" type="button" style="width: fit-content">Apply as a design partner</button>
+</form>
+</sc-if>
+
+<sc-if value="{{isAlly}}" hint-placeholder-val="{{false}}">
+<form class="stack" role="tabpanel" style="gap: 20px; padding: clamp(24px, 4vw, 40px); background: #fff; border: 1px solid #D5DBD8; border-radius: 14px; animation: rise .5s cubic-bezier(.2,.7,.2,1) both" aria-label="Contacto aliados">
+<p class="mono" style="color: #B84A12; font-size: 13px">Aliados, academia e inversión · responde el fundador</p>
+<div class="grid g2" style="gap: 20px">
+<div class="field"><label for="c-a-name">Nombre</label><input id="c-a-name" type="text" autocomplete="name"></div>
+<div class="field"><label for="c-a-org">Organización</label><input id="c-a-org" type="text" autocomplete="organization"></div>
+<div class="field"><label for="c-a-email">Correo</label><input id="c-a-email" type="email" autocomplete="email"></div>
+<div class="field"><label for="c-a-type">Tipo de alianza</label><select id="c-a-type"><option>Distribución</option><option>Academia e investigación</option><option>Institucional</option><option>Socio estratégico</option><option>Prensa</option></select></div>
+</div>
+<div class="field"><label for="c-a-msg">Mensaje</label><textarea id="c-a-msg"></textarea></div>
+<button class="btn btn-primary" type="button" style="width: fit-content">Enviar</button>
+</form>
+</sc-if>
+</div>
+
+<aside style="flex: 1 1 300px; min-width: 0" aria-label="Canales directos">
+<p class="eyebrow">Canales directos</p>
+<div class="docs">
+<div class="doc"><div><b>WhatsApp</b><p>+57 314 790 3517</p></div><a class="link" href="https://wa.me/573147903517">Escribir ↗</a></div>
+<div class="doc"><div><b>Ventas</b><p><span class="fill">[ventas@solyontechnologies.com]</span></p></div></div>
+<div class="doc"><div><b>Gobierno</b><p><span class="fill">[gobierno@solyontechnologies.com]</span></p></div></div>
+<div class="doc"><div><b>Fundador</b><p>sergio@solyontechnologies.com</p></div></div>
+<div class="doc"><div><b>Medellín, Colombia</b><p>Respondemos en un máximo de <span class="fill">[N.º]</span> días hábiles.</p></div></div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+
+<section class="section paper" style="padding: 88px 0">
+<div class="wrap band">
+<h2 class="h2 sr">¿Primero quieres ver lo que ya construimos?</h2>
+<div class="row">
+<a class="btn btn-primary" href="Move.dc.html">Ver el piloto SOLYON Move</a>
+<a class="btn btn-secondary" href="Nosotros.dc.html">Conocer al equipo</a>
+</div>
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2650}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const a = (this.state && this.state.a) || 'retail';
+    const list = [
+      { id: 'retail', label: 'Tengo una boutique', sub: 'Retail de alto ticket' },
+      { id: 'gov', label: 'Soy entidad pública', sub: 'Gobierno y territorio' },
+      { id: 'ins', label: 'Insurance in the US', sub: 'Design partners' },
+      { id: 'ally', label: 'Aliado o academia', sub: 'Alianzas, inversión, prensa' }
+    ];
+    return {
+      options: list.map((o) => ({ ...o, pressed: o.id === a ? 'true' : 'false', pick: () => this.setState({ a: o.id }) })),
+      isRetail: a === 'retail',
+      isGov: a === 'gov',
+      isIns: a === 'ins',
+      isAlly: a === 'ally'
+    };
+  }
+}
+</script>
+</body>
+</html>

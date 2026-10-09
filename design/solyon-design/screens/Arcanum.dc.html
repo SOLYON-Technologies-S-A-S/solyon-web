@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Arcanum · Motor de IA de SOLYON</title>
+
+<link rel="stylesheet" href="../styles/01-base.css">
+<link rel="stylesheet" href="../styles/02-media.css">
+<link rel="stylesheet" href="../styles/03-motion-components.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="font-family: 'IBM Plex Sans', sans-serif; color: #0B1D26; background: #F4F5F2">
+<dc-import name="Nav" hint-size="100%,72px"></dc-import>
+
+<section class="dark phero">
+<div class="wrap hero2">
+<div class="stack" style="gap: 28px">
+<a class="crumb" href="Tecnologia.dc.html">Inicio / Tecnología / Arcanum</a>
+<span class="kicker reveal"><span class="live"></span><span>Capa de inteligencia de <b>SOLYON OS</b></span></span>
+<h1 class="h1 reveal d1">La IA que recuerda cómo funciona tu operación.</h1>
+<p class="lead reveal d2" style="margin: 0; max-width: 540px">Arcanum es el motor de IA propio de SOLYON. Organiza el conocimiento en una memoria jerárquica para que cada respuesta parta del contexto correcto, no de suposiciones.</p>
+<div class="row reveal d3">
+<a class="btn btn-primary" href="#resultados">Ver resultados</a>
+<a class="btn btn-secondary" href="Investigacion.dc.html">Ver el laboratorio</a>
+</div>
+</div>
+
+<div class="console reveal d2" aria-label="Representación simplificada de la memoria jerárquica de Arcanum">
+<div class="console-bar"><span>Arcanum · memoria jerárquica</span><span class="on">Consultando</span></div>
+<div class="bubble step-in"><small>Consulta</small>¿Qué excepciones aplican a este caso?</div>
+<div class="step-in s2" style="border: 1px solid #3A5A68; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9B8BE"><span>N1 · General</span><span>Reglas y criterio de la organización</span></div>
+<div style="border: 1px solid #4A7385; border-radius: 10px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #A9B8BE"><span>N2 · Operación</span><span>Procesos y excepciones</span></div>
+<div class="step-in s3" style="border: 1.5px solid #FF7A3D; background: rgba(255,122,61,.14); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #FF7A3D"><span>N3 · Caso</span><span>Cliente, cuenta o barrera concreta</span></div>
+<span class="chip ok" style="width: fit-content">Contexto recuperado</span>
+</div>
+</div>
+</div>
+<p class="muted" style="font-size: 14px">Lo general vive arriba y el detalle de cada caso abajo. La IA consulta solo el nivel que necesita: menos ruido, menos respuestas inventadas.</p>
+<p class="mono" style="color: #A9B8BE; font-size: 11px">Representación simplificada · datos de ejemplo</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap">
+<div class="head sr">
+<p class="eyebrow">Qué hace</p>
+<h2 class="h2">Cuatro funciones, dentro de alcances definidos.</h2>
+</div>
+<div class="feat sr">
+<div><span class="n">01</span><h3 class="h4">Recuperar conocimiento</h3><p class="muted" style="font-size: 15px">Acceso contextual a documentación y criterio estructurado.</p></div>
+<div><span class="n">02</span><h3 class="h4">Razonamiento asistido</h3><p class="muted" style="font-size: 15px">Análisis y soporte a decisiones con responsabilidad humana.</p></div>
+<div><span class="n">03</span><h3 class="h4">Orquestar agentes</h3><p class="muted" style="font-size: 15px">Coordinación de agentes especializados sobre flujos definidos.</p></div>
+<div><span class="n">04</span><h3 class="h4">Contexto operacional</h3><p class="muted" style="font-size: 15px">Uso de datos, reglas y permisos propios de cada operación.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section dark" id="resultados">
+<div class="wrap">
+<div class="head sr" style="margin-bottom: 40px">
+<p class="eyebrow">Resultados de laboratorio</p>
+<h2 class="h2">Lo que medimos internamente.</h2>
+</div>
+<div class="sr" style="display: inline-flex; align-items: center; gap: 12px; padding: 12px 18px; border: 1.5px solid #FF7A3D; border-radius: 4px; background: rgba(255,122,61,.1); margin-bottom: 24px">
+<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" style="fill: none; stroke: #FF7A3D; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex: none"><path d="M12 3l9.5 17h-19z"></path><path d="M12 10v4"></path><path d="M12 17.5v.01"></path></svg>
+<span style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; letter-spacing: .08em; text-transform: uppercase; color: #FF7A3D; font-weight: 500">Benchmark interno, no auditado</span>
+</div>
+<div class="bigstat sr">
+<div><span class="n">93%</span><span class="l">de coherencia contextual en las pruebas internas · benchmark interno, no auditado</span></div>
+<div><span class="n">−61%</span><span class="l">de alucinaciones frente a la línea base de las pruebas internas · benchmark interno, no auditado</span></div>
+</div>
+<div class="notice sr" style="margin-top: 40px">Benchmark interno de SOLYON, no auditado por terceros. Metodología y condiciones de prueba: <span class="fill">[ENLACE A NOTA TÉCNICA]</span>. Buscamos aliados académicos para una validación independiente.</div>
+</div>
+</section>
+
+<section class="section paper">
+<div class="wrap split">
+<div class="stack sr" style="gap: 20px">
+<p class="eyebrow" style="margin: 0">Principios</p>
+<h2 class="h2">IA útil, con límites claros.</h2>
+</div>
+<ul class="checks sr" style="grid-template-columns: 1fr; gap: 0">
+<li><span><b>Supervisión humana.</b> Las decisiones con consecuencias las toma una persona. Arcanum organiza el contexto.</span></li>
+<li><span><b>Alcances definidos.</b> Cada agente trabaja sobre tareas y permisos concretos, no como inteligencia general.</span></li>
+<li><span><b>Menos dependencia de terceros.</b> En SOLYON Move, las rutas se calculan con un motor propio, sin APIs de rutas externas.</span></li>
+</ul>
+</div>
+</section>
+
+<section class="section" style="padding: 88px 0">
+<div class="wrap band">
+<div class="sr"><p class="eyebrow">Investigación</p><h2 class="h2">¿Eres investigador o universidad? Validemos Arcanum juntos.</h2></div>
+<div class="row"><a class="btn btn-primary" href="Investigacion.dc.html">Ver el laboratorio</a><a class="btn btn-secondary" href="Contacto.dc.html">Proponer colaboración</a></div>
+</div>
+</section>
+
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3720}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
