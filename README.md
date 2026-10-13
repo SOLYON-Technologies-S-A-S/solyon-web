@@ -11,6 +11,11 @@ npm run dev      # http://localhost:5173
 npm run build    # next build + chequeo de placeholders
 ```
 
+## Despliegue y vista previa
+
+Cada push a una rama distinta de `main` genera una vista previa en Vercel (variables del entorno Preview).
+`main` es la rama de producción: allí el build falla mientras queden placeholders `[ ... ]`.
+
 ## Rutas
 
 `/` · `/soluciones/retail` · `/soluciones/gobierno` · `/solyon-move` · `/en/insurance` ·
