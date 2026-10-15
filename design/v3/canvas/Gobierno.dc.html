@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Gobierno y territorio · SOLYON Technologies</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/697273894deaa146d3e6695b6d31c757">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}
+.req{color:#A8606C}
+.form input:user-invalid,.form textarea:user-invalid,.form select:user-invalid{border-color:#A8606C;box-shadow:0 0 0 1px #A8606C}
+.form-ok{display:flex;flex-direction:column;gap:14px;padding:clamp(24px,3vw,36px);border-radius:22px;background:#F7EFDA;border:2px solid #B8962C;color:#1A1814;align-self:start}
+.form-ok .d3{margin:0}</style>
+</helmet>
+<div style="font-family: 'Sora', sans-serif; background: #000000; color: #EFE8D8">
+<dc-import name="Nav" cta-label="Solicitar la ficha" cta-href="#ficha" hint-size="100%,77px"></dc-import>
+<main id="contenido">
+
+<section class="s-negro phero">
+<div class="wrap hero-g">
+<div style="display: flex; flex-direction: column; gap: 26px">
+<a class="crumb" href="Main.dc.html">Inicio / Gobierno y territorio</a>
+<h1 class="d1">Sepa dónde están las <span class="tag-y">barreras de su ciudad.</span></h1>
+<p class="lead sub">Un tablero georreferenciado en vivo para controlar las barreras de su territorio. La comunidad reporta, cada secretaría gestiona lo que le corresponde y el avance queda como evidencia para el Plan de Desarrollo.</p>
+<div class="row">
+<a class="btn btn-y" href="#ficha">Solicitar la ficha técnica</a>
+<a class="btn btn-o" href="Move.dc.html">Ver el caso Medellín</a>
+</div>
+</div>
+<figure class="case-photo" style="border: 7px solid #B8962C; border-radius: 28px">
+<img src="/_blob/36b1613edf699201c1159c6cd89d9866" alt="Tablero institucional de SOLYON en vivo: usuarios activos, rutas y buses reportados, y mapa georreferenciado de incidentes viales" style="aspect-ratio: 1 / 1; object-position: 31% top">
+<figcaption>Tablero institucional en vivo durante el piloto, 2026.</figcaption>
+</figure>
+</div>
+</section>
+
+<section class="s-crema sec">
+<div class="wrap">
+<div style="max-width: 760px; display: flex; flex-direction: column; gap: 16px; margin-bottom: clamp(36px, 5vw, 56px)">
+<h2 class="d2">Tres herramientas sobre la misma infraestructura.</h2>
+</div>
+<div class="routes">
+<div class="route">
+<span class="pill ok" style="width: fit-content">Validado en Medellín</span>
+<h3 class="d3">Tablero de control de barreras, en vivo</h3>
+<p class="sub">Mapa georreferenciado en tiempo real: cada barrera con foto, tipo y estado. La entidad la gestiona de Pendiente a Revisado y la comunidad confirma cuando queda Solucionada.</p>
+</div>
+<div class="route">
+<span class="pill pend" style="width: fit-content">Disponible para implementar</span>
+<h3 class="d3">Observatorio territorial</h3>
+<p class="sub">Informes que conectan los datos del territorio con las metas del Plan de Desarrollo.</p>
+</div>
+<div class="route">
+<span class="pill pend" style="width: fit-content">Disponible para implementar</span>
+<h3 class="d3">Accesibilidad de flota por placa</h3>
+<p class="sub">Qué vehículos y rutas del transporte público son accesibles y dónde están las brechas.</p>
+</div>
+</div>
+<div style="margin-top: clamp(44px,5vw,64px); display: flex; flex-direction: column; gap: 10px; max-width: 760px">
+<h3 class="d3">Un usuario por secretaría. Cada una ve solo lo suyo.</h3>
+<p class="sub">El tablero entrega un acceso por cada secretaría contratante. Cada reporte llega directo a la que le corresponde, que lo gestiona sin ver lo de las demás.</p>
+</div>
+<div class="pb-cols c3" style="margin-top: clamp(24px,3vw,36px)">
+<div class="pb-col"><span class="ring-dot" aria-hidden="true" style="border-color: #B8962C"></span><h4 class="d4">Infraestructura</h4><p class="sub">Huecos, andenes dañados, rampas inexistentes, postes mal ubicados y paraderos estrechos.</p></div>
+<div class="pb-col"><span class="ring-dot" aria-hidden="true" style="border-color: #55534E"></span><h4 class="d4">Movilidad</h4><p class="sub">Vehículos sobre el andén, cruces peatonales invadidos y buses sin accesibilidad.</p></div>
+<div class="pb-col"><span class="ring-dot" aria-hidden="true" style="border-color: #A8606C"></span><h4 class="d4">Espacio público</h4><p class="sub">Basura que bloquea la acera, locales y ventas que invaden el andén o la rampa.</p></div>
+</div>
+<p class="small sub" style="margin-top: 16px">Las secretarías se configuran según la estructura de cada entidad.</p>
+<p class="d4" style="margin-top: clamp(36px,4vw,52px)">Lo que recibe la entidad</p>
+<ul class="checks two" aria-label="Lo que incluye">
+<li>Tablero georreferenciado en vivo para gestionar las barreras en tiempo real</li>
+<li>Un usuario por cada secretaría contratante, con acceso solo a lo suyo</li>
+<li>Capacitación a las secretarías que usarán el tablero</li>
+<li>Trabajo de campo con la comunidad, incluidas zonas descentralizadas</li>
+<li>Informes alineados a las metas del Plan de Desarrollo</li>
+<li><span>Los datos del territorio son de la entidad: los consulta y gestiona en su tablero durante el contrato y los recibe completos al terminarlo. SOLYON conserva la tecnología y solo usa datos anonimizados y agregados para mejorar el motor. Datos personales tratados según la Ley 1581 de 2012.</span></li>
+</ul>
+</div>
+</section>
+
+<dc-import name="Ciclo" hint-size="100%,1300px"></dc-import>
+
+<dc-import name="Reportes" hint-size="100%,1100px"></dc-import>
+
+<section class="s-negro sec">
+<div class="wrap">
+<div style="max-width: 820px; display: flex; flex-direction: column; gap: 14px; margin-bottom: clamp(32px, 4vw, 48px)">
+<h2 class="d2">Ya funciona en Medellín. Su proceso tiene con qué sustentarse.</h2>
+<p class="lead sub">Piloto con Ruta N y Toyota Mobility Foundation en Manrique y Aranjuez, de febrero a agosto de 2026. <a class="lnk" href="https://www.medellin.gov.co/es/sala-de-prensa/noticias/en-medellin-crean-dos-plataformas-con-inteligencia-artificial-para-facilitar-los-viajes-de-personas-con-movilidad-reducida/">Nota de la Alcaldía</a></p>
+</div>
+<div class="ev">
+<div class="facts">
+<div class="fact"><span class="n">150</span><span class="t">personas con movilidad reducida validaron la app</span><span class="stamp">Ruta N, agosto de 2026</span></div>
+<div class="fact"><span class="n">184</span><span class="t">usuarios activos al cierre, 122,7% de la meta contractual</span><span class="stamp int">Registro interno del CRM</span></div>
+<div class="fact"><span class="n">378</span><span class="t">barreras georreferenciadas con foto</span><span class="stamp int">Registro interno del piloto</span></div>
+</div>
+<div><p class="d4" style="margin-bottom: 8px">Documentación para su proceso</p>
+<div class="docs">
+<div class="doc"><div><b>Registro de SOLYON Move ante la DNDA</b><p>Registro 13-110-56: soporta la titularidad del software</p></div><span class="pill ok">Disponible</span></div>
+<div class="doc"><div><b>Ficha técnica de la solución</b><p>Alcance, entregables y requisitos técnicos</p></div><span class="pill ok">Disponible</span></div>
+<div class="doc"><div><b>Certificación del grupo de investigación</b><p>Componente de ciencia, tecnología e innovación</p></div><span class="pill ok">Disponible</span></div>
+<div class="doc" style="border-bottom: 1px solid #2A2824"><div><b>Mapeo a metas del Plan de Desarrollo</b><p>Se elabora para cada municipio</p></div><span class="pill pend">Por entidad</span></div>
+
+<p class="small sub" style="margin-top: 16px">La modalidad de contratación la define la entidad.</p></div>
+</div>
+</div>
+</section>
+
+<section class="s-crema sec" id="ficha">
+<div class="wrap split">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 class="d2">Le enviamos la ficha técnica con una propuesta para su municipio.</h2>
+<p class="lead sub">Respondemos en un máximo de 3 días hábiles.</p>
+<p class="small sub">Le responde Sergio Andrés Murillo Estrada, fundador y CEO. También por WhatsApp: <a class="lnk" href="https://wa.me/573147903517?text=Hola%2C%20quiero%20informaci%C3%B3n%20del%20tablero%20de%20barreras%20para%20mi%20municipio">+57 314 790 3517</a></p>
+<div style="margin-top: 20px">
+<details class="qa"><summary>¿Cómo puede contratarnos una alcaldía?</summary><p>La modalidad la define la entidad. Entregamos la ficha técnica para el estudio de mercado, el registro del software y la certificación del grupo de investigación para el componente de ciencia, tecnología e innovación.</p></details>
+<details class="qa"><summary>¿Qué recibe la entidad?</summary><p>Un tablero georreferenciado en vivo para controlar las barreras de su territorio: cada reporte con foto, tipo, fecha y estado, y su gestión de Pendiente a Solucionado en tiempo real. Los datos personales se anonimizan según la Ley 1581 de 2012.</p></details>
+<details class="qa"><summary>¿Cada secretaría ve todo el tablero?</summary><p>No. Cada secretaría contratante tiene su propio usuario y ve solo los reportes que le corresponden, por ejemplo Infraestructura los huecos y andenes, y Movilidad los vehículos sobre el andén.</p></details>
+<details class="qa"><summary>¿Sirve para un municipio distinto a Medellín?</summary><p>Sí. El motor de esfuerzo de Arcanum se calibra con la topografía de cada territorio y el levantamiento se hace con la comunidad local, incluidas zonas rurales y descentralizadas.</p></details>
+</div>
+</div>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+<form class="form" onSubmit="{{send}}" aria-label="Solicitud de ficha técnica">
+<div class="field"><label for="g-name">Nombre<span class="req" aria-hidden="true"> *</span></label><input id="g-name" required type="text" autocomplete="name"></div>
+<div class="field"><label for="g-role">Cargo</label><input id="g-role" type="text" autocomplete="organization-title"></div>
+<div class="field"><label for="g-entity">Entidad<span class="req" aria-hidden="true"> *</span></label><input id="g-entity" required type="text" placeholder="Alcaldía de…" autocomplete="organization"></div>
+<div class="field"><label for="g-mun">Municipio<span class="req" aria-hidden="true"> *</span></label><input id="g-mun" required type="text"></div>
+<div class="field full"><label for="g-mail">Correo institucional<span class="req" aria-hidden="true"> *</span></label><input id="g-mail" required type="email" autocomplete="email"></div>
+<div class="field full"><label for="g-goal">¿Qué meta del Plan de Desarrollo quiere atender?</label><textarea id="g-goal"></textarea><span class="hint">Opcional. Nos ayuda a preparar una propuesta concreta.</span></div>
+<label class="chk full"><input type="checkbox" required> <span>Autorizo el tratamiento de mis datos según la <a class="lnk" href="Politica.dc.html">política de tratamiento de datos</a> de SOLYON Technologies.</span></label>
+<p class="hint full" style="color: #5E574B">Los campos con * son obligatorios.</p>
+<div class="full"><button class="btn btn-y" type="submit">Solicitar la ficha técnica</button></div>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<div class="form-ok" role="status"><p class="d3">Solicitud recibida.</p><p>Le enviamos la ficha técnica a su correo institucional en los próximos minutos. En máximo 3 días hábiles le escribimos con una propuesta para su municipio.</p><div class="row" style="gap: 12px 22px"><a class="btn btn-n" href="https://wa.me/573147903517?text=Hola%2C%20quiero%20agendar%2030%20minutos%20sobre%20el%20tablero%20de%20barreras">Agendar 30 minutos por WhatsApp</a><a class="lnk" href="Move.dc.html">Ver el caso Medellín</a></div></div>
+</sc-if>
+</div>
+</section>
+
+</main>
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":6770}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const sent = !!(this.state && this.state.sent);
+    return { sent: sent, notSent: !sent, send: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); } };
+  }
+}
+</script>
+</body>
+</html>

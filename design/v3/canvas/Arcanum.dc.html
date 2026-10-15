@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Arcanum, el motor de IA de SOLYON</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/697273894deaa146d3e6695b6d31c757">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<div style="font-family: 'Sora', sans-serif; background: #000000; color: #EFE8D8">
+<dc-import name="Nav" hint-size="100%,77px"></dc-import>
+<main id="contenido">
+
+<section class="s-negro phero">
+<div class="wrap hero-g">
+<div style="display: flex; flex-direction: column; gap: 26px">
+<a class="crumb" href="Tecnologia.dc.html">Inicio / Tecnología / Arcanum</a>
+<h1 class="d1">Arcanum no adivina: <span class="tag-y">calcula.</span></h1>
+<p class="lead sub">Es el motor de IA propio y determinista de SOLYON OS. Cada respuesta parte del contexto correcto, no de suposiciones.</p>
+<div class="row">
+<a class="btn btn-y" href="#memoria">Ver cómo recuerda</a>
+<a class="btn btn-o" href="Investigacion.dc.html">Ver la investigación</a>
+</div>
+</div>
+<div class="vz-wrap"><input type="checkbox" class="vz-toggle" id="vzp-1"><label class="vz-pause" for="vzp-1">Pausar animación</label><div class="vz-frame"><svg class="vz-svg vz-mem" viewBox="0 0 600 600" role="img" aria-label="Ilustración: la memoria jerárquica de Arcanum, del nivel general al caso concreto">
+<circle cx="300" cy="300" r="262" class="m-r1"/><circle cx="300" cy="300" r="178" class="m-r2"/><circle cx="300" cy="300" r="94" class="m-r3"/>
+<g class="m-o1"><circle class="m-n1" cx="562.0" cy="300.0" r="6"/><circle class="m-n1" cx="536.1" cy="413.7" r="6"/><circle class="m-n1" cx="463.4" cy="504.8" r="6"/><circle class="m-n1" cx="358.3" cy="555.4" r="6"/><circle class="m-n1" cx="241.7" cy="555.4" r="6"/><circle class="m-n1" cx="136.6" cy="504.8" r="6"/><circle class="m-n1" cx="63.9" cy="413.7" r="6"/><circle class="m-n1" cx="38.0" cy="300.0" r="6"/><circle class="m-n1" cx="63.9" cy="186.3" r="6"/><circle class="m-n1" cx="136.6" cy="95.2" r="6"/><circle class="m-n1" cx="241.7" cy="44.6" r="6"/><circle class="m-n1" cx="358.3" cy="44.6" r="6"/><circle class="m-n1" cx="463.4" cy="95.2" r="6"/><circle class="m-n1" cx="536.1" cy="186.3" r="6"/></g><g class="m-o2"><circle class="m-n2" cx="470.0" cy="352.6" r="6"/><circle class="m-n2" cx="396.5" cy="449.6" r="6"/><circle class="m-n2" cx="277.7" cy="476.6" r="6"/><circle class="m-n2" cx="169.4" cy="421.0" r="6"/><circle class="m-n2" cx="122.2" cy="308.7" r="6"/><circle class="m-n2" cx="158.2" cy="192.4" r="6"/><circle class="m-n2" cx="260.5" cy="126.4" r="6"/><circle class="m-n2" cx="381.3" cy="141.7" r="6"/><circle class="m-n2" cx="464.1" cy="231.0" r="6"/></g><g class="m-o3"><circle class="m-n3" cx="358.4" cy="373.6" r="6"/><circle class="m-n3" cx="248.0" cy="378.3" r="6"/><circle class="m-n3" cx="209.4" cy="274.8" r="6"/><circle class="m-n3" cx="296.0" cy="206.1" r="6"/><circle class="m-n3" cx="388.1" cy="267.2" r="6"/></g>
+<path class="m-q" d="M560 40 L300 300"/>
+<circle cx="300" cy="300" r="30" class="m-core"/><circle cx="300" cy="300" r="30" class="m-core-p"/>
+<text x="300" y="26" class="m-t">General</text><text x="300" y="112" class="m-t">Operación</text><text x="300" y="196" class="m-t">Caso</text>
+<text x="548" y="30" class="m-t m-tq" text-anchor="end">Consulta</text>
+</svg></div></div>
+</div>
+</section>
+
+<section class="s-crema sec" id="memoria">
+<div class="wrap">
+<div class="pb-head">
+<h2 class="d2">Una memoria con tres niveles.</h2>
+<p class="lead sub">Lo general vive afuera y el detalle de cada caso en el centro. Toque un nivel para ver qué guarda.</p>
+</div>
+<div class="pb-mem-g">
+<div class="pb-mem" role="tablist" aria-label="Niveles de la memoria de Arcanum">
+<button class="pb-lv l1" type="button" role="tab" id="lv-gen" aria-selected="{{selGen}}" onClick="{{pickGen}}"><span>General</span></button>
+<button class="pb-lv l2" type="button" role="tab" id="lv-op" aria-selected="{{selOp}}" onClick="{{pickOp}}"><span>Operación</span></button>
+<button class="pb-lv l3" type="button" role="tab" id="lv-caso" aria-selected="{{selCaso}}" onClick="{{pickCaso}}"><span>Caso</span></button>
+</div>
+
+<sc-if value="{{isGen}}" hint-placeholder-val="{{true}}">
+<div class="pb-mem-p" role="tabpanel" id="pn-gen" aria-labelledby="lv-gen">
+<h3 class="d3">General: reglas y criterio</h3>
+<p class="sub">Lo que vale para toda la organización y cambia poco.</p>
+<ul>
+<li>Normas y políticas que aplican siempre</li>
+<li>Criterio experto convertido en reglas</li>
+<li>Permisos: quién puede ver y decidir qué</li>
+</ul>
+</div>
+</sc-if>
+
+<sc-if value="{{isOp}}" hint-placeholder-val="{{false}}">
+<div class="pb-mem-p" role="tabpanel" id="pn-op" aria-labelledby="lv-op">
+<h3 class="d3">Operación: procesos y excepciones</h3>
+<p class="sub">Cómo se trabaja en un territorio, una línea de negocio o un equipo.</p>
+<ul>
+<li>Pasos de cada proceso y sus excepciones</li>
+<li>Patrones del entorno, como pendientes y tramos difíciles</li>
+<li>Decisiones anteriores y su resultado</li>
+</ul>
+</div>
+</sc-if>
+
+<sc-if value="{{isCaso}}" hint-placeholder-val="{{false}}">
+<div class="pb-mem-p" role="tabpanel" id="pn-caso" aria-labelledby="lv-caso">
+<h3 class="d3">Caso: el detalle concreto</h3>
+<p class="sub">Una persona, una cuenta o una barrera, con su historia.</p>
+<ul>
+<li>Perfil de esfuerzo físico y equipo de asistencia de un usuario</li>
+<li>Una barrera reportada, con foto y ubicación</li>
+<li>El historial de una cuenta o un cliente</li>
+</ul>
+</div>
+</sc-if>
+</div>
+<p class="small sub" style="margin-top: clamp(28px, 4vw, 40px); max-width: 680px">Arcanum consulta solo el nivel que necesita cada pregunta: menos ruido y menos respuestas inventadas.</p>
+</div>
+</section>
+
+<section class="s-negro sec">
+<div class="wrap">
+<div class="pb-head">
+<p class="kick">Ejemplo real: SOLYON Move en Medellín</p>
+<h2 class="d2">Cómo elige una ruta.</h2>
+<p class="lead sub">Mide el esfuerzo total de cada camino y elige el de menor esfuerzo para esa persona.</p>
+</div>
+<div class="pb-box">
+<div class="flow" aria-label="Cómo decide Arcanum la ruta">
+<div class="nd"><i aria-hidden="true"></i><span>Barreras reportadas y patrones del entorno</span></div>
+<span class="ar" aria-hidden="true"></span>
+<div class="nd"><i aria-hidden="true"></i><span>Coste total de esfuerzo de cada ruta</span></div>
+<span class="ar" aria-hidden="true"></span>
+<div class="nd end"><i aria-hidden="true"></i><b>Ruta de mínimo esfuerzo</b></div>
+</div>
+</div>
+<div class="row" style="margin-top: 28px; gap: 12px 24px">
+<span class="stamp int">378 barreras georreferenciadas con foto, registro interno del piloto</span>
+<a class="lnk" href="Move.dc.html">Ver el caso Medellín</a>
+</div>
+</div>
+</section>
+
+<section class="s-papel sec">
+<div class="wrap">
+<div class="pb-head">
+<h2 class="d2">IA útil, con límites claros.</h2>
+</div>
+<div class="pb-cols c3">
+<div class="pb-col"><span class="ring-dot" aria-hidden="true"></span><h3 class="d4">Supervisión humana</h3><p class="sub">Arcanum organiza el contexto. Las decisiones con consecuencias las toma una persona.</p></div>
+<div class="pb-col"><span class="ring-dot" aria-hidden="true" style="border-color: #A8606C"></span><h3 class="d4">Alcances definidos</h3><p class="sub">Cada agente trabaja sobre tareas y permisos concretos, no como inteligencia general.</p></div>
+<div class="pb-col"><span class="ring-dot" aria-hidden="true" style="border-color: #55534E"></span><h3 class="d4">Motor de rutas propio</h3><p class="sub">En SOLYON Move las rutas se calculan con un motor propio, sin APIs de rutas de terceros.</p></div>
+</div>
+</div>
+</section>
+
+<section class="s-negro s-topo sec">
+<div class="wrap">
+<div class="pb-head">
+<h2 class="d2">Lo que medimos en laboratorio.</h2>
+<p class="lead sub">Resultados de nuestras pruebas internas. Buscamos aliados académicos para validarlos de forma independiente.</p>
+</div>
+<div class="gap" style="margin-top: 0">
+<div class="fact"><span class="n">93%</span><span class="t">de coherencia contextual en las pruebas internas</span><span class="stamp int">Benchmark interno, no auditado</span></div>
+<div class="fact"><span class="n">−61%</span><span class="t">de alucinaciones frente a la línea base</span><span class="stamp int">Benchmark interno, no auditado</span></div>
+</div>
+<p class="small sub" style="margin-top: 24px; max-width: 760px">Benchmark interno, no auditado por terceros. La nota técnica con la metodología y las condiciones de prueba está en preparación.</p>
+</div>
+</section>
+
+<section class="s-crema sec">
+<div class="wrap split" style="align-items: center">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 class="d2">¿Investiga en IA o movilidad? Validemos Arcanum juntos.</h2>
+<p class="lead sub">Abrimos nuestras pruebas a universidades y grupos de investigación.</p>
+</div>
+<div class="row">
+<a class="btn btn-n" href="Investigacion.dc.html">Ver la investigación</a>
+<a class="btn btn-o" href="Contacto.dc.html">Proponer una colaboración</a>
+</div>
+</div>
+</section>
+
+</main>
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4912}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const a = (this.state && this.state.lv) || 'gen';
+    const pick = (id) => () => this.setState({ lv: id });
+    return {
+      selGen: a === 'gen' ? 'true' : 'false',
+      selOp: a === 'op' ? 'true' : 'false',
+      selCaso: a === 'caso' ? 'true' : 'false',
+      pickGen: pick('gen'),
+      pickOp: pick('op'),
+      pickCaso: pick('caso'),
+      isGen: a === 'gen',
+      isOp: a === 'op',
+      isCaso: a === 'caso'
+    };
+  }
+}
+</script>
+</body>
+</html>

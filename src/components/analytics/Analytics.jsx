@@ -65,8 +65,8 @@ export default function Analytics() {
     <section className="consent" aria-label="Cookies de analítica">
       <p>Usamos cookies de analítica (Google Analytics) para entender cómo se usa el sitio. Solo se activan si las aceptas.</p>
       <div className="row">
-        <button className="btn btn-primary" type="button" onClick={() => decide("granted")}>Aceptar</button>
-        <button className="btn btn-secondary" type="button" onClick={() => decide("denied")}>Rechazar</button>
+        <button className="btn btn-y" type="button" onClick={() => decide("granted")}>Aceptar</button>
+        <button className="btn btn-o" type="button" onClick={() => decide("denied")}>Rechazar</button>
       </div>
     </section>
   );

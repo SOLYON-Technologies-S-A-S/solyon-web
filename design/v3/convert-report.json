@@ -1,0 +1,129 @@
+{
+ "Nav": {
+  "title": "Navegación SOLYON",
+  "forms": []
+ },
+ "Footer": {
+  "title": "Pie de página SOLYON",
+  "forms": []
+ },
+ "Explorer": {
+  "title": "Infraestructura SOLYON Move",
+  "forms": []
+ },
+ "Productos": {
+  "title": "Productos SOLYON",
+  "forms": []
+ },
+ "Reportes": {
+  "title": "Muro de reportes",
+  "forms": []
+ },
+ "Ciclo": {
+  "title": "Ciclo en tiempo real",
+  "forms": []
+ },
+ "Main": {
+  "title": "SOLYON Technologies · IA aplicada a problemas físicos",
+  "forms": [
+   "contacto"
+  ]
+ },
+ "Gobierno": {
+  "title": "Gobierno y territorio · SOLYON Technologies",
+  "forms": [
+   "gobierno"
+  ]
+ },
+ "Empresas": {
+  "title": "SOLYON OS para empresas",
+  "forms": [
+   "empresas"
+  ]
+ },
+ "Retail": {
+  "title": "SOLYON para boutiques de alto ticket",
+  "forms": [
+   "retail"
+  ]
+ },
+ "Move": {
+  "title": "SOLYON Move, movilidad accesible en Medellín",
+  "forms": []
+ },
+ "Insurance": {
+  "title": "SOLYON Insurance Operations",
+  "forms": [
+   "insurance"
+  ]
+ },
+ "Tecnologia": {
+  "title": "SOLYON OS, la tecnología de SOLYON Technologies",
+  "forms": []
+ },
+ "Arcanum": {
+  "title": "Arcanum, el motor de IA de SOLYON",
+  "forms": []
+ },
+ "Modelo": {
+  "title": "Modelo de negocio de SOLYON Technologies",
+  "forms": []
+ },
+ "Aliados": {
+  "title": "Aliados de SOLYON Technologies",
+  "forms": [
+   "aliados"
+  ]
+ },
+ "Investigacion": {
+  "title": "Investigación · SOLYON Technologies",
+  "forms": []
+ },
+ "PI": {
+  "title": "Propiedad intelectual de SOLYON Technologies",
+  "forms": []
+ },
+ "Publicaciones": {
+  "title": "Publicaciones · SOLYON Technologies",
+  "forms": [
+   "publicaciones"
+  ]
+ },
+ "Impacto": {
+  "title": "Impacto · SOLYON Technologies",
+  "forms": []
+ },
+ "ReporteBarreras": {
+  "title": "Reporte de barreras de accesibilidad",
+  "forms": [
+   "reporte"
+  ]
+ },
+ "Nosotros": {
+  "title": "Nosotros · SOLYON Technologies",
+  "forms": []
+ },
+ "Prensa": {
+  "title": "Prensa · SOLYON Technologies",
+  "forms": []
+ },
+ "Contacto": {
+  "title": "Contacto SOLYON Technologies",
+  "forms": [
+   "gobierno",
+   "empresas",
+   "retail",
+   "aliados"
+  ]
+ },
+ "Politica": {
+  "title": "Política de tratamiento de datos de SOLYON Technologies",
+  "forms": []
+ },
+ "Inversion": {
+  "title": "Inversionistas de SOLYON Technologies",
+  "forms": [
+   "inversion"
+  ]
+ }
+}

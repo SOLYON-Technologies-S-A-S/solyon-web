@@ -28,6 +28,16 @@ for (const file of htmlFiles(ROOT)) {
   found.set(route === "/" ? "/" : route.replace(/\/$/, ""), new Set(hits.map((h) => h.replace(/\s+/g, " "))));
 }
 
+// Documentos que los formularios prometen enviar "en los próximos minutos".
+const DOCS = ["DOC_FICHA_GOBIERNO_URL", "DOC_MEMO_URL", "DOC_REPORTE_URL"].filter((k) => !process.env[k]);
+if (DOCS.length) {
+  console.log(`Documentos sin configurar (los formularios los prometen): ${DOCS.join(", ")}`);
+  if (strict) {
+    console.error("✗ Build de producción detenido: configura esas variables en Vercel.");
+    process.exit(1);
+  }
+}
+
 if (found.size === 0) {
   console.log("✓ Sin placeholders [ ... ] en el HTML generado.");
   process.exit(0);

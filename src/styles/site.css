@@ -1,0 +1,22 @@
+/* Ajustes del sitio sobre el CSS del canvas (src/styles/v3.css, generado; no editar ese archivo). */
+@font-face{font-family:Sora;src:url(/fonts/sora-latin-wght-normal.woff2) format("woff2");font-weight:100 800;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Sora;src:url(/fonts/sora-latin-ext-wght-normal.woff2) format("woff2");font-weight:100 800;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+html,body{margin:0;background:#000}
+/* Migas: en el sitio cada nivel es un enlace propio */
+nav.crumb a{color:inherit;text-decoration:none}
+nav.crumb a:hover,nav.crumb a:focus-visible{text-decoration:underline;text-underline-offset:4px}
+nav.crumb [aria-current]{color:inherit}
+/* Error de envío de formularios */
+.form-err{margin:0;padding:12px 16px;border-radius:14px;background:#F7EFDA;border:1.5px solid #A8606C;color:#1A1814;font-size:15px;line-height:1.5}
+.btn[disabled]{opacity:.6;cursor:progress}
+/* Aviso de cookies con la identidad v3 */
+.consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;background:#000;color:#F2E6C6;border:1px solid #55534E;border-radius:22px;padding:18px 22px;font:400 14px/1.5 Sora,sans-serif}
+.consent p{flex:1 1 320px;margin:0}
+.consent .row{display:flex;gap:10px;flex-wrap:wrap}
+.consent .btn{min-height:44px;padding:0 20px}
+.consent .btn-o{border-color:#F2E6C6;color:#F2E6C6;background:transparent}
+/* Retratos pendientes: iniciales mientras llegan las fotos con consentimiento */
+.pc-ph.pc-ini{display:flex;align-items:center;justify-content:center;border-style:solid;background:#F7EFDA;color:#6E5A1C;font-size:clamp(40px,5vw,64px);font-weight:700;letter-spacing:-.02em}
+/* Barra superior en teléfonos angostos: el botón contextual cabe junto a la marca */
+@media (max-width:480px){.nav .brand div b{font-size:15px;letter-spacing:.06em}.nav-in{gap:10px}}
+@media (max-width:380px){.nav .brand div{display:none}}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Muro de reportes</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/697273894deaa146d3e6695b6d31c757">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<section class="s-crema sec" style="font-family: 'Sora', sans-serif">
+<div class="wrap">
+<div class="rw-head">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 640px">
+<h2 class="d2">Así se ve un reporte de Ojos de Ciudad.</h2>
+<p class="lead sub">Foto, dirección, tipo de barrera y fecha. Cada uno entra al mapa y al cálculo de esfuerzo de Arcanum.</p>
+</div>
+<div class="rw-f" role="group" aria-label="Filtrar reportes por tipo"><sc-for list="{{fs}}" as="f" hint-placeholder-count="5"><button type="button" aria-pressed="{{f.on}}" onClick="{{f.pick}}">{{f.label}}</button></sc-for></div>
+</div>
+<div class="rw-grid" aria-live="polite">
+<sc-if value="{{s0}}" hint-placeholder-val="{{true}}"><article class="rw-c"><figure><img src="/_blob/ec74723c350edd0a135a98ac6fae24a8" alt="Foto del reporte: acera estrecha, sin rampa, Cra. 52 # 81-3"><span class="ty a">Andenes y rampas</span></figure><div class="rw-b"><b>Acera estrecha, sin rampa</b><span>Cra. 52 # 81-3, Medellín. 28 jul 2026</span><span class="an">Ciudadano anonimizado</span></div></article></sc-if>
+<sc-if value="{{s1}}" hint-placeholder-val="{{true}}"><article class="rw-c"><figure><img src="/_blob/a6796919abccb20c3a1e2374f9d7ac67" alt="Foto del reporte: hueco peligroso, Cl. 52B # 80-4"><span class="ty h">Huecos y alcantarillas</span></figure><div class="rw-b"><b>Hueco peligroso</b><span>Cl. 52B # 80-4, Medellín. 30 jul 2026</span><span class="an">Ciudadano anonimizado</span></div></article></sc-if>
+<sc-if value="{{s2}}" hint-placeholder-val="{{true}}"><article class="rw-c"><figure><img src="/_blob/510c352ef9b2819120a0b9163f8b5741" alt="Foto del reporte: paradero de bus demasiado estrecho para personas con movilidad reducida, Cra. 34 # 95AA-64"><span class="ty t">Transporte</span></figure><div class="rw-b"><b>Paradero de bus demasiado estrecho para personas con movilidad reducida</b><span>Cra. 34 # 95AA-64, Medellín. 28 jul 2026</span><span class="an">Ciudadano anonimizado</span></div></article></sc-if>
+<sc-if value="{{s3}}" hint-placeholder-val="{{true}}"><article class="rw-c"><figure><img src="/_blob/8c7f88da3e458b16606283d0aa2d0d25" alt="Foto del reporte: alcantarilla abierta en obra, Cra. 52 # 91-47"><span class="ty h">Huecos y alcantarillas</span></figure><div class="rw-b"><b>Alcantarilla abierta en obra</b><span>Cra. 52 # 91-47, Medellín. 28 jul 2026</span><span class="an">Ciudadano anonimizado</span></div></article></sc-if>
+<sc-if value="{{s4}}" hint-placeholder-val="{{false}}"><article class="rw-c"><figure><img src="/_blob/dbefe3c867f7156a1975fd45a6df1722" alt="Foto del reporte: escombros en la vía, Cra. 52 # 82A-29"><span class="ty e">Escombros</span></figure><div class="rw-b"><b>Escombros en la vía</b><span>Cra. 52 # 82A-29, Medellín. 28 jul 2026</span><span class="an">Ciudadano anonimizado</span></div></article></sc-if>
+<sc-if value="{{s5}}" hint-placeholder-val="{{false}}"><article class="rw-c"><figure><img src="/_blob/9ea10f99461e36df22366f3530574bee" alt="Foto del reporte: andén angosto por obra, Av. 80 # 59AA-19"><span class="ty a">Andenes y rampas</span></figure><div class="rw-b"><b>Andén angosto por obra</b><span>Av. 80 # 59AA-19, Medellín. 30 jul 2026</span><span class="an">Ciudadano anonimizado</span></div></article></sc-if>
+<sc-if value="{{s6}}" hint-placeholder-val="{{false}}"><article class="rw-c"><figure><img src="/_blob/853bdc8c89d67feb6b5760c555bfc726" alt="Foto del reporte: hueco en el andén, Av. 80 # 52-51"><span class="ty h">Huecos y alcantarillas</span></figure><div class="rw-b"><b>Hueco en el andén</b><span>Av. 80 # 52-51, Medellín. 30 jul 2026</span><span class="an">Ciudadano anonimizado</span></div></article></sc-if>
+<sc-if value="{{s7}}" hint-placeholder-val="{{false}}"><article class="rw-c"><figure><img src="/_blob/96ecba315c13efb6ae68f018018c60ef" alt="Foto del reporte: alcantarilla sin tapa, Cl. 52B # 80-4"><span class="ty h">Huecos y alcantarillas</span></figure><div class="rw-b"><b>Alcantarilla sin tapa</b><span>Cl. 52B # 80-4, Medellín. 30 jul 2026</span><span class="an">Ciudadano anonimizado</span></div></article></sc-if>
+</div>
+<sc-if value="{{hasMore}}" hint-placeholder-val="{{true}}"><div style="margin-top: 22px"><button class="btn btn-o rw-more" type="button" onClick="{{more}}">{{moreLabel}}</button></div></sc-if>
+<p class="rw-note">Reportes reales del piloto, julio de 2026. Los nombres de quienes reportan se anonimizan según la Ley 1581 de 2012.</p>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const f = (this.state && this.state.f) || 'all';
+    const kinds = ['a', 'h', 't', 'h', 'e', 'a', 'h', 'h'];
+    const list = [{id: 'all', label: 'Todos'}, {id: 'h', label: 'Huecos y alcantarillas'}, {id: 'a', label: 'Andenes y rampas'}, {id: 't', label: 'Transporte'}, {id: 'e', label: 'Escombros'}];
+    const all = !!(this.state && this.state.all);
+    const out = { fs: list.map((x) => ({ ...x, on: x.id === f ? 'true' : 'false', pick: () => this.setState({ f: x.id }) })) };
+    let shown = 0, total = 0;
+    kinds.forEach((k, i) => { const ok = f === 'all' || f === k; if (ok) total++; const vis = ok && (all || shown < 4); if (vis) shown++; out['s' + i] = vis; });
+    out.hasMore = total > 4;
+    out.moreLabel = all ? 'Ver menos' : 'Ver los ' + total + ' reportes';
+    out.more = () => this.setState({ all: !all });
+    return out;
+  }
+}
+</script>
+</body>
+</html>

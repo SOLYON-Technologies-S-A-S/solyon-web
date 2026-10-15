@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Publicaciones · SOLYON Technologies</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/697273894deaa146d3e6695b6d31c757">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}
+.req{color:#A8606C}
+.form input:user-invalid,.form textarea:user-invalid,.form select:user-invalid{border-color:#A8606C;box-shadow:0 0 0 1px #A8606C}
+.form-ok{display:flex;flex-direction:column;gap:14px;padding:clamp(24px,3vw,36px);border-radius:22px;background:#F7EFDA;border:2px solid #B8962C;color:#1A1814;align-self:start}
+.form-ok .d3{margin:0}</style>
+</helmet>
+<div style="font-family: 'Sora', sans-serif; background: #000000; color: #EFE8D8">
+<dc-import name="Nav" hint-size="100%,77px"></dc-import>
+<main id="contenido">
+
+<section class="s-negro phero">
+<div class="wrap hero-g">
+<div style="display: flex; flex-direction: column; gap: 26px">
+<a class="crumb" href="Investigacion.dc.html">Inicio / Investigación / Publicaciones</a>
+<h1 class="d1">Lo que aprendemos, <span class="tag-y">documentado.</span></h1>
+<p class="lead sub">Reportes, notas técnicas y comunicados oficiales. Marcamos qué está publicado y qué está en preparación.</p>
+<div class="row">
+<a class="btn btn-y" href="#lista">Ver documentos</a>
+<a class="btn btn-o" href="ReporteBarreras.dc.html">Reporte de barreras</a>
+</div>
+</div>
+<div class="vz-wrap"><input type="checkbox" class="vz-toggle" id="vzp-1"><label class="vz-pause" for="vzp-1">Pausar animación</label><div class="vz-frame"><svg class="vz-svg vz-doc" viewBox="0 0 600 520" role="img" aria-label="Ilustración: un documento se convierte en conocimiento estructurado">
+<g class="d-page"><rect x="34" y="60" width="250" height="330" rx="14"/><rect class="d-h" x="58" y="82" width="110" height="12" rx="6"/><rect class="d-l" x="58" y="110" width="150" height="8" rx="4"/><rect class="d-l" x="58" y="136" width="190" height="8" rx="4"/><rect class="d-l" x="58" y="162" width="170" height="8" rx="4"/><rect class="d-l" x="58" y="188" width="120" height="8" rx="4"/><rect class="d-l" x="58" y="214" width="180" height="8" rx="4"/><rect class="d-l" x="58" y="240" width="160" height="8" rx="4"/><rect class="d-l" x="58" y="266" width="140" height="8" rx="4"/><rect class="d-l" x="58" y="292" width="190" height="8" rx="4"/><rect class="d-l" x="58" y="318" width="110" height="8" rx="4"/><rect class="d-scan" x="34" y="60" width="250" height="34"/></g>
+<path class="d-arrow" d="M296 225 L336 225"/><path class="d-arrow" d="M328 217 L336 225 L328 233"/>
+<g class="d-row" style="animation-delay:1.2s"><rect x="352" y="150" width="228" height="62" rx="12"/><text x="370" y="175" class="d-k">Nota técnica</text><text x="370" y="196" class="d-v">Memoria jerárquica</text></g><g class="d-row" style="animation-delay:1.7s"><rect x="352" y="228" width="228" height="62" rx="12"/><text x="370" y="253" class="d-k">Método</text><text x="370" y="274" class="d-v">Benchmark interno</text></g><g class="d-row" style="animation-delay:2.2s"><rect x="352" y="306" width="228" height="62" rx="12"/><text x="370" y="331" class="d-k">Estado</text><text x="370" y="352" class="d-v">En preparación</text></g><g class="d-row" style="animation-delay:2.7s"><rect x="352" y="384" width="228" height="62" rx="12"/><text x="370" y="409" class="d-k">Enlaces</text><text x="370" y="430" class="d-v">Reporte y datos</text></g><text x="34" y="440" class="d-cap">Ilustración</text></svg></div></div>
+</div>
+</section>
+
+<section class="s-crema sec" id="lista">
+<div class="wrap">
+<div style="max-width: 760px; display: flex; flex-direction: column; gap: 16px; margin-bottom: clamp(28px, 4vw, 44px)">
+<h2 class="d2">Documentos.</h2>
+<p class="lead sub">Filtra por tipo.</p>
+</div>
+<div class="pc-filter" role="group" aria-label="Filtrar documentos por tipo">
+<button class="pc-chip" type="button" aria-pressed="{{pAll}}" onClick="{{fAll}}">Todos</button>
+<button class="pc-chip" type="button" aria-pressed="{{pTec}}" onClick="{{fTec}}">Técnico</button>
+<button class="pc-chip" type="button" aria-pressed="{{pImp}}" onClick="{{fImp}}">Impacto</button>
+<button class="pc-chip" type="button" aria-pressed="{{pIns}}" onClick="{{fIns}}">Prensa institucional</button>
+<span class="pc-count" aria-live="polite">{{count}}</span>
+</div>
+
+<div class="pc-pubs pc-flat">
+<sc-if value="{{showTec}}" hint-placeholder-val="{{true}}">
+<article class="pc-pub">
+<span class="ty">Técnico</span>
+<div><h3>Nota técnica de Arcanum: memoria jerárquica y método anti-alucinación</h3><p>Arquitectura del motor y metodología del benchmark interno: 93% de coherencia contextual y −61% de alucinaciones frente a la línea base. Benchmark interno, no auditado.</p></div>
+<div class="act"><span class="pill pend">En preparación</span></div>
+</article>
+<article class="pc-pub">
+<span class="ty">Técnico</span>
+<div><h3>AI Systems for Intelligent Mobility and Insurance Optimization</h3><p>SOLYON DeepTech Research Papers, ISSN 2980-1457, vol. 1, 2025, págs. 1 a 20. Sergio Andrés Murillo Estrada. En inglés.</p></div>
+<div class="act"><span class="pill ok">Publicado</span><a class="lnk" href="https://scienti.minciencias.gov.co/gruplac/jsp/visualiza/visualizagr.jsp?nro=00000000025028">Ver en GrupLAC</a></div>
+</article>
+</sc-if>
+
+<sc-if value="{{showImp}}" hint-placeholder-val="{{true}}">
+<article class="pc-pub imp">
+<span class="ty">Impacto</span>
+<div><h3>Reporte de barreras de accesibilidad en Manrique y Aranjuez</h3><p>378 barreras georreferenciadas con foto durante el piloto SOLYON Move, febrero a agosto de 2026.</p></div>
+<div class="act"><span class="pill ok">Publicado</span><a class="lnk" href="ReporteBarreras.dc.html">Ver el reporte</a></div>
+</article>
+<article class="pc-pub imp">
+<span class="ty">Impacto</span>
+<div><h3>Video del piloto SOLYON Move</h3><p>El piloto en Medellín contado en video.</p></div>
+<div class="act"><span class="pill ok">Publicado</span><a class="lnk" href="https://www.youtube.com/watch?v=0SyayXeU42g">Ver en YouTube</a></div>
+</article>
+</sc-if>
+
+<sc-if value="{{showIns}}" hint-placeholder-val="{{true}}">
+<article class="pc-pub ins">
+<span class="ty">Prensa institucional</span>
+<div><h3>En Medellín crean dos plataformas con inteligencia artificial para facilitar los viajes de personas con movilidad reducida</h3><p>Alcaldía de Medellín, 6 de agosto de 2026</p></div>
+<div class="act"><span class="pill ok">Externo</span><a class="lnk" href="https://www.medellin.gov.co/es/sala-de-prensa/noticias/en-medellin-crean-dos-plataformas-con-inteligencia-artificial-para-facilitar-los-viajes-de-personas-con-movilidad-reducida/">Leer en medellin.gov.co</a></div>
+</article>
+<article class="pc-pub ins">
+<span class="ty">Prensa institucional</span>
+<div><h3>En Medellín crean dos plataformas con inteligencia artificial para facilitar los viajes de personas con movilidad reducida</h3><p>Ruta N, 6 de agosto de 2026</p></div>
+<div class="act"><span class="pill ok">Externo</span><a class="lnk" href="https://rutanmedellin.org/noticias/en-medell%C3%ADn-crean-dos-plataformas-con-inteligencia-artificial-para-facilitar-los-viajes-de-personas-con-movilidad-reducida">Leer en Ruta N</a></div>
+</article>
+<article class="pc-pub ins">
+<span class="ty">Prensa institucional</span>
+<div><h3>Comunicado de Toyota Mobility Foundation sobre los cinco proyectos seleccionados con Ruta N</h3><p>Toyota Mobility Foundation, 16 de febrero de 2026. En inglés.</p></div>
+<div class="act"><span class="pill ok">Externo</span><a class="lnk" href="https://toyotamobilityfoundation.org/en/press-room/pressrelease02162026/">Leer el comunicado</a></div>
+</article>
+<article class="pc-pub ins">
+<span class="ty">Prensa institucional</span>
+<div><h3>Con cinco proyectos seleccionados por Ruta N y una fundación internacional, Medellín fortalecerá la movilidad incluyente</h3><p>Alcaldía de Medellín, febrero de 2026</p></div>
+<div class="act"><span class="pill ok">Externo</span><a class="lnk" href="https://www.medellin.gov.co/es/sala-de-prensa/noticias/con-cinco-proyectos-seleccionados-por-ruta-n-y-una-fundacion-internacional-medellin-fortalecera-la-movilidad-incluyente/">Leer en medellin.gov.co</a></div>
+</article>
+</sc-if>
+</div>
+</div>
+</section>
+
+<section class="s-negro s-topo sec">
+<div class="wrap split">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 class="d2">Recibe cada nueva publicación.</h2>
+<p class="lead sub">Un correo cuando publiquemos un reporte o una nota técnica. Nada más.</p>
+</div>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+<form class="form" onSubmit="{{send}}" aria-label="Suscripción a publicaciones">
+<div class="field full"><label for="p-mail">Correo<span class="req" aria-hidden="true"> *</span></label><input id="p-mail" required type="email" autocomplete="email"></div>
+<label class="chk full"><input type="checkbox" required> <span>Autorizo el tratamiento de mis datos según la <a class="lnk" href="Politica.dc.html">política de tratamiento de datos</a> de SOLYON Technologies.</span></label>
+<p class="hint full" style="color: #A39C8E">Los campos con * son obligatorios.</p>
+<div class="full"><button class="btn btn-y" type="submit">Suscribirme</button></div>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<div class="form-ok" role="status"><p class="d3">Suscripción confirmada.</p><p>Te avisaremos por correo cuando publiquemos algo nuevo.</p><div class="row" style="gap: 12px 22px"><a class="lnk" href="ReporteBarreras.dc.html">Ver el reporte de barreras</a></div></div>
+</sc-if>
+</div>
+</section>
+
+<section class="s-papel sec-c">
+<div class="wrap split" style="align-items: center">
+<h2 class="d3">¿Investigas o escribes sobre movilidad, IA o territorio?</h2>
+<div class="row" style="justify-content: flex-end">
+<a class="btn btn-n" href="Investigacion.dc.html">Colaborar con el laboratorio</a>
+<a class="lnk" href="Prensa.dc.html">Sala de prensa</a>
+</div>
+</div>
+</section>
+
+</main>
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":3265}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const sent = !!(this.state && this.state.sent);
+    const f = (this.state && this.state.f) || 'all';
+    const n = { all: 8, tec: 2, imp: 2, ins: 4 };
+    const on = (k) => f === 'all' || f === k;
+    const go = (k) => () => this.setState({ f: k });
+    return {
+      sent: sent, notSent: !sent, send: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+      pAll: f === 'all' ? 'true' : 'false', pTec: f === 'tec' ? 'true' : 'false',
+      pImp: f === 'imp' ? 'true' : 'false', pIns: f === 'ins' ? 'true' : 'false',
+      fAll: go('all'), fTec: go('tec'), fImp: go('imp'), fIns: go('ins'),
+      showTec: on('tec'), showImp: on('imp'), showIns: on('ins'),
+      count: n[f] + (n[f] === 1 ? ' documento' : ' documentos')
+    };
+  }
+}
+</script>
+</body>
+</html>

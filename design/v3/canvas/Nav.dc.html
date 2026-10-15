@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Navegación SOLYON</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/697273894deaa146d3e6695b6d31c757">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<header class="nav" style="font-family: 'Sora', sans-serif">
+<nav aria-label="Principal" class="wrap nav-in">
+<a class="brand" href="Main.dc.html" aria-label="SOLYON Technologies, inicio">
+<img src="/_blob/849858a100c2abf7b9b407924e85bd98" alt="">
+<div><b>SOLYON</b><span>TECHNOLOGIES</span></div>
+</a>
+<div class="nav-links {{openCls}}" id="menu">
+<a href="Gobierno.dc.html">Gobierno</a>
+<a href="Empresas.dc.html">Empresas</a>
+<a href="Retail.dc.html">Retail</a>
+<a href="Move.dc.html">SOLYON Move</a>
+<a href="Tecnologia.dc.html">Tecnología</a>
+<a href="Nosotros.dc.html">Nosotros</a>
+</div>
+<div class="nav-end">
+<a class="lang" href="Insurance.dc.html" lang="en">Insurance (EN)</a>
+<a class="btn btn-y" href="{{ctaHref}}">{{ctaLabel}}</a>
+<button class="burger" type="button" aria-controls="menu" aria-expanded="{{expanded}}" aria-label="{{label}}" onClick="{{toggle}}">
+<sc-if value="{{open}}" hint-placeholder-val="{{false}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></sc-if>
+<sc-if value="{{closed}}" hint-placeholder-val="{{true}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></sc-if>
+</button>
+</div>
+</nav>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":77},"ctaLabel":{"editor":null,"default":"Hablar con el equipo"},"ctaHref":{"editor":null,"default":"Contacto.dc.html"}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const open = !!(this.state && this.state.open);
+    return { ctaLabel: this.props.ctaLabel ?? 'Hablar con el equipo', ctaHref: this.props.ctaHref ?? 'Contacto.dc.html', open: open, closed: !open, openCls: open ? 'open' : '', expanded: open ? 'true' : 'false', label: open ? 'Cerrar menú' : 'Abrir menú', toggle: () => this.setState({ open: !open }) };
+  }
+}
+</script>
+</body>
+</html>

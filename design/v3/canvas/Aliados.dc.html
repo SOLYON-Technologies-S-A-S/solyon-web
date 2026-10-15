@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Aliados de SOLYON Technologies</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/697273894deaa146d3e6695b6d31c757">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}
+.req{color:#A8606C}
+.form input:user-invalid,.form textarea:user-invalid,.form select:user-invalid{border-color:#A8606C;box-shadow:0 0 0 1px #A8606C}
+.form-ok{display:flex;flex-direction:column;gap:14px;padding:clamp(24px,3vw,36px);border-radius:22px;background:#F7EFDA;border:2px solid #B8962C;color:#1A1814;align-self:start}
+.form-ok .d3{margin:0}</style>
+</helmet>
+<div style="font-family: 'Sora', sans-serif; background: #000000; color: #EFE8D8">
+<dc-import name="Nav" hint-size="100%,77px"></dc-import>
+<main id="contenido">
+
+<section class="s-negro phero">
+<div class="wrap hero-g">
+<div style="display: flex; flex-direction: column; gap: 26px">
+<a class="crumb" href="Main.dc.html">Inicio / Aliados</a>
+<h1 class="d1">Construimos con <span class="tag-y">aliados de largo plazo.</span></h1>
+<p class="lead sub">Instituciones, equipos de campo, academia y tecnología. Cada relación, con su fuente.</p>
+<div class="row">
+<a class="btn btn-y" href="#proponer">Proponer una alianza</a>
+<a class="btn btn-o" href="#ecosistema">Ver el ecosistema</a>
+</div>
+</div>
+<div class="vz-wrap"><input type="checkbox" class="vz-toggle" id="vzp-1"><label class="vz-pause" for="vzp-1">Pausar animación</label><div class="vz-frame"><svg class="vz-svg vz-anillos" viewBox="0 0 600 600" role="img" aria-label="Los tres anillos de SOLYON, entrelazados">
+<g class="a-g1"><circle cx="300" cy="210" r="150" class="a-r a-oro"/></g><g class="a-g2"><circle cx="220" cy="350" r="150" class="a-r a-ros"/></g><g class="a-g3"><circle cx="380" cy="350" r="150" class="a-r a-pla"/></g>
+<circle cx="300" cy="303" r="12" class="a-c"/></svg></div></div>
+</div>
+</section>
+
+<section class="s-crema sec" id="ecosistema">
+<div class="wrap">
+<div class="pb-head">
+<h2 class="d2">Con quién trabajamos hoy.</h2>
+<p class="lead sub">Filtre por tipo de relación.</p>
+</div>
+<div class="pb-tabs" role="group" aria-label="Filtrar aliados por tipo">
+<button class="pb-tab" type="button" aria-pressed="{{prAll}}" onClick="{{fAll}}">Todos</button>
+<button class="pb-tab" type="button" aria-pressed="{{prInst}}" onClick="{{fInst}}"><i aria-hidden="true" style="border-color: #B8962C"></i>Institucional</button>
+<button class="pb-tab" type="button" aria-pressed="{{prProg}}" onClick="{{fProg}}"><i aria-hidden="true" style="border-color: #A8606C"></i>Programa</button>
+<button class="pb-tab" type="button" aria-pressed="{{prTec}}" onClick="{{fTec}}"><i aria-hidden="true" style="border-color: #55534E"></i>Tecnología</button>
+<button class="pb-tab" type="button" aria-pressed="{{prAca}}" onClick="{{fAca}}"><i aria-hidden="true" style="border-color: #5E574B"></i>Académico</button>
+</div>
+<div class="pb-ally" aria-live="polite">
+<sc-if value="{{showRutan}}" hint-placeholder-val="{{true}}">
+<div class="pb-a"><div class="nm"><b>Ruta N</b><span class="ty">Institucional</span></div><p>Contrató el piloto SOLYON Move dentro de Medellín Mobility for All y validó la app con 150 personas.</p><span class="src"><a class="lnk" href="https://rutanmedellin.org/noticias/en-medell%C3%ADn-crean-dos-plataformas-con-inteligencia-artificial-para-facilitar-los-viajes-de-personas-con-movilidad-reducida">Nota de Ruta N, ago. 2026</a></span></div>
+</sc-if>
+<sc-if value="{{showTmf}}" hint-placeholder-val="{{true}}">
+<div class="pb-a"><div class="nm"><b>Toyota Mobility Foundation</b><span class="ty">Institucional</span></div><p>Cofinancia el programa y seleccionó a SOLYON Move entre 5 de 20 propuestas de 6 países.</p><span class="src"><a class="lnk" href="https://toyotamobilityfoundation.org/en/press-room/pressrelease02162026/" lang="en">Comunicado de TMF, feb. 2026</a></span></div>
+</sc-if>
+<sc-if value="{{showAlc}}" hint-placeholder-val="{{true}}">
+<div class="pb-a"><div class="nm"><b>Alcaldía de Medellín</b><span class="ty">Institucional</span></div><p>El Distrito acompaña el programa y publicó los resultados de las plataformas con IA.</p><span class="src"><a class="lnk" href="https://www.medellin.gov.co/es/sala-de-prensa/noticias/en-medellin-crean-dos-plataformas-con-inteligencia-artificial-para-facilitar-los-viajes-de-personas-con-movilidad-reducida/">Nota de la Alcaldía, ago. 2026</a></span></div>
+</sc-if>
+<sc-if value="{{showCrea}}" hint-placeholder-val="{{true}}">
+<div class="pb-a"><div class="nm"><b>Créame</b><span class="ty">Institucional</span></div><p>Ruta del Emprendimiento 2026 del Distrito de Medellín, operada por Créame.</p><span class="src">Constancia disponible a solicitud</span></div>
+</sc-if>
+<sc-if value="{{showEafit}}" hint-placeholder-val="{{true}}">
+<div class="pb-a"><div class="nm"><b>Universidad EAFIT</b><span class="ty">Programa y academia</span></div><p>Equipo del programa Medellín Mobility for All, con MOBI y GRID EAFIT.</p><span class="src"><a class="lnk" href="https://www.elcolombiano.com/inicio/invencion-paisa-silla-de-ruedas-inclusion-movilidad-innovacion-MJ37941580">El Colombiano</a></span></div>
+</sc-if>
+<sc-if value="{{showComite}}" hint-placeholder-val="{{true}}">
+<div class="pb-a"><div class="nm"><b>El Comité</b><span class="ty">Programa</span></div><p>Equipo del programa Medellín Mobility for All.</p><span class="src"><a class="lnk" href="https://www.medellin.gov.co/es/sala-de-prensa/noticias/con-cinco-proyectos-seleccionados-por-ruta-n-y-una-fundacion-internacional-medellin-fortalecera-la-movilidad-incluyente/">Selección de los 5 proyectos</a></span></div>
+</sc-if>
+<sc-if value="{{showUrb}}" hint-placeholder-val="{{true}}">
+<div class="pb-a"><div class="nm"><b>Más Urbano</b><span class="ty">Programa</span></div><p>Equipo del programa Medellín Mobility for All.</p><span class="src"><a class="lnk" href="https://www.medellin.gov.co/es/sala-de-prensa/noticias/con-cinco-proyectos-seleccionados-por-ruta-n-y-una-fundacion-internacional-medellin-fortalecera-la-movilidad-incluyente/">Selección de los 5 proyectos</a></span></div>
+</sc-if>
+<sc-if value="{{showGoog}}" hint-placeholder-val="{{true}}">
+<div class="pb-a"><div class="nm"><b>Google for Startups</b><span class="ty">Tecnología</span></div><p>Infraestructura cloud para SOLYON OS.</p><span class="src">Constancia disponible a solicitud</span></div>
+</sc-if>
+<sc-if value="{{showEleven}}" hint-placeholder-val="{{true}}">
+<div class="pb-a"><div class="nm"><b>ElevenLabs Grant</b><span class="ty">Tecnología</span></div><p>Voz para accesibilidad; asistente por voz en desarrollo.</p><span class="src"><a class="lnk" href="https://elevenlabs.io/startup-grants">Programa ElevenLabs Grants</a></span></div>
+</sc-if>
+<sc-if value="{{showMinc}}" hint-placeholder-val="{{true}}">
+<div class="pb-a"><div class="nm"><b>MinCiencias</b><span class="ty">Academia</span></div><p>Grupo SOLYON DeepTech &amp; Cognitive Systems lab, avalado por SOLYON e inscrito en GrupLAC.</p><span class="src"><a class="lnk" href="https://scienti.minciencias.gov.co/gruplac/jsp/visualiza/visualizagr.jsp?nro=00000000025028">Ficha GrupLAC COL0248279</a></span></div>
+</sc-if>
+</div>
+<p class="small sub" style="margin-top: 24px; max-width: 760px">Los equipos del programa Medellín Mobility for All son aliados, no competidores: trabajamos el mismo reto desde frentes distintos.</p>
+</div>
+</section>
+
+<section class="s-negro s-topo sec">
+<div class="wrap">
+<div class="pb-head">
+<h2 class="d2">Cuatro formas de construir con nosotros.</h2>
+</div>
+<div class="pb-cols">
+<div class="pb-col"><span class="ring-dot" aria-hidden="true"></span><h3 class="d4">Distribución</h3><p class="sub">Empresas que llevan SOLYON OS a nuevos mercados o a su base de clientes, sin exclusividad.</p></div>
+<div class="pb-col"><span class="ring-dot" aria-hidden="true"></span><h3 class="d4">Academia e investigación</h3><p class="sub">Universidades y grupos que co-investigan y validan nuestra tecnología de forma independiente.</p></div>
+<div class="pb-col"><span class="ring-dot" aria-hidden="true"></span><h3 class="d4">Instituciones</h3><p class="sub">Entidades de innovación y gobiernos que articulan pilotos y escalamiento territorial.</p></div>
+<div class="pb-col"><span class="ring-dot" aria-hidden="true"></span><h3 class="d4">Socios estratégicos</h3><p class="sub">Participación directa en la compañía, con alineación de largo plazo.</p></div>
+</div>
+</div>
+</section>
+
+<section class="s-crema sec" id="proponer">
+<div class="wrap split" style="align-items: start">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h2 class="d2">Proponga una alianza.</h2>
+<p class="lead sub">Responde el fundador directamente.</p>
+<p class="small sub">También por WhatsApp: <a class="lnk" href="https://wa.me/573147903517">+57 314 790 3517</a></p>
+</div>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+<form class="form" onSubmit="{{send}}" aria-label="Propuesta de alianza">
+<div class="field"><label for="a-name">Nombre<span class="req" aria-hidden="true"> *</span></label><input id="a-name" required type="text" autocomplete="name"></div>
+<div class="field"><label for="a-org">Organización<span class="req" aria-hidden="true"> *</span></label><input id="a-org" required type="text" autocomplete="organization"></div>
+<div class="field"><label for="a-mail">Correo<span class="req" aria-hidden="true"> *</span></label><input id="a-mail" required type="email" autocomplete="email"></div>
+<div class="field"><label for="a-type">Tipo de alianza</label><select id="a-type"><option>Distribución</option><option>Academia e investigación</option><option>Institucional</option><option>Socio estratégico</option></select></div>
+<div class="field full"><label for="a-msg">Cuéntenos su propuesta</label><textarea id="a-msg" maxlength="400"></textarea><span class="hint" style="color: #5E574B">Hasta 400 caracteres.</span></div>
+<label class="chk full" style="color: #5E574B"><input type="checkbox" required> <span>Autorizo el tratamiento de mis datos según la <a class="lnk" href="Politica.dc.html">política de tratamiento de datos</a> de SOLYON Technologies.</span></label>
+<p class="hint full" style="color: #5E574B">Los campos con * son obligatorios.</p>
+<div class="full"><button class="btn btn-n" type="submit">Enviar propuesta</button></div>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<div class="form-ok" role="status"><p class="d3">Propuesta recibida.</p><p>Le responde el fundador en máximo 3 días hábiles.</p><div class="row" style="gap: 12px 22px"><a class="btn btn-n" href="https://wa.me/573147903517">Escribir por WhatsApp</a></div></div>
+</sc-if>
+</div>
+</section>
+
+</main>
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4279}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const sent = !!(this.state && this.state.sent);
+    const f = (this.state && this.state.f) || 'all';
+    const types = {
+      rutan: ["inst"],
+      tmf: ["inst"],
+      alc: ["inst"],
+      crea: ["inst"],
+      eafit: ["prog", "aca"],
+      comite: ["prog"],
+      urb: ["prog"],
+      goog: ["tec"],
+      eleven: ["tec"],
+      minc: ["aca"]
+    };
+    const show = (id) => f === 'all' || types[id].indexOf(f) !== -1;
+    return {
+      sent: sent, notSent: !sent, send: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+      prAll: f === 'all' ? 'true' : 'false',
+      fAll: () => this.setState({ f: 'all' }),
+      prInst: f === 'inst' ? 'true' : 'false',
+      fInst: () => this.setState({ f: 'inst' }),
+      prProg: f === 'prog' ? 'true' : 'false',
+      fProg: () => this.setState({ f: 'prog' }),
+      prTec: f === 'tec' ? 'true' : 'false',
+      fTec: () => this.setState({ f: 'tec' }),
+      prAca: f === 'aca' ? 'true' : 'false',
+      fAca: () => this.setState({ f: 'aca' }),
+      showRutan: show('rutan'),
+      showTmf: show('tmf'),
+      showAlc: show('alc'),
+      showCrea: show('crea'),
+      showEafit: show('eafit'),
+      showComite: show('comite'),
+      showUrb: show('urb'),
+      showGoog: show('goog'),
+      showEleven: show('eleven'),
+      showMinc: show('minc')
+    };
+  }
+}
+</script>
+</body>
+</html>

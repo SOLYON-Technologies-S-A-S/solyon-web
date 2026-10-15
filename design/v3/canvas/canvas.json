@@ -1,0 +1,335 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "Aliados.dc.html": {
+      "expand": "fill",
+      "h": 4345,
+      "is_interactive": true,
+      "page": "tecnologia",
+      "title": "/aliados",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "Arcanum.dc.html": {
+      "expand": "fill",
+      "h": 4912,
+      "is_interactive": true,
+      "page": "tecnologia",
+      "title": "/tecnologia/arcanum",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Contacto.dc.html": {
+      "expand": "fill",
+      "h": 2340,
+      "is_interactive": true,
+      "page": "confianza",
+      "title": "/contacto",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "Explorer.dc.html": {
+      "h": 900,
+      "is_interactive": true,
+      "page": "sistema",
+      "title": "Componente · Infraestructura SOLYON Move",
+      "w": 1440,
+      "x": 1520,
+      "y": 760
+    },
+    "Footer.dc.html": {
+      "h": 420,
+      "is_interactive": true,
+      "page": "sistema",
+      "title": "Componente · Footer",
+      "w": 1440,
+      "x": 1520,
+      "y": 200
+    },
+    "Gobierno.dc.html": {
+      "expand": "fill",
+      "h": 7550,
+      "is_interactive": true,
+      "page": "soluciones",
+      "title": "/soluciones/gobierno · v3",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Impacto.dc.html": {
+      "expand": "fill",
+      "h": 4337,
+      "is_interactive": true,
+      "page": "investigacion",
+      "title": "/impacto",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "Insurance.dc.html": {
+      "expand": "fill",
+      "h": 3782,
+      "is_interactive": true,
+      "page": "soluciones",
+      "title": "/soluciones/insurance (EN)",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "Investigacion.dc.html": {
+      "expand": "fill",
+      "h": 3823,
+      "is_interactive": true,
+      "page": "investigacion",
+      "title": "/investigacion",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 6189,
+      "is_interactive": true,
+      "page": "home",
+      "title": "Home · v3 Tres anillos",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Modelo.dc.html": {
+      "expand": "fill",
+      "h": 4767,
+      "is_interactive": true,
+      "page": "tecnologia",
+      "title": "/modelo",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "Move.dc.html": {
+      "expand": "fill",
+      "h": 7634,
+      "is_interactive": true,
+      "page": "soluciones",
+      "title": "/solyon-move",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "Nav.dc.html": {
+      "h": 77,
+      "is_interactive": true,
+      "page": "sistema",
+      "title": "Componente · Navegación",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Nosotros.dc.html": {
+      "expand": "fill",
+      "h": 5295,
+      "is_interactive": true,
+      "page": "confianza",
+      "title": "/nosotros",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "PI.dc.html": {
+      "expand": "fill",
+      "h": 3180,
+      "is_interactive": true,
+      "page": "investigacion",
+      "title": "/investigacion/pi",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Prensa.dc.html": {
+      "expand": "fill",
+      "h": 4930,
+      "is_interactive": true,
+      "page": "confianza",
+      "title": "/prensa",
+      "w": 1440,
+      "x": 1520,
+      "y": 0
+    },
+    "Publicaciones.dc.html": {
+      "expand": "fill",
+      "h": 3422,
+      "is_interactive": true,
+      "page": "investigacion",
+      "title": "/publicaciones",
+      "w": 1440,
+      "x": 3040,
+      "y": 0
+    },
+    "ReporteBarreras.dc.html": {
+      "expand": "fill",
+      "h": 4985,
+      "is_interactive": true,
+      "page": "investigacion",
+      "title": "/reporte-barreras",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    },
+    "Retail.dc.html": {
+      "expand": "fill",
+      "h": 5058,
+      "is_interactive": true,
+      "page": "soluciones",
+      "title": "/soluciones/retail",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "StyleGuide.dc.html": {
+      "expand": "fill",
+      "h": 3150,
+      "page": "sistema",
+      "title": "Identidad SOLYON · Tres anillos",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Tecnologia.dc.html": {
+      "expand": "fill",
+      "h": 5400,
+      "is_interactive": true,
+      "page": "tecnologia",
+      "title": "/tecnologia",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Productos.dc.html": {
+      "h": 900,
+      "is_interactive": true,
+      "page": "sistema",
+      "title": "Componente · Productos",
+      "w": 1440,
+      "x": 1520,
+      "y": 1620
+    },
+    "Reportes.dc.html": {
+      "h": 1100,
+      "is_interactive": true,
+      "page": "sistema",
+      "title": "Componente · Muro de reportes",
+      "w": 1440,
+      "x": 1520,
+      "y": 2600
+    },
+    "Ciclo.dc.html": {
+      "h": 1300,
+      "is_interactive": true,
+      "page": "sistema",
+      "title": "Componente · Ciclo en tiempo real",
+      "w": 1440,
+      "x": 1520,
+      "y": 3800
+    },
+    "Politica.dc.html": {
+      "expand": "fill",
+      "h": 4666,
+      "is_interactive": true,
+      "page": "confianza",
+      "title": "/politica-de-datos",
+      "w": 1440,
+      "x": 4560,
+      "y": 0
+    },
+    "Empresas.dc.html": {
+      "expand": "fill",
+      "h": 4300,
+      "is_interactive": true,
+      "page": "soluciones",
+      "title": "/soluciones/empresas",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    },
+    "Inversion.dc.html": {
+      "expand": "fill",
+      "h": 3514,
+      "is_interactive": true,
+      "page": "confianza",
+      "title": "/inversionistas",
+      "w": 1440,
+      "x": 6080,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-08T15:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "page": "home",
+    "view": "canvas"
+  },
+  "notes": {},
+  "order": [
+    "Main.dc.html",
+    "StyleGuide.dc.html",
+    "Nav.dc.html",
+    "Footer.dc.html",
+    "Retail.dc.html",
+    "Empresas.dc.html",
+    "Gobierno.dc.html",
+    "Move.dc.html",
+    "Insurance.dc.html",
+    "Tecnologia.dc.html",
+    "Arcanum.dc.html",
+    "Modelo.dc.html",
+    "Aliados.dc.html",
+    "Investigacion.dc.html",
+    "PI.dc.html",
+    "Publicaciones.dc.html",
+    "Impacto.dc.html",
+    "ReporteBarreras.dc.html",
+    "Nosotros.dc.html",
+    "Prensa.dc.html",
+    "Contacto.dc.html",
+    "Inversion.dc.html",
+    "Politica.dc.html",
+    "Explorer.dc.html",
+    "Productos.dc.html",
+    "Reportes.dc.html",
+    "Ciclo.dc.html"
+  ],
+  "pages": [
+    {
+      "id": "sistema",
+      "name": "00 · Sistema visual"
+    },
+    {
+      "id": "home",
+      "name": "01 · Home"
+    },
+    {
+      "id": "soluciones",
+      "name": "02 · Soluciones"
+    },
+    {
+      "id": "tecnologia",
+      "name": "03 · Tecnología"
+    },
+    {
+      "id": "investigacion",
+      "name": "04 · Investigación e impacto"
+    },
+    {
+      "id": "confianza",
+      "name": "05 · Confianza y contacto"
+    }
+  ],
+  "title": "SOLYON Technologies — Sitio web 2026"
+}

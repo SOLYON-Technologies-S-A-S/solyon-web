@@ -1,23 +1,40 @@
+// Ruta /politica-de-datos: vista generada desde el canvas v3 (Politica.dc.html). Metadatos y datos estructurados aquí.
+import Politica from "@/views/Politica";
+import JsonLd from "@/components/ui/JsonLd";
 import { pageMeta } from "@/lib/seo";
 
 export const metadata = pageMeta({
-  title: "Política de tratamiento de datos · SOLYON",
-  description: "Política de tratamiento de datos personales de SOLYON Technologies S.A.S. BIC.",
+  title: "Política de tratamiento de datos | SOLYON Technologies",
+  description: "Cómo SOLYON Technologies S.A.S. BIC recoge, usa y protege los datos personales según la Ley 1581 de 2012, y cómo ejercer sus derechos.",
   path: "/politica-de-datos",
 });
 
-// El texto legal está pendiente del fundador (SPEC §7). El marcador queda visible en desarrollo
-// y el chequeo de build bloquea la publicación en producción mientras exista.
-export default function PoliticaDeDatosPage() {
+const LD = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.solyontechnologies.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Política de tratamiento de datos",
+        "item": "https://www.solyontechnologies.com/politica-de-datos"
+      }
+    ]
+  }
+];
+
+export default function Page() {
   return (
-    <section className="section">
-      <div className="wrap">
-        <div className="head">
-          <p className="eyebrow">Legal</p>
-          <h1 className="h1">Política de tratamiento de datos</h1>
-        </div>
-        <p className="notice"><span className="fill">[TEXTO LEGAL DE LA POLÍTICA DE TRATAMIENTO DE DATOS · PENDIENTE]</span></p>
-      </div>
-    </section>
+    <>
+      {LD.map((d, i) => <JsonLd key={i} data={d} />)}
+      <Politica />
+    </>
   );
 }

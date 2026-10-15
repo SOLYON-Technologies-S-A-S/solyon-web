@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Infraestructura SOLYON Move</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/697273894deaa146d3e6695b6d31c757">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<section class="s-negro sec" style="font-family: 'Sora', sans-serif">
+<div class="wrap">
+<h2 class="d2" style="max-width: 900px; margin-bottom: clamp(32px, 4vw, 52px)">Tres piezas, un mismo dato.</h2>
+<div class="explore">
+<div class="ex-tabs" role="tablist" aria-label="Piezas de la infraestructura SOLYON Move">
+<sc-for list="{{tabs}}" as="t" hint-placeholder-count="3">
+<button class="ex-tab" type="button" role="tab" aria-selected="{{t.sel}}" onClick="{{t.pick}}"><span class="rd" aria-hidden="true"></span><b>{{t.label}}</b><small>{{t.who}}</small></button>
+</sc-for>
+</div>
+
+<sc-if value="{{isOjos}}" hint-placeholder-val="{{true}}">
+<div class="ex-panel" role="tabpanel">
+<div class="ex-media tall"><img src="/_blob/4a6050bfed219d9b69c4fda18e6f18ed" alt="Mapa de la app SOLYON Move con cientos de reportes ciudadanos en Manrique y Aranjuez"></div>
+<p>La app SOLYON Move convierte a cada usuario en ojos de la ciudad: reporta barreras e incidentes en vías y buses, y recibe rutas que evitan pendientes, escaleras y obstáculos según su perfil.</p>
+<div class="row"><span class="free">Gratis</span><a class="btn btn-y" href="https://play.google.com/store/apps/details?id=com.solyon.move">Descargar en Google Play</a></div>
+</div>
+</sc-if>
+
+<sc-if value="{{isArc}}" hint-placeholder-val="{{false}}">
+<div class="ex-panel" role="tabpanel">
+<div class="ex-media"><div class="flow" aria-label="Cómo decide Arcanum la ruta">
+<div class="nd"><i aria-hidden="true"></i><span>Barreras reportadas y patrones del entorno</span></div>
+<span class="ar" aria-hidden="true"></span>
+<div class="nd"><i aria-hidden="true"></i><span>Coste total de esfuerzo de cada ruta</span></div>
+<span class="ar" aria-hidden="true"></span>
+<div class="nd end"><i aria-hidden="true"></i><b>Ruta de mínimo esfuerzo</b></div>
+</div></div>
+<p>Arcanum es nuestro motor de IA determinista. No adivina: calcula. Con las barreras reportadas y los patrones del entorno mide el esfuerzo total de cada camino y elige el de menor esfuerzo.</p>
+<div class="row"><a class="lnk" href="Arcanum.dc.html">Conocer Arcanum</a></div>
+</div>
+</sc-if>
+
+<sc-if value="{{isPanel}}" hint-placeholder-val="{{false}}">
+<div class="ex-panel" role="tabpanel">
+<div class="ex-media"><img src="/_blob/36b1613edf699201c1159c6cd89d9866" alt="Tablero institucional de SOLYON con usuarios activos, rutas reportadas y mapa de incidentes en Medellín" style="object-position: top left"></div>
+<p>Un tablero georreferenciado en vivo: cada secretaría ve y gestiona solo las barreras que le corresponden, de Pendiente a Solucionado.</p>
+<div class="row"><a class="lnk" href="Gobierno.dc.html">Ver la solución para gobierno</a></div>
+</div>
+</sc-if>
+</div>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const a = (this.state && this.state.t) || 'ojos';
+    const list = [
+      { id: 'ojos', label: 'Ojos de Ciudad', who: 'App SOLYON Move, gratis en Google Play' },
+      { id: 'arc', label: 'Arcanum', who: 'Motor de IA determinista' },
+      { id: 'panel', label: 'Tablero institucional', who: 'Un usuario por secretaría' }
+    ];
+    return {
+      tabs: list.map((t) => ({ ...t, sel: t.id === a ? 'true' : 'false', pick: () => this.setState({ t: t.id }) })),
+      isOjos: a === 'ojos',
+      isArc: a === 'arc',
+      isPanel: a === 'panel'
+    };
+  }
+}
+</script>
+</body>
+</html>

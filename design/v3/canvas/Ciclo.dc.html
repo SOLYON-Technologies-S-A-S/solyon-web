@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Ciclo en tiempo real</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/697273894deaa146d3e6695b6d31c757">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}</style>
+</helmet>
+<section class="s-negro sec" style="font-family: 'Sora', sans-serif">
+<div class="wrap">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px; margin-bottom: clamp(32px, 4vw, 52px)">
+<div class="row" style="gap: 10px 14px; align-items: center"><span class="cy-live"><i aria-hidden="true"></i>En tiempo real, menos de 1 minuto</span><span class="stamp int">Medición interna repetida, no auditada</span></div>
+<h2 class="d2">De la calle al tablero de la entidad en menos de un minuto.</h2>
+</div>
+<div class="cy">
+<div class="cy-steps" role="tablist" aria-label="Ciclo de un reporte en SOLYON Move">
+<sc-for list="{{steps}}" as="s" hint-placeholder-count="4">
+<button class="cy-step" type="button" role="tab" aria-selected="{{s.sel}}" onClick="{{s.pick}}"><span class="nb" aria-hidden="true">{{s.n}}</span><b>{{s.label}}</b><small>{{s.who}}</small></button>
+</sc-for>
+</div>
+
+<sc-if value="{{is1}}" hint-placeholder-val="{{true}}">
+<div class="cy-shot" role="tabpanel">
+<div class="cy-media"><img src="/_blob/521bcf076414325b02326d2b7f4e4862" alt="Pantalla Reportar vía de la app SOLYON Move con dirección, descripción y foto adjunta"></div>
+<p>Una persona ve la barrera, toma la foto y la reporta desde Ojos de Ciudad, en la app SOLYON Move. Dirección, tipo y evidencia quedan en un solo registro.</p>
+</div>
+</sc-if>
+<sc-if value="{{is2}}" hint-placeholder-val="{{false}}">
+<div class="cy-shot" role="tabpanel">
+<div class="cy-media"><img src="/_blob/aa361a75855ab2cc4975269daf1754c0" alt="Detalle de un incidente en el CRM de SOLYON con descripción, fecha, foto y control de estado Pendiente o Revisado"></div>
+<p>En menos de un minuto el reporte aparece en el tablero de la secretaría que le corresponde, con su foto y su fecha. Su equipo lo revisa y cambia el estado de Pendiente a Revisado.</p>
+</div>
+</sc-if>
+<sc-if value="{{is3}}" hint-placeholder-val="{{false}}">
+<div class="cy-shot" role="tabpanel">
+<div class="cy-media"><img src="/_blob/b4d96a2e5ec56f78e75f1663b735bba9" alt="La app SOLYON Move con una ruta calculada que rodea los reportes de barreras, con tiempo y distancia estimados"></div>
+<p>Arcanum suma la barrera al cálculo de esfuerzo. La siguiente ruta que pide cualquier usuario ya la rodea, con tiempo y distancia estimados.</p>
+</div>
+</sc-if>
+<sc-if value="{{is4}}" hint-placeholder-val="{{false}}">
+<div class="cy-shot" role="tabpanel">
+<div class="cy-media"><img src="/_blob/4eff8bc04f58c22bb9621f914a3a6036" alt="Detalle de un reporte activo en la app con foto y el botón Solucionado para que la comunidad confirme el arreglo"></div>
+<p>Cuando la barrera se arregla, la propia comunidad lo confirma con Solucionado. El mapa y el tablero se actualizan para todos.</p>
+</div>
+</sc-if>
+</div>
+
+<div class="bt">
+<p class="d4">Qué se está reportando</p>
+<div class="bt-bar" role="img" aria-label="Distribución de reportes por tipo: Infraestructura 220, Movilidad 129, Espacio público 34">
+<span style="flex: 220; background: #B8962C"></span><span style="flex: 129; background: #BEBEBE"></span><span style="flex: 34; background: #A8606C"></span>
+</div>
+<div class="bt-l">
+<div class="bt-i"><b><i style="background: #B8962C"></i><em>220</em>Infraestructura</b><span>Huecos, aceras dañadas, postes mal ubicados, paraderos estrechos, rampas inexistentes</span></div>
+<div class="bt-i"><b><i style="background: #BEBEBE"></i><em>129</em>Movilidad</b><span>Vehículos mal parqueados o sobre la acera, invasión del cruce peatonal</span></div>
+<div class="bt-i"><b><i style="background: #A8606C"></i><em>34</em>Espacio público</b><span>Basura que bloquea la acera, locales que invaden el andén, ventas sobre la rampa, letreros</span></div>
+</div>
+<p style="margin-top: 18px"><span class="stamp int">Registro interno del CRM, octubre de 2026</span></p>
+</div>
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1300}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const a = (this.state && this.state.t) || 1;
+    const list = [
+      { id: 1, label: 'La ciudadanía reporta', who: 'Ojos de Ciudad, en la app' },
+      { id: 2, label: 'Llega al tablero', who: 'En menos de 1 minuto, según nuestras mediciones' },
+      { id: 3, label: 'Arcanum recalcula la ruta', who: 'Ruta de mínimo esfuerzo' },
+      { id: 4, label: 'La comunidad confirma', who: 'Estado Solucionado' }
+    ];
+    return {
+      steps: list.map((s) => ({ ...s, n: String(s.id), sel: s.id === a ? 'true' : 'false', pick: () => this.setState({ t: s.id }) })),
+      is1: a === 1, is2: a === 2, is3: a === 3, is4: a === 4
+    };
+  }
+}
+</script>
+</body>
+</html>

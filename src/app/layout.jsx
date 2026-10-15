@@ -1,269 +1,89 @@
-// src/app/layout.jsx
-
-import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
-import "@/styles/design/01-base.css";
-import "@/styles/design/02-media.css";
-import "@/styles/design/03-motion-components.css";
-import "@/styles/design/04-footer.css";
-import "@/styles/design/05-consent.css";
+// Layout raíz. Cada página trae su propia navegación y pie (componentes v3 generados desde el canvas),
+// porque el botón principal del menú cambia según la página.
+import "@/styles/v3.css";
+import "@/styles/site.css";
 import Analytics from "@/components/analytics/Analytics";
-import Nav from "@/components/layout/Nav";
-import Footer from "@/components/layout/Footer";
+import JsonLd from "@/components/ui/JsonLd";
+import { SITE_URL } from "@/lib/seo";
 
-const archivo = Archivo({ subsets: ["latin"], axes: ["wdth"], display: "swap", variable: "--font-archivo" });
-const plexSans = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], display: "swap", variable: "--font-plex-sans" });
-const plexMono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], display: "swap", variable: "--font-plex-mono" });
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://www.solyontechnologies.com";
-
-const SITE_NAME = "SOLYON Technologies";
+const TITLE = "SOLYON Technologies: IA determinista desde Medellín";
+const DESCRIPTION =
+  "Infraestructura de inteligencia operacional. Probada en la calle con SOLYON Move y en empresas con SOLYON OS. Laboratorio DeepTech en Medellín.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-
-  applicationName: SITE_NAME,
-
-  title: {
-    default:
-      "SOLYON Technologies | DeepTech & Applied AI from Medellín",
-    template:
-      "%s | SOLYON Technologies",
-  },
-
-  description:
-    "Laboratorio DeepTech desde Medellín que construye infraestructura tecnológica con inteligencia artificial aplicada, datos, software, automatización y sistemas de inteligencia operacional.",
-
-  keywords: [
-    "SOLYON Technologies",
-    "SOLYON",
-    "DeepTech",
-    "Applied AI",
-    "Inteligencia Artificial",
-    "Operational Intelligence",
-    "SOLYON OS",
-    "Arcanum",
-    "AI Agents",
-    "Data Infrastructure",
-    "Workflow Automation",
-    "Operational Systems",
-    "Institutional Software",
-    "SOLYON Move",
-    "Technology Medellín",
-    "DeepTech Colombia",
-    "Artificial Intelligence Colombia",
-    "Medellín Innovation",
-  ],
-
-  authors: [
-    {
-      name: "SOLYON Technologies",
-      url: SITE_URL,
-    },
-  ],
-
-  creator:
-    "SOLYON Technologies",
-
-  publisher:
-    "SOLYON Technologies",
-
-  category:
-    "Technology",
-
+  applicationName: "SOLYON Technologies",
+  title: { default: TITLE, template: "%s" },
+  description: DESCRIPTION,
+  authors: [{ name: "SOLYON Technologies S.A.S. BIC", url: SITE_URL }],
+  creator: "SOLYON Technologies",
+  publisher: "SOLYON Technologies",
   openGraph: {
     type: "website",
-
-
-    siteName:
-      "SOLYON Technologies",
-
-    title:
-      "SOLYON Technologies | DeepTech & Applied AI from Medellín",
-
-    description:
-      "We build technology infrastructure with applied AI. Software, data and automation that turn real-world operations into intelligent systems.",
-
-    locale:
-      "es_CO",
-
-    alternateLocale: [
-      "en_US",
-    ],
-
-    images: [
-      {
-        url: "/og-cover.jpg",
-        width: 1200,
-        height: 630,
-        alt:
-          "SOLYON Technologies — DeepTech and Applied AI from Medellín",
-      },
-    ],
+    siteName: "SOLYON Technologies",
+    title: TITLE,
+    description: DESCRIPTION,
+    locale: "es_CO",
+    images: [{ url: "/og-cover.jpg", width: 1200, height: 630, alt: "SOLYON Technologies, laboratorio DeepTech en Medellín" }],
   },
-
-  twitter: {
-    card:
-      "summary_large_image",
-
-    title:
-      "SOLYON Technologies | DeepTech & Applied AI",
-
-    description:
-      "Technology infrastructure, operational intelligence, data systems and applied AI built from Medellín.",
-
-    images: [
-      "/og-cover.jpg",
-    ],
-  },
-
-  robots: {
-    index: true,
-    follow: true,
-
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview":
-        "large",
-      "max-snippet":
-        -1,
-      "max-video-preview":
-        -1,
-    },
-  },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: ["/og-cover.jpg"] },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
+  icons: { icon: "/favicon.ico", apple: "/media/simbolo.png" },
 };
 
-export default function RootLayout({
-  children,
-}) {
-  const organizationJsonLd = {
-    "@context":
-      "https://schema.org",
+export const viewport = { themeColor: "#000000" };
 
-    "@type":
-      "Organization",
+const organization = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${SITE_URL}/#organization`,
+  name: "SOLYON Technologies",
+  legalName: "SOLYON Technologies S.A.S. BIC",
+  taxID: "902028596-1",
+  url: SITE_URL,
+  logo: `${SITE_URL}/media/simbolo.png`,
+  description:
+    "Laboratorio DeepTech de Medellín que aplica inteligencia artificial a problemas físicos: calles, operaciones y riesgos reales. Creador de SOLYON OS, Arcanum y SOLYON Move.",
+  email: "sergio@solyontechnologies.com",
+  telephone: "+57 314 790 3517",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Carrera 65 # 1 sur 21",
+    addressLocality: "Medellín",
+    addressRegion: "Antioquia",
+    addressCountry: "CO",
+  },
+  founder: { "@type": "Person", name: "Sergio Andrés Murillo Estrada", jobTitle: "Fundador y CEO" },
+  knowsAbout: ["Inteligencia artificial determinista", "Inteligencia operacional", "Movilidad accesible", "Datos territoriales", "Agentes de IA con supervisión humana"],
+  sameAs: [
+    "https://www.linkedin.com/company/solyon-technologies/",
+    "https://www.instagram.com/solyontechnologies/",
+    "https://www.facebook.com/profile.php?id=61584609184819",
+    "https://www.youtube.com/watch?v=0SyayXeU42g",
+    "https://scienti.minciencias.gov.co/gruplac/jsp/visualiza/visualizagr.jsp?nro=00000000025028",
+  ],
+};
 
-    "@id":
-      `${SITE_URL}/#organization`,
+const website = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${SITE_URL}/#website`,
+  url: SITE_URL,
+  name: "SOLYON Technologies",
+  inLanguage: "es-CO",
+  publisher: { "@id": `${SITE_URL}/#organization` },
+};
 
-    name:
-      "SOLYON Technologies",
-
-    legalName:
-      "SOLYON Technologies S.A.S. BIC",
-
-    url:
-      SITE_URL,
-
-    logo:
-      `${SITE_URL}/visual/solyon-symbol.png`,
-
-    description:
-      "DeepTech laboratory from Medellín building operational intelligence infrastructure through applied AI, data systems, software and automation.",
-
-    foundingLocation: {
-      "@type":
-        "Place",
-
-      name:
-        "Medellín, Colombia",
-    },
-
-    address: {
-      "@type":
-        "PostalAddress",
-
-      addressLocality:
-        "Medellín",
-
-      addressRegion:
-        "Antioquia",
-
-      addressCountry:
-        "CO",
-    },
-
-    sameAs: [
-      "https://www.linkedin.com/company/solyon-technologies/",
-      "https://www.instagram.com/solyontechnologies/",
-      "https://www.facebook.com/profile.php?id=61584609184819",
-      "https://www.youtube.com/watch?v=0SyayXeU42g",
-    ],
-
-    knowsAbout: [
-      "DeepTech",
-      "Applied Artificial Intelligence",
-      "Operational Intelligence",
-      "Data Infrastructure",
-      "Workflow Automation",
-      "AI Agents",
-      "Operational Systems",
-      "Mobility Technology",
-    ],
-  };
-
-  const websiteJsonLd = {
-    "@context":
-      "https://schema.org",
-
-    "@type":
-      "WebSite",
-
-    "@id":
-      `${SITE_URL}/#website`,
-
-    url:
-      SITE_URL,
-
-    name:
-      "SOLYON Technologies",
-
-    publisher: {
-      "@id":
-        `${SITE_URL}/#organization`,
-    },
-
-    inLanguage: [
-      "es-CO",
-      "en-US",
-    ],
-  };
-
+export default function RootLayout({ children }) {
   return (
-    <html
-      lang="es"
-      className={`${archivo.variable} ${plexSans.variable} ${plexMono.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="es-CO">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html:
-              JSON.stringify(
-                organizationJsonLd
-              ),
-          }}
-        />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html:
-              JSON.stringify(
-                websiteJsonLd
-              ),
-          }}
-        />
+        <link rel="preload" href="/fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <JsonLd data={organization} />
+        <JsonLd data={website} />
       </head>
-
       <body>
-        <a className="skip" href="#contenido">Saltar al contenido</a>
-        <Nav />
-        <main id="contenido">{children}</main>
-        <Footer />
+        {children}
         <Analytics />
       </body>
     </html>

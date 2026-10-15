@@ -1,9 +1,7 @@
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.solyontechnologies.com").replace(/\/$/, "");
 
-const LANGUAGE_PAIRS = {
-  "/": { es: "/", en: "/en/insurance" },
-  "/en/insurance": { es: "/", en: "/en/insurance" },
-};
+// Sin pares de idioma: /en/insurance no es traducción de ninguna página en español.
+const LANGUAGE_PAIRS = {};
 
 const abs = (path) => `${SITE_URL}${path === "/" ? "" : path}`;
 

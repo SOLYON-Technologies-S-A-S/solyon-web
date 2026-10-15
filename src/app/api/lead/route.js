@@ -87,6 +87,21 @@ export async function POST(request) {
       subject: `[Sitio web] ${audience.label}`,
       text,
     });
+    // Confirmación para quien escribió, con el documento prometido si su URL está configurada.
+    if (replyTo && audience.reply) {
+      const docUrl = audience.doc ? process.env[audience.doc] : "";
+      const intro = docUrl ? `${audience.reply}\n\n${docUrl}` : audience.replyNoDoc || audience.reply;
+      const en = body.audience === "insurance";
+      await transport
+        .sendMail({
+          from: SMTP_FROM || SMTP_USER,
+          to: replyTo,
+          replyTo: to,
+          subject: en ? "SOLYON Technologies: we received your application" : "SOLYON Technologies: recibimos tu mensaje",
+          text: `${intro}\n\n${en ? "SOLYON Technologies, Medellín, Colombia" : "SOLYON Technologies S.A.S. BIC, Medellín, Colombia"}\nWhatsApp +57 314 790 3517`,
+        })
+        .catch((err) => console.error("[lead] fallo en la confirmación:", err?.code || err?.message));
+    }
   } catch (err) {
     console.error("[lead] fallo al enviar:", err?.code || err?.message);
     return json({ error: "send_failed" }, 502);

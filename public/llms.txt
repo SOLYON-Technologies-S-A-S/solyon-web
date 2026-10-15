@@ -1,0 +1,25 @@
+# SOLYON Technologies
+
+> Laboratorio DeepTech de Medellín, Colombia (SOLYON Technologies S.A.S. BIC, NIT 902028596-1). Aplica inteligencia artificial a problemas físicos: calles, operaciones y riesgos reales. Su infraestructura, SOLYON OS, tiene como motor a Arcanum, una IA determinista con memoria jerárquica.
+
+Cada cifra de este sitio indica su fuente. Las cifras marcadas como "registro interno" o "benchmark interno, no auditado" son mediciones propias sin auditoría externa.
+
+## Productos
+- [SOLYON Move](https://www.solyontechnologies.com/solyon-move): app gratuita para Android que calcula la ruta de menor esfuerzo para personas con movilidad reducida y permite reportar barreras (Ojos de Ciudad). Validada con 150 personas en Manrique y Aranjuez, Medellín (Ruta N y Alcaldía de Medellín, agosto de 2026). Registro DNDA 13-110-56.
+- [Tablero de control de barreras para entidades públicas](https://www.solyontechnologies.com/soluciones/gobierno): tablero georreferenciado en vivo; un usuario por cada secretaría contratante, cada una ve solo lo que le corresponde.
+- [SOLYON OS para empresas](https://www.solyontechnologies.com/soluciones/empresas): conocimiento, datos, sistemas y agentes de IA con supervisión humana. Diagnóstico sin costo, piloto pagado, licencia.
+- [Retail de alto ticket](https://www.solyontechnologies.com/soluciones/retail): lanzamientos privados, reservas y cobros para boutiques en 21 días. Activación COP 8.600.000; desde el mes 2, COP 1.200.000 al mes.
+- [EL-VÍA DOT Express](https://play.google.com/store/apps/details?id=com.solyon.elvia): entrenamiento con IA para conductores latinos en EE. UU. (freemium).
+
+## Tecnología
+- [SOLYON OS](https://www.solyontechnologies.com/tecnologia): infraestructura de inteligencia operacional reutilizable entre industrias.
+- [Arcanum](https://www.solyontechnologies.com/tecnologia/arcanum): motor de IA determinista; con los mismos datos da la misma respuesta.
+
+## Evidencia
+- [Reporte de barreras](https://www.solyontechnologies.com/reporte-barreras): resumen público por tipo (infraestructura, movilidad, espacio público) y dataset anonimizado.
+- [Impacto](https://www.solyontechnologies.com/impacto) y [Prensa](https://www.solyontechnologies.com/prensa): notas oficiales de la Alcaldía de Medellín, Ruta N y Toyota Mobility Foundation.
+- [Investigación](https://www.solyontechnologies.com/investigacion): grupo SOLYON DeepTech & Cognitive Systems lab, GrupLAC COL0248279.
+
+## Compañía
+- [Nosotros](https://www.solyontechnologies.com/nosotros), [Inversionistas](https://www.solyontechnologies.com/inversionistas), [Contacto](https://www.solyontechnologies.com/contacto)
+- Contacto: sergio@solyontechnologies.com, WhatsApp +57 314 790 3517

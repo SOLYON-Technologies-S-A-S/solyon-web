@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Reporte de barreras de accesibilidad</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="/_blob/697273894deaa146d3e6695b6d31c757">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;display=swap">
+<style>body{margin:0}
+.s-crema .bt{border-top-color:#DCCFAE}
+.s-crema .bt-i b{color:#1A1814}
+.s-crema .bt-i span{color:#5E574B}
+.req{color:#A8606C}
+.form input:user-invalid,.form textarea:user-invalid,.form select:user-invalid{border-color:#A8606C;box-shadow:0 0 0 1px #A8606C}
+.form-ok{display:flex;flex-direction:column;gap:14px;padding:clamp(24px,3vw,36px);border-radius:22px;background:#F7EFDA;border:2px solid #B8962C;color:#1A1814;align-self:start}
+.form-ok .d3{margin:0}</style>
+</helmet>
+<div style="font-family: 'Sora', sans-serif; background: #000000; color: #EFE8D8">
+<dc-import name="Nav" hint-size="100%,77px"></dc-import>
+<main id="contenido">
+
+<section class="s-negro phero">
+<div class="wrap hero-g">
+<div style="display: flex; flex-direction: column; gap: 26px">
+<a class="crumb" href="Main.dc.html">Inicio / Investigación / Reporte de barreras</a>
+<h1 class="d1">378 barreras, <span class="tag-y">mapeadas una por una.</span></h1>
+<p class="lead sub">El reporte del piloto SOLYON Move en Manrique y Aranjuez, para que entidades, academia y organizaciones prioricen dónde intervenir.</p>
+<div class="row">
+<a class="btn btn-y" href="#solicitar">Solicitar el reporte</a>
+<a class="btn btn-o" href="Move.dc.html">Ver el piloto</a>
+</div>
+<span class="stamp int">Registro interno del piloto, febrero a agosto de 2026</span>
+</div>
+<figure class="case-photo" style="border: 7px solid #B8962C; border-radius: 28px; max-width: 480px; justify-self: end; width: 100%">
+<img src="/_blob/537ab007673a147f387a0545bc2c50fa" alt="Reporte de una barrera en el panel de SOLYON: dirección, descripción de andenes sin acceso a ambos costados, fecha y tres fotos de la vía; quien reporta aparece como ciudadano anonimizado" style="aspect-ratio: 4 / 5; object-position: top">
+<figcaption>Un reporte real del piloto. Datos personales anonimizados.</figcaption>
+</figure>
+</div>
+</section>
+
+<dc-import name="Reportes" hint-size="100%,1100px"></dc-import>
+
+<section class="s-negro s-topo sec">
+<div class="wrap">
+<h2 class="d2" style="max-width: 900px; margin-bottom: clamp(32px, 4vw, 52px)">Dos fuentes, un mismo mapa.</h2>
+<div class="explore">
+<div class="ex-tabs" role="tablist" aria-label="Metodología del levantamiento">
+<button class="ex-tab" type="button" role="tab" id="mt-c" aria-selected="{{sCiu}}" onClick="{{pCiu}}"><span class="rd" aria-hidden="true"></span><b>Reportes ciudadanos</b><small>Ojos de Ciudad, en la app SOLYON Move</small></button>
+<button class="ex-tab" type="button" role="tab" id="mt-f" aria-selected="{{sCam}}" onClick="{{pCam}}"><span class="rd" aria-hidden="true"></span><b>Levantamiento en campo</b><small>Recorridos con el equipo y los aliados</small></button>
+</div>
+<sc-if value="{{isCiu}}" hint-placeholder-val="{{true}}">
+<div class="ex-panel" role="tabpanel" id="mp-c" aria-labelledby="mt-c">
+<div class="ex-media"><img src="/_blob/36b1613edf699201c1159c6cd89d9866" alt="Tablero institucional de SOLYON con usuarios activos, rutas y mapa de incidentes reportados en Medellín" style="object-position: top left"></div>
+<p>Las personas usuarias reportan desde la app la barrera con foto y ubicación. Cada reporte llega al tablero de la entidad en tiempo real.</p>
+</div>
+</sc-if>
+<sc-if value="{{isCam}}" hint-placeholder-val="{{false}}">
+<div class="ex-panel" role="tabpanel" id="mp-f" aria-labelledby="mt-f">
+<div class="ex-wrap"><input type="checkbox" class="vz-toggle" id="vzx-1"><div class="ex-media" style="padding: 16px"><svg class="vz-svg vz-perf" viewBox="0 0 620 470" role="img" aria-label="Ilustración: perfil de pendiente de los últimos 400 metros entre la estación y la casa, con tramos de más del 6 por ciento">
+<g class="p-grid"><path d="M60 400 L560 400"/><path d="M60 330 L560 330"/><path d="M60 260 L560 260"/><path d="M60 190 L560 190"/><path d="M60 120 L560 120"/></g>
+<path class="p-area" d="M60.0,400.0 L66.2,398.7 L72.5,397.4 L78.8,396.2 L85.0,394.9 L91.2,393.6 L97.5,392.3 L103.8,391.0 L110.0,389.8 L116.2,388.5 L122.5,387.2 L128.8,385.9 L135.0,384.6 L141.2,380.0 L147.5,375.3 L153.8,370.6 L160.0,365.9 L166.2,361.2 L172.5,356.5 L178.8,351.8 L185.0,347.1 L191.2,342.4 L197.5,337.7 L203.8,333.1 L210.0,328.4 L216.2,323.7 L222.5,319.0 L228.8,314.3 L235.0,313.0 L241.2,311.7 L247.5,310.5 L253.8,309.2 L260.0,307.9 L266.2,306.6 L272.5,305.3 L278.8,304.1 L285.0,302.8 L291.2,301.5 L297.5,300.2 L303.8,298.9 L310.0,297.7 L316.2,296.4 L322.5,295.1 L328.8,293.8 L335.0,292.5 L341.2,286.6 L347.5,280.6 L353.8,274.6 L360.0,268.7 L366.2,262.7 L372.5,256.7 L378.8,250.8 L385.0,244.8 L391.2,238.8 L397.5,232.9 L403.8,226.9 L410.0,220.9 L416.2,214.9 L422.5,209.0 L428.8,203.0 L435.0,197.0 L441.2,191.1 L447.5,185.1 L453.8,179.1 L460.0,173.2 L466.2,167.2 L472.5,165.9 L478.8,164.6 L485.0,163.4 L491.2,162.1 L497.5,160.8 L503.8,159.5 L510.0,158.2 L516.2,157.0 L522.5,155.7 L528.8,154.4 L535.0,153.1 L541.2,151.8 L547.5,150.6 L553.8,149.3 L560.0,148.0 L560.0,400 L60.0,400 Z"/><path class="p-line" d="M60.0,400.0 L66.2,398.7 L72.5,397.4 L78.8,396.2 L85.0,394.9 L91.2,393.6 L97.5,392.3 L103.8,391.0 L110.0,389.8 L116.2,388.5 L122.5,387.2 L128.8,385.9 L135.0,384.6 L141.2,380.0 L147.5,375.3 L153.8,370.6 L160.0,365.9 L166.2,361.2 L172.5,356.5 L178.8,351.8 L185.0,347.1 L191.2,342.4 L197.5,337.7 L203.8,333.1 L210.0,328.4 L216.2,323.7 L222.5,319.0 L228.8,314.3 L235.0,313.0 L241.2,311.7 L247.5,310.5 L253.8,309.2 L260.0,307.9 L266.2,306.6 L272.5,305.3 L278.8,304.1 L285.0,302.8 L291.2,301.5 L297.5,300.2 L303.8,298.9 L310.0,297.7 L316.2,296.4 L322.5,295.1 L328.8,293.8 L335.0,292.5 L341.2,286.6 L347.5,280.6 L353.8,274.6 L360.0,268.7 L366.2,262.7 L372.5,256.7 L378.8,250.8 L385.0,244.8 L391.2,238.8 L397.5,232.9 L403.8,226.9 L410.0,220.9 L416.2,214.9 L422.5,209.0 L428.8,203.0 L435.0,197.0 L441.2,191.1 L447.5,185.1 L453.8,179.1 L460.0,173.2 L466.2,167.2 L472.5,165.9 L478.8,164.6 L485.0,163.4 L491.2,162.1 L497.5,160.8 L503.8,159.5 L510.0,158.2 L516.2,157.0 L522.5,155.7 L528.8,154.4 L535.0,153.1 L541.2,151.8 L547.5,150.6 L553.8,149.3 L560.0,148.0" style="--len:579"/><path class="p-st" d="M135.0,384.6 L141.2,380.0 L147.5,375.3 L153.8,370.6 L160.0,365.9 L166.2,361.2 L172.5,356.5 L178.8,351.8 L185.0,347.1 L191.2,342.4 L197.5,337.7 L203.8,333.1 L210.0,328.4 L216.2,323.7 L222.5,319.0 L228.8,314.3 L235.0,313.0"/><path class="p-st" d="M335.0,292.5 L341.2,286.6 L347.5,280.6 L353.8,274.6 L360.0,268.7 L366.2,262.7 L372.5,256.7 L378.8,250.8 L385.0,244.8 L391.2,238.8 L397.5,232.9 L403.8,226.9 L410.0,220.9 L416.2,214.9 L422.5,209.0 L428.8,203.0 L435.0,197.0 L441.2,191.1 L447.5,185.1 L453.8,179.1 L460.0,173.2 L466.2,167.2 L472.5,165.9"/>
+<circle class="p-walk" r="8" style="offset-path: path('M60.0,400.0 L66.2,398.7 L72.5,397.4 L78.8,396.2 L85.0,394.9 L91.2,393.6 L97.5,392.3 L103.8,391.0 L110.0,389.8 L116.2,388.5 L122.5,387.2 L128.8,385.9 L135.0,384.6 L141.2,380.0 L147.5,375.3 L153.8,370.6 L160.0,365.9 L166.2,361.2 L172.5,356.5 L178.8,351.8 L185.0,347.1 L191.2,342.4 L197.5,337.7 L203.8,333.1 L210.0,328.4 L216.2,323.7 L222.5,319.0 L228.8,314.3 L235.0,313.0 L241.2,311.7 L247.5,310.5 L253.8,309.2 L260.0,307.9 L266.2,306.6 L272.5,305.3 L278.8,304.1 L285.0,302.8 L291.2,301.5 L297.5,300.2 L303.8,298.9 L310.0,297.7 L316.2,296.4 L322.5,295.1 L328.8,293.8 L335.0,292.5 L341.2,286.6 L347.5,280.6 L353.8,274.6 L360.0,268.7 L366.2,262.7 L372.5,256.7 L378.8,250.8 L385.0,244.8 L391.2,238.8 L397.5,232.9 L403.8,226.9 L410.0,220.9 L416.2,214.9 L422.5,209.0 L428.8,203.0 L435.0,197.0 L441.2,191.1 L447.5,185.1 L453.8,179.1 L460.0,173.2 L466.2,167.2 L472.5,165.9 L478.8,164.6 L485.0,163.4 L491.2,162.1 L497.5,160.8 L503.8,159.5 L510.0,158.2 L516.2,157.0 L522.5,155.7 L528.8,154.4 L535.0,153.1 L541.2,151.8 L547.5,150.6 L553.8,149.3 L560.0,148.0')"/>
+<g transform="translate(60.0 400.0)"><circle r="10" class="vz-a"/></g><g transform="translate(560.0 148.0)"><circle r="10" class="vz-b"/></g>
+<text x="60.0" y="428" class="p-t">Estación, 0 m</text><text x="310.0" y="428" class="p-t" text-anchor="middle">200 m</text><text x="560.0" y="428" class="p-t" text-anchor="end">Casa, 400 m</text>
+<g transform="translate(398 169)"><rect x="-58" y="-20" width="116" height="30" rx="15" class="p-tag"/><text y="0" class="p-tt" text-anchor="middle">más de 6%</text></g>
+<text x="60" y="458" class="p-c">Ilustración de una ladera típica; no corresponde a una calle específica.</text>
+</svg></div><label class="vz-pause" for="vzx-1">Pausar animación</label></div>
+<p>El equipo recorre las calles de Manrique y Aranjuez para levantar y validar las barreras en el sitio, junto con Ruta N y Toyota Mobility Foundation.</p>
+</div>
+</sc-if>
+</div>
+<div class="gap">
+<div class="fact"><span class="n">378</span><span class="t">barreras georreferenciadas con foto</span><span class="stamp int">Registro interno del piloto</span></div>
+<div class="fact"><span class="n">150</span><span class="t">personas con movilidad reducida validaron la app</span><span class="stamp">Ruta N y Alcaldía de Medellín, agosto de 2026</span></div>
+<div class="fact"><span class="n">184</span><span class="t">usuarios activos al cierre del piloto</span><span class="stamp int">Registro interno del CRM</span></div>
+<div class="fact"><span class="n">2</span><span class="t">comunas: 3 Manrique y 4 Aranjuez, de febrero a agosto de 2026</span><span class="stamp">Ruta N y Toyota Mobility Foundation</span></div>
+</div>
+</div>
+</section>
+
+<section class="s-crema sec" id="solicitar">
+<div class="wrap">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 820px">
+<h2 class="d2">Lo que muestra el reporte.</h2>
+<p class="lead sub">Resumen público. Cada barrera tiene foto, ubicación, tipo y fecha, y se clasifica en tres grupos.</p>
+</div>
+<div class="bt" style="margin-top: clamp(28px,4vw,40px)">
+<div class="bt-bar" role="img" aria-label="Distribución de reportes por tipo: Infraestructura 220, Movilidad 129, Espacio público 34">
+<span style="flex: 220; background: #B8962C"></span><span style="flex: 129; background: #55534E"></span><span style="flex: 34; background: #A8606C"></span>
+</div>
+<div class="bt-l">
+<div class="bt-i"><b><i style="background: #B8962C"></i><em>220</em>Infraestructura</b><span>Huecos, aceras dañadas, postes mal ubicados, paraderos estrechos, rampas inexistentes</span></div>
+<div class="bt-i"><b><i style="background: #55534E"></i><em>129</em>Movilidad</b><span>Vehículos mal parqueados o sobre la acera, invasión del cruce peatonal</span></div>
+<div class="bt-i"><b><i style="background: #A8606C"></i><em>34</em>Espacio público</b><span>Basura que bloquea la acera, locales que invaden el andén, ventas sobre la rampa, letreros</span></div>
+</div>
+<p style="margin-top: 18px"><span class="stamp int">383 reportes en el CRM a octubre de 2026; 378 al cierre del piloto en agosto</span></p>
+</div>
+</div>
+<div class="wrap split" style="margin-top: clamp(48px,6vw,80px)">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<h3 class="d2">Recibe el dataset completo en tu correo.</h3>
+<p class="lead sub">Gratis para entidades, academia, organizaciones y medios.</p>
+<ul class="checks">
+<li>Datos personales anonimizados antes de publicar</li>
+<li>Tratamiento según la Ley 1581 de 2012</li>
+<li><span>El reporte es de SOLYON Technologies. Puede usarlo citando la fuente; para uso comercial, escríbanos.</span></li>
+</ul>
+</div>
+<sc-if value="{{notSent}}" hint-placeholder-val="{{true}}">
+<form class="form" onSubmit="{{send}}" aria-label="Solicitud del reporte de barreras">
+<div class="field"><label for="b-name">Nombre<span class="req" aria-hidden="true"> *</span></label><input id="b-name" required type="text" autocomplete="name"></div>
+<div class="field"><label for="b-mail">Correo<span class="req" aria-hidden="true"> *</span></label><input id="b-mail" required type="email" autocomplete="email"></div>
+<div class="field"><label for="b-org">Organización</label><input id="b-org" type="text" autocomplete="organization"></div>
+<div class="field"><label for="b-prof">Perfil</label><select id="b-prof"><option>Entidad pública</option><option>Academia</option><option>Organización social</option><option>Medio de comunicación</option><option>Empresa</option><option>Ciudadano</option></select></div>
+<div class="field full"><label for="b-use">¿Para qué usarás los datos?</label><textarea id="b-use" maxlength="280"></textarea><span class="hint" style="color: #5E574B">Opcional. Nos ayuda a definir la licencia de uso.</span></div>
+<label class="chk full" style="color: #5E574B"><input type="checkbox" required> <span>Autorizo el tratamiento de mis datos según la <a class="lnk" href="Politica.dc.html">política de tratamiento de datos</a> de SOLYON Technologies.</span></label>
+<p class="hint full" style="color: #5E574B">Los campos con * son obligatorios.</p>
+<div class="full row"><button class="btn btn-n" type="submit">Solicitar el reporte</button><a class="lnk" href="Gobierno.dc.html">¿Lo quieres para tu municipio?</a></div>
+</form>
+</sc-if>
+<sc-if value="{{sent}}" hint-placeholder-val="{{false}}">
+<div class="form-ok" role="status"><p class="d3">Solicitud recibida.</p><p>Te enviamos el reporte a tu correo en los próximos minutos.</p><div class="row" style="gap: 12px 22px"><a class="lnk" href="Gobierno.dc.html">¿Lo quieres para tu municipio?</a></div></div>
+</sc-if>
+</div>
+</section>
+
+</main>
+<dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":4580}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const sent = !!(this.state && this.state.sent);
+    const a = (this.state && this.state.m) || 'ciu';
+    return {
+      sent: sent, notSent: !sent, send: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ sent: true }); },
+      sCiu: a === 'ciu' ? 'true' : 'false',
+      sCam: a === 'cam' ? 'true' : 'false',
+      isCiu: a === 'ciu',
+      isCam: a === 'cam',
+      pCiu: () => this.setState({ m: 'ciu' }),
+      pCam: () => this.setState({ m: 'cam' })
+    };
+  }
+}
+</script>
+</body>
+</html>

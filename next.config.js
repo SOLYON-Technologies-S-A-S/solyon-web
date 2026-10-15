@@ -7,7 +7,13 @@ const OLD_ROUTES = {
   "/about": "/nosotros",
   "/ecosystem": "/tecnologia",
   "/contact": "/contacto",
-  "/investors": "/investigacion",
+  "/investors": "/inversionistas",
+  "/inversion": "/inversionistas",
+  "/empresas": "/soluciones/empresas",
+  "/gobierno": "/soluciones/gobierno",
+  "/retail": "/soluciones/retail",
+  "/move": "/solyon-move",
+  "/privacy": "/politica-de-datos",
   "/store": "/",
 };
 

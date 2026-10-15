@@ -1,20 +1,13 @@
-// src/app/robots.js
+import { SITE_URL } from "@/lib/seo";
 
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.solyontechnologies.com";
+// Rastreadores de buscadores y de motores de IA permitidos de forma explícita.
+const AI_BOTS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User", "PerplexityBot", "Perplexity-User", "Google-Extended", "Applebot-Extended", "CCBot", "Bingbot"];
 
-/**
- * Robots de Next.js (App Router)
- * Documentación: https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots
- */
 export default function robots() {
   return {
     rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-        disallow: ["/api/", "/api/*"],
-      },
+      { userAgent: "*", allow: "/", disallow: ["/api/"] },
+      ...AI_BOTS.map((userAgent) => ({ userAgent, allow: "/", disallow: ["/api/"] })),
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,
