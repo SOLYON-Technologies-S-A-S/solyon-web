@@ -18,8 +18,7 @@ python3 design/v3/tools/gen_routes.py design/v3 .   # regenera rutas, metadatos 
 ## Despliegue y vista previa
 
 Cada push a una rama distinta de `main` genera una vista previa en Vercel (variables del entorno Preview).
-`main` es la rama de producción: allí el build falla mientras queden placeholders `[ ... ]` o falten los documentos
-que los formularios prometen enviar (ver abajo).
+`main` es la rama de producción: allí el build falla mientras queden placeholders `[ ... ]`.
 
 ## Rutas
 
@@ -55,9 +54,9 @@ Redirecciones 301 (`next.config.js`): `/technology`, `/impact`, `/about`, `/ecos
 | `DOC_REPORTE_URL` | URL del dataset anonimizado del reporte de barreras. |
 | `NEXT_PUBLIC_GA_ID` | ID de GA4 (`G-XXXXXXX`). Sin ella no se carga analítica ni el aviso de cookies. Es de build. |
 
-Los mensajes de confirmación del sitio prometen la ficha, el memo y el reporte "en los próximos minutos". Si una
-variable `DOC_*` falta, la confirmación por correo sale sin el enlace y con un texto que promete el envío manual,
-pero **el build de producción falla** para que esa promesa no quede incumplida.
+Mientras falte una variable `DOC_*`, la confirmación por correo promete el envío del documento en máximo 3 días
+hábiles, igual que el mensaje del sitio, y el equipo lo envía a mano. Con la variable configurada, el enlace sale en
+la confirmación automática.
 
 ## Formularios
 

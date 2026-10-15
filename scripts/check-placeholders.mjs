@@ -28,15 +28,10 @@ for (const file of htmlFiles(ROOT)) {
   found.set(route === "/" ? "/" : route.replace(/\/$/, ""), new Set(hits.map((h) => h.replace(/\s+/g, " "))));
 }
 
-// Documentos que los formularios prometen enviar "en los próximos minutos".
+// Documentos que se adjuntan en la confirmación automática. Sin ellos, la confirmación promete el envío
+// manual en 3 días hábiles (igual que el sitio), así que solo se avisa.
 const DOCS = ["DOC_FICHA_GOBIERNO_URL", "DOC_MEMO_URL", "DOC_REPORTE_URL"].filter((k) => !process.env[k]);
-if (DOCS.length) {
-  console.log(`Documentos sin configurar (los formularios los prometen): ${DOCS.join(", ")}`);
-  if (strict) {
-    console.error("✗ Build de producción detenido: configura esas variables en Vercel.");
-    process.exit(1);
-  }
-}
+if (DOCS.length) console.log(`Aviso: documentos sin configurar, se enviarán a mano: ${DOCS.join(", ")}`);
 
 if (found.size === 0) {
   console.log("✓ Sin placeholders [ ... ] en el HTML generado.");
