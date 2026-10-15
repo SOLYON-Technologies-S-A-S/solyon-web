@@ -97,7 +97,7 @@ export async function POST(request) {
           from: SMTP_FROM || SMTP_USER,
           to: replyTo,
           replyTo: to,
-          subject: en ? "SOLYON Technologies: we received your application" : "SOLYON Technologies: recibimos tu mensaje",
+          subject: en ? "SOLYON Technologies: we received your application" : "SOLYON Technologies: solicitud recibida",
           text: `${intro}\n\n${en ? "SOLYON Technologies, Medellín, Colombia" : "SOLYON Technologies S.A.S. BIC, Medellín, Colombia"}\nWhatsApp +57 314 790 3517`,
         })
         .catch((err) => console.error("[lead] fallo en la confirmación:", err?.code || err?.message));

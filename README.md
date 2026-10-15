@@ -52,7 +52,6 @@ Redirecciones 301 (`next.config.js`): `/technology`, `/impact`, `/about`, `/ecos
 | `DOC_FICHA_GOBIERNO_URL` | URL del PDF de la ficha técnica que recibe la entidad al enviar el formulario de Gobierno. |
 | `DOC_MEMO_URL` | URL del memo de inversión que recibe quien lo solicita en `/inversionistas`. |
 | `DOC_REPORTE_URL` | URL del dataset anonimizado del reporte de barreras. |
-| `NEXT_PUBLIC_GA_ID` | ID de GA4 (`G-XXXXXXX`). Sin ella no se carga analítica ni el aviso de cookies. Es de build. |
 
 Mientras falte una variable `DOC_*`, la confirmación por correo promete el envío del documento en máximo 3 días
 hábiles, igual que el mensaje del sitio, y el equipo lo envía a mano. Con la variable configurada, el enlace sale en
@@ -79,11 +78,13 @@ El límite de envíos vive en memoria de cada instancia serverless: frena abuso 
 - `robots.txt` permite explícitamente a los rastreadores de buscadores y de IA; `public/llms.txt` resume la empresa
   con fuentes; `sitemap.xml` usa la fecha real de actualización (`UPDATED` en `src/app/sitemap.js`).
 
-## Analítica (GA4)
+## Analítica (Vercel Web Analytics)
 
-Solo se carga si el visitante acepta las cookies. Eventos: `lead_contacto`, `lead_gobierno`, `lead_empresas`,
-`lead_retail`, `lead_insurance`, `lead_aliado`, `lead_inversion`, `descarga_reporte`, `suscripcion`,
-`click_whatsapp`, `click_google_play`, `click_video`. Los enlaces a Google Play llevan `referrer` con UTM.
+Se activa en Vercel > proyecto > Analytics. No usa cookies ni identificadores personales, así que no hay aviso de
+cookies. Eventos personalizados (plan Pro): `lead_contacto`, `lead_gobierno`, `lead_empresas`, `lead_retail`,
+`lead_insurance`, `lead_aliado`, `lead_inversion`, `descarga_reporte`, `suscripcion`, `click_whatsapp`,
+`click_google_play`, `click_video`. Solo llevan la página y el formulario, nunca datos de quien escribe.
+Los enlaces a Google Play llevan `referrer` con UTM.
 
 ## Pendientes antes de producción
 

@@ -9,12 +9,6 @@ nav.crumb [aria-current]{color:inherit}
 /* Error de envío de formularios */
 .form-err{margin:0;padding:12px 16px;border-radius:14px;background:#F7EFDA;border:1.5px solid #A8606C;color:#1A1814;font-size:15px;line-height:1.5}
 .btn[disabled]{opacity:.6;cursor:progress}
-/* Aviso de cookies con la identidad v3 */
-.consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;background:#000;color:#F2E6C6;border:1px solid #55534E;border-radius:22px;padding:18px 22px;font:400 14px/1.5 Sora,sans-serif}
-.consent p{flex:1 1 320px;margin:0}
-.consent .row{display:flex;gap:10px;flex-wrap:wrap}
-.consent .btn{min-height:44px;padding:0 20px}
-.consent .btn-o{border-color:#F2E6C6;color:#F2E6C6;background:transparent}
 /* Retratos pendientes: iniciales mientras llegan las fotos con consentimiento */
 .pc-ph.pc-ini{display:flex;align-items:center;justify-content:center;border-style:solid;background:#F7EFDA;color:#6E5A1C;font-size:clamp(40px,5vw,64px);font-weight:700;letter-spacing:-.02em}
 /* Barra superior en teléfonos angostos: el botón contextual cabe junto a la marca */
