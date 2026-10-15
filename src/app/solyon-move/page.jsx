@@ -35,7 +35,7 @@ const LD = [
     "description": "Pieza de Ruta N sobre SOLYON Move: la app, el tablero institucional en tiempo real y el piloto con personas con movilidad reducida en Medellín. Con subtítulos.",
     "thumbnailUrl": "https://www.solyontechnologies.com/media/rutan-solyon-move-poster.jpg",
     "contentUrl": "https://www.solyontechnologies.com/media/rutan-solyon-move.mp4",
-    "uploadDate": "2026-08-07",
+    "uploadDate": "2026-08-07T00:00:00-05:00",
     "duration": "PT1M8S",
     "publisher": {
       "@id": "https://www.solyontechnologies.com/#organization"
@@ -49,7 +49,7 @@ const LD = [
     "description": "Una persona en silla de ruedas usa SOLYON Move para planificar su ruta en Medellín.",
     "thumbnailUrl": "https://www.solyontechnologies.com/media/move-agosto-poster.jpg",
     "contentUrl": "https://www.solyontechnologies.com/media/move-agosto.mp4",
-    "uploadDate": "2026-08-06",
+    "uploadDate": "2026-08-06T00:00:00-05:00",
     "duration": "PT10S",
     "publisher": {
       "@id": "https://www.solyontechnologies.com/#organization"

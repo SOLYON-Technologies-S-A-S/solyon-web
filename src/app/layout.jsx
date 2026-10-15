@@ -42,6 +42,7 @@ const organization = {
   taxID: "902028596-1",
   url: SITE_URL,
   logo: `${SITE_URL}/media/simbolo.png`,
+  image: `${SITE_URL}/og-cover.jpg`,
   description:
     "Laboratorio DeepTech de Medellín que aplica inteligencia artificial a problemas físicos: calles, operaciones y riesgos reales. Creador de SOLYON OS, Arcanum y SOLYON Move.",
   email: "sergio@solyontechnologies.com",

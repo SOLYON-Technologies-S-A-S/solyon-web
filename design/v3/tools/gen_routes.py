@@ -37,7 +37,7 @@ ELVIA_APP = {"@context": "https://schema.org", "@type": "SoftwareApplication", "
              "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Modo gratuito; plan PRO dentro de la app"}, "publisher": ORG}
 def video(name, desc, file, poster, dur, date):
     return {"@context": "https://schema.org", "@type": "VideoObject", "name": name, "description": desc, "thumbnailUrl": f"https://www.solyontechnologies.com/media/{poster}",
-            "contentUrl": f"https://www.solyontechnologies.com/media/{file}", "uploadDate": date, "duration": dur, "publisher": ORG, "inLanguage": "es"}
+            "contentUrl": f"https://www.solyontechnologies.com/media/{file}", "uploadDate": f"{date}T00:00:00-05:00", "duration": dur, "publisher": ORG, "inLanguage": "es"}
 def service(name, desc, url, extra=None):
     d = {"@context": "https://schema.org", "@type": "Service", "name": name, "description": desc, "provider": ORG, "areaServed": "CO", "url": "https://www.solyontechnologies.com" + url}
     if extra: d.update(extra)
