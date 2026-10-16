@@ -85,6 +85,7 @@ cookies. Eventos personalizados (plan Pro): `lead_contacto`, `lead_gobierno`, `l
 `lead_insurance`, `lead_aliado`, `lead_inversion`, `descarga_reporte`, `suscripcion`, `click_whatsapp`,
 `click_google_play`, `click_video`. Solo llevan la página y el formulario, nunca datos de quien escribe.
 Speed Insights (`@vercel/speed-insights`) mide los Core Web Vitals reales de cada visita; se ve en Vercel > proyecto > Speed Insights.
+Visitas internas: entrar una vez a cualquier página con `?interno=1` marca ese navegador como del equipo y sus visitas dejan de contar en Analytics y Speed Insights; `?interno=0` lo desmarca. La marca vive en ese navegador (localStorage), así que hay que hacerlo en cada navegador y celular del equipo.
 Los enlaces a Google Play llevan `referrer` con UTM.
 
 ## Pendientes antes de producción

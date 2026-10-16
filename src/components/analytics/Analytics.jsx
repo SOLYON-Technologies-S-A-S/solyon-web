@@ -3,11 +3,16 @@
 import { useEffect } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { track } from "@/lib/analytics";
+import { track, dropInternal, rememberInternalFlag } from "@/lib/analytics";
 
 // Vercel Web Analytics: visitas y eventos agregados, sin cookies ni identificadores personales,
 // por eso no hace falta aviso de cookies. Se activa en Vercel > proyecto > Analytics.
 export default function Analytics() {
+  // ?interno=1 marca este navegador como del equipo; ?interno=0 lo desmarca.
+  useEffect(() => {
+    rememberInternalFlag();
+  }, []);
+
   // Clics en WhatsApp, Google Play y video (YouTube).
   useEffect(() => {
     const onClick = (e) => {
@@ -26,8 +31,8 @@ export default function Analytics() {
   // Speed Insights mide la velocidad real de carga (Core Web Vitals) de cada visita, sin cookies.
   return (
     <>
-      <VercelAnalytics />
-      <SpeedInsights />
+      <VercelAnalytics beforeSend={dropInternal} />
+      <SpeedInsights beforeSend={dropInternal} />
     </>
   );
 }
