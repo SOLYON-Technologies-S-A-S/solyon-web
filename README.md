@@ -78,12 +78,13 @@ El límite de envíos vive en memoria de cada instancia serverless: frena abuso 
 - `robots.txt` permite explícitamente a los rastreadores de buscadores y de IA; `public/llms.txt` resume la empresa
   con fuentes; `sitemap.xml` usa la fecha real de actualización (`UPDATED` en `src/app/sitemap.js`).
 
-## Analítica (Vercel Web Analytics)
+## Analítica (Vercel Web Analytics y Speed Insights)
 
 Se activa en Vercel > proyecto > Analytics. No usa cookies ni identificadores personales, así que no hay aviso de
 cookies. Eventos personalizados (plan Pro): `lead_contacto`, `lead_gobierno`, `lead_empresas`, `lead_retail`,
 `lead_insurance`, `lead_aliado`, `lead_inversion`, `descarga_reporte`, `suscripcion`, `click_whatsapp`,
 `click_google_play`, `click_video`. Solo llevan la página y el formulario, nunca datos de quien escribe.
+Speed Insights (`@vercel/speed-insights`) mide los Core Web Vitals reales de cada visita; se ve en Vercel > proyecto > Speed Insights.
 Los enlaces a Google Play llevan `referrer` con UTM.
 
 ## Pendientes antes de producción

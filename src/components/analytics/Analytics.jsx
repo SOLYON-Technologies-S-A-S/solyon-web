@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { track } from "@/lib/analytics";
 
 // Vercel Web Analytics: visitas y eventos agregados, sin cookies ni identificadores personales,
@@ -22,5 +23,11 @@ export default function Analytics() {
     return () => document.removeEventListener("click", onClick);
   }, []);
 
-  return <VercelAnalytics />;
+  // Speed Insights mide la velocidad real de carga (Core Web Vitals) de cada visita, sin cookies.
+  return (
+    <>
+      <VercelAnalytics />
+      <SpeedInsights />
+    </>
+  );
 }
